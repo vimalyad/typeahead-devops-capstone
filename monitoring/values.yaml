@@ -1,0 +1,3 @@
+scrapeInterval: 5s
+retention: 2h
+grafanaSecret: grafana-admin

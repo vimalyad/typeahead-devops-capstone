@@ -1,0 +1,113 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+data:
+  prometheus.yml: "global:\n  evaluation_interval: 5s\n  scrape_interval: {{ .Values.scrapeInterval }}\nrule_files:\n- /etc/prometheus/alerts.yml\n\
+    scrape_configs:\n- job_name: ingestion\n  metrics_path: /metrics\n  dns_sd_configs:\n  - names:\n    - ingestion-metrics\n\
+    \    type: A\n    port: 8082\n- job_name: suggestion\n  metrics_path: /metrics\n  dns_sd_configs:\n  - names:\n\
+    \    - suggestion-metrics\n    type: A\n    port: 8081\n"
+  alerts.yml: "groups:\n- name: typeahead\n  rules:\n  - alert: ApplicationUnavailable\n    expr: up{job=~\"ingestion|suggestion\"\
+    } == 0\n    for: 15s\n    labels:\n      severity: critical\n    annotations:\n      summary: An application\
+    \ replica cannot be scraped.\n  - alert: ApplicationErrors\n    expr: sum(rate(http_server_requests_seconds_count{status=~\"\
+    5..\"}[1m])) > 0\n    for: 10s\n    labels:\n      severity: warning\n    annotations:\n      summary: The application\
+    \ is returning HTTP 5xx errors.\n"
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus
+  template:
+    metadata:
+      labels:
+        app: prometheus
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65534
+        fsGroup: 65534
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+      - name: prometheus
+        image: prom/prometheus:v3.15.0@sha256:efd719c99d83b060d9daefdcf00360461adf279f45ef5391f8d111892118753e
+        ports:
+        - name: http
+          containerPort: 9090
+        volumeMounts:
+        - name: config
+          mountPath: /etc/prometheus
+        - name: data
+          mountPath: /prometheus
+        resources:
+          requests:
+            cpu: 50m
+            memory: 96Mi
+          limits:
+            cpu: 500m
+            memory: 384Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+        readinessProbe:
+          httpGet:
+            path: /-/ready
+            port: http
+          initialDelaySeconds: 5
+        args:
+        - --config.file=/etc/prometheus/prometheus.yml
+        - --storage.tsdb.path=/prometheus
+        - --storage.tsdb.retention.time={{ .Values.retention }}
+      volumes:
+      - name: config
+        configMap:
+          name: prometheus-config
+      - name: data
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus
+spec:
+  selector:
+    app: prometheus
+  ports:
+  - port: 9090
+    targetPort: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingestion-metrics
+spec:
+  clusterIP: None
+  publishNotReadyAddresses: true
+  selector:
+    app: ingestion-service
+  ports:
+  - name: http
+    port: 8082
+    targetPort: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: suggestion-metrics
+spec:
+  clusterIP: None
+  publishNotReadyAddresses: true
+  selector:
+    app: suggestion-service
+  ports:
+  - name: http
+    port: 8081
+    targetPort: http
