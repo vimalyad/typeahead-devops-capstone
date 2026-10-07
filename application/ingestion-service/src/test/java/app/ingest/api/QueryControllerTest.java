@@ -5,8 +5,8 @@ import app.ingest.kafka.SearchEventProducer;
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.web.servlet.MockMvc;
@@ -19,8 +19,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest({QueryController.class, SearchController.class})
 class QueryControllerTest {
     @Autowired MockMvc mvc;
-    @MockBean QueryRepository repository;
-    @MockBean SearchEventProducer producer;
+    @MockitoBean QueryRepository repository;
+    @MockitoBean SearchEventProducer producer;
     private final QueryItem item = new QueryItem(7, "kubernetes", 5);
 
     @Test void listsQueries() throws Exception {

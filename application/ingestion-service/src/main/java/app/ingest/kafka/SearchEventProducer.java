@@ -1,8 +1,8 @@
 package app.ingest.kafka;
 
 import app.shared.SearchEvent;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 import java.time.Instant;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
@@ -35,7 +35,7 @@ public class SearchEventProducer {
             // (uncommitted events replay) would not actually cover the submission edge.
             template.send(topic, query, mapper.writeValueAsString(event))
                     .get(10, TimeUnit.SECONDS);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             throw new IllegalStateException("failed to serialize search event", e);
         } catch (ExecutionException | TimeoutException e) {
             throw new IllegalStateException("failed to publish search event", e);

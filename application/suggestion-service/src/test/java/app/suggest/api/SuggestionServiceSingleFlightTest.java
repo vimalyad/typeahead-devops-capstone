@@ -13,7 +13,7 @@ import app.shared.Suggestion;
 import app.suggest.cache.RedisRouter;
 import app.suggest.index.Index;
 import app.suggest.index.IndexBuilder;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
