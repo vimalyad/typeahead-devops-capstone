@@ -107,9 +107,11 @@ jobs:
           python3 scripts/install-tools.py trivy
       - name: Reject HIGH and CRITICAL vulnerabilities in every image
         run: |
+          scan_status=0
           for component in ingestion suggestion frontend; do
-            .tools/bin/trivy image --scanners vuln --severity HIGH,CRITICAL --exit-code 1 --format json --output "reports/$component-trivy.json" "$IMAGE_PREFIX-$component:$IMAGE_TAG"
+            .tools/bin/trivy image --no-progress --timeout 10m --scanners vuln --severity HIGH,CRITICAL --exit-code 1 --format json --output "reports/$component-trivy.json" "$IMAGE_PREFIX-$component:$IMAGE_TAG" || scan_status=1
           done
+          exit "$scan_status"
       - name: Publish and retrieve immutable SHA images
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
         env:

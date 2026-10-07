@@ -4,7 +4,8 @@ WORKDIR /workspace
 COPY application/ ./
 RUN --mount=type=cache,target=/root/.gradle ./gradlew --no-daemon :ingestion-service:bootJar :suggestion-service:bootJar
 
-FROM gcr.io/distroless/java21-debian13:nonroot@sha256:0a1f5a75661918de9c0813f287f651c3bf2d6dd752eada5f084eb0c1f14ced9e
+FROM eclipse-temurin:21-jre-alpine@sha256:51ab5e3302e7141ce665ca3ea85e8b5cd648eafbc3c0c90dd79d6537684e4555
+LABEL org.opencontainers.image.source="https://github.com/vimalyad/devops-heros"
 ARG SERVICE=ingestion-service
 ARG VERSION=local
 ENV APP_VERSION=$VERSION
