@@ -227,6 +227,8 @@ spec:
     port: 9093
     targetPort: 9093
   clusterIP: None
+  # KRaft must resolve its controller address before broker readiness can pass.
+  publishNotReadyAddresses: true
 ---
 apiVersion: apps/v1
 kind: Deployment
