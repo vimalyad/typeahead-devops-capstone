@@ -4,6 +4,7 @@ import { CacheInspector } from "./components/CacheInspector";
 import { SearchTypeahead } from "./components/SearchTypeahead";
 import { Toast } from "./components/Toast";
 import { Trending } from "./components/Trending";
+import { QueryManager } from "./components/QueryManager";
 
 interface ToastState {
   message: string;
@@ -66,6 +67,7 @@ export default function App() {
       )}
 
       <Trending onPick={pickTrending} />
+      <QueryManager />
 
       {toast && (
         <Toast

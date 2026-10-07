@@ -14,6 +14,8 @@ export default defineConfig({
       "/api/suggest": suggestTarget,
       "/api/trending": suggestTarget,
       "/api/search": searchTarget,
+      "/api/queries": searchTarget,
+      "/api/cache": suggestTarget,
     },
   },
 });

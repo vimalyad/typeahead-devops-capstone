@@ -53,3 +53,30 @@ export async function submitSearch(query: string): Promise<string> {
   const body = (await res.json()) as { message?: string };
   return body.message ?? "Searched";
 }
+
+export interface QueryItem {
+  id: number;
+  query: string;
+  allTimeCount: number;
+}
+
+export async function listQueries(): Promise<QueryItem[]> {
+  const response = await fetch("/api/queries");
+  if (!response.ok) throw new Error("Could not load the query catalog.");
+  return response.json() as Promise<QueryItem[]>;
+}
+
+export async function saveQuery(query: string, allTimeCount: number, id?: number): Promise<void> {
+  const response = await fetch(id === undefined ? "/api/queries" : `/api/queries/${id}`, {
+    method: id === undefined ? "POST" : "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query, allTimeCount }),
+  });
+  if (response.status === 409) throw new Error("That query already exists.");
+  if (!response.ok) throw new Error("Could not save this query. Check the text and count.");
+}
+
+export async function removeQuery(id: number): Promise<void> {
+  const response = await fetch(`/api/queries/${id}`, { method: "DELETE" });
+  if (!response.ok) throw new Error("Could not delete this query. Try refreshing the catalog.");
+}
