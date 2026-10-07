@@ -91,39 +91,58 @@ public class BatchWorker {
     }
 
     private void run() {
-        consumer = new KafkaConsumer<>(consumerProperties());
-        consumer.subscribe(List.of(topic));
-        Map<String, Long> buffer = new HashMap<>();
-        long lastFlush = System.nanoTime();
-        try {
-            while (running) {
-                var records = consumer.poll(Duration.ofMillis(500));
-                for (var rec : records) {
-                    try {
-                        SearchEvent ev = mapper.readValue(rec.value(), SearchEvent.class);
-                        buffer.merge(ev.query(), 1L, Long::sum);
-                        eventsReceived.increment();
-                    } catch (Exception parseError) {
-                        log.warn("skipping malformed event: {}", rec.value(), parseError);
-                    }
+        while (running) {
+            try (KafkaConsumer<String, String> current = new KafkaConsumer<>(consumerProperties())) {
+                consumer = current;
+                current.subscribe(List.of(topic));
+                consume(current);
+            } catch (WakeupException shutdown) {
+                if (running) {
+                    log.warn("consumer interrupted; retrying the session", shutdown);
                 }
-                boolean bySize = buffer.size() >= flushSize;
-                boolean byTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - lastFlush) >= flushIntervalMs;
-                if (!buffer.isEmpty() && (bySize || byTime)) {
-                    Map<String, Long> snapshot = buffer;
-                    buffer = new HashMap<>();
-                    upsertDao.batchUpsert(snapshot, perSecondFactor);
-                    consumer.commitSync();
-                    dbUpserts.increment(snapshot.size());
-                    flushes.increment();
-                    lastFlush = System.nanoTime();
-                    log.info("flushed {} distinct queries in one transaction", snapshot.size());
+            } catch (RuntimeException failure) {
+                // DNS, broker startup and transient database failures must not silently
+                // terminate this background thread. Uncommitted offsets are replayed.
+                log.error("consumer session failed; retrying in two seconds", failure);
+            } finally {
+                consumer = null;
+            }
+            if (running) {
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException interrupted) {
+                    Thread.currentThread().interrupt();
+                    return;
                 }
             }
-        } catch (WakeupException expectedOnShutdown) {
-            // fall through to close
-        } finally {
-            consumer.close();
+        }
+    }
+
+    private void consume(KafkaConsumer<String, String> current) {
+        Map<String, Long> buffer = new HashMap<>();
+        long lastFlush = System.nanoTime();
+        while (running) {
+            var records = current.poll(Duration.ofMillis(500));
+            for (var rec : records) {
+                try {
+                    SearchEvent ev = mapper.readValue(rec.value(), SearchEvent.class);
+                    buffer.merge(ev.query(), 1L, Long::sum);
+                    eventsReceived.increment();
+                } catch (Exception parseError) {
+                    log.warn("skipping malformed event: {}", rec.value(), parseError);
+                }
+            }
+            boolean bySize = buffer.size() >= flushSize;
+            boolean byTime = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - lastFlush) >= flushIntervalMs;
+            if (!buffer.isEmpty() && (bySize || byTime)) {
+                upsertDao.batchUpsert(buffer, perSecondFactor);
+                current.commitSync();
+                dbUpserts.increment(buffer.size());
+                flushes.increment();
+                log.info("flushed {} distinct queries in one transaction", buffer.size());
+                buffer.clear();
+                lastFlush = System.nanoTime();
+            }
         }
     }
 
