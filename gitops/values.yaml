@@ -1,0 +1,3 @@
+# Replace with the full SHA of a successful pipeline before installing Argo CD.
+imageTag: local
+version: local

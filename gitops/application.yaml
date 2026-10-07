@@ -1,0 +1,45 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: typeahead-capstone
+  namespace: argocd
+spec:
+  sourceRepos:
+    - https://github.com/vimalyad/devops-heros.git
+  destinations:
+    - namespace: assignment-s21
+      server: https://kubernetes.default.svc
+  namespaceResourceWhitelist:
+    - group: '*'
+      kind: '*'
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: typeahead-capstone
+  namespace: argocd
+spec:
+  project: typeahead-capstone
+  source:
+    repoURL: https://github.com/vimalyad/devops-heros.git
+    targetRevision: assignment/session21-typeahead-capstone
+    path: session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm
+    helm:
+      releaseName: typeahead
+      valueFiles:
+        - ../gitops/values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: assignment-s21
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
+      - RespectIgnoreDifferences=true
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /spec/replicas
