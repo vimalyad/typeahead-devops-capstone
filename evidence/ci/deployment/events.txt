@@ -1,0 +1,76 @@
+LAST SEEN   TYPE      REASON                  OBJECT                                     MESSAGE
+44s         Normal    Scheduled               pod/frontend-66f9bbf5cb-tnfqb              Successfully assigned assignment-s21/frontend-66f9bbf5cb-tnfqb to capstone-37588149332-1-control-plane
+44s         Normal    Scheduled               pod/suggestion-service-76568485c8-fqsfp    Successfully assigned assignment-s21/suggestion-service-76568485c8-fqsfp to capstone-37588149332-1-control-plane
+44s         Normal    ScalingReplicaSet       deployment/suggestion-service              Scaled up replica set suggestion-service-76568485c8 from 0 to 2
+44s         Normal    SuccessfulCreate        replicaset/suggestion-service-76568485c8   Created pod: suggestion-service-76568485c8-fqsfp
+44s         Normal    SuccessfulCreate        replicaset/ingestion-service-7bbb774bff    Created pod: ingestion-service-7bbb774bff-snp2z
+44s         Normal    WaitForFirstConsumer    persistentvolumeclaim/data-postgres-0      waiting for first consumer to be created before binding
+44s         Normal    WaitForPodScheduled     persistentvolumeclaim/data-postgres-0      waiting for pod postgres-0 to be scheduled
+44s         Normal    SuccessfulCreate        statefulset/postgres                       Create Pod postgres-0 in StatefulSet postgres successful
+44s         Warning   FailedScheduling        pod/postgres-0                             running PreBind plugin "VolumeBinding": Operation cannot be fulfilled on persistentvolumeclaims "data-postgres-0": the object has been modified; please apply your changes to the latest version and try again
+44s         Normal    SuccessfulCreate        statefulset/kafka                          Create Pod kafka-0 in StatefulSet kafka successful
+44s         Normal    Scheduled               pod/frontend-66f9bbf5cb-mvp6k              Successfully assigned assignment-s21/frontend-66f9bbf5cb-mvp6k to capstone-37588149332-1-control-plane
+44s         Normal    SuccessfulCreate        statefulset/postgres                       Create Claim data-postgres-0 Pod postgres-0 in StatefulSet postgres success
+44s         Normal    WaitForPodScheduled     persistentvolumeclaim/data-kafka-0         waiting for pod kafka-0 to be scheduled
+44s         Normal    SuccessfulCreate        statefulset/kafka                          Create Claim data-kafka-0 Pod kafka-0 in StatefulSet kafka success
+44s         Normal    SuccessfulCreate        replicaset/suggestion-service-76568485c8   Created pod: suggestion-service-76568485c8-q5fnr
+44s         Normal    Scheduled               pod/redis-647bfd9f67-vhfgt                 Successfully assigned assignment-s21/redis-647bfd9f67-vhfgt to capstone-37588149332-1-control-plane
+44s         Normal    WaitForFirstConsumer    persistentvolumeclaim/data-kafka-0         waiting for first consumer to be created before binding
+44s         Normal    SuccessfulCreate        replicaset/redis-647bfd9f67                Created pod: redis-647bfd9f67-vhfgt
+44s         Normal    SuccessfulCreate        replicaset/frontend-66f9bbf5cb             Created pod: frontend-66f9bbf5cb-tnfqb
+44s         Normal    SuccessfulCreate        replicaset/frontend-66f9bbf5cb             Created pod: frontend-66f9bbf5cb-mvp6k
+44s         Normal    ScalingReplicaSet       deployment/frontend                        Scaled up replica set frontend-66f9bbf5cb from 0 to 2
+44s         Normal    Scheduled               pod/ingestion-service-7bbb774bff-9f8md     Successfully assigned assignment-s21/ingestion-service-7bbb774bff-9f8md to capstone-37588149332-1-control-plane
+44s         Normal    ScalingReplicaSet       deployment/redis                           Scaled up replica set redis-647bfd9f67 from 0 to 1
+44s         Normal    Scheduled               pod/suggestion-service-76568485c8-q5fnr    Successfully assigned assignment-s21/suggestion-service-76568485c8-q5fnr to capstone-37588149332-1-control-plane
+44s         Warning   FailedScheduling        pod/kafka-0                                running PreBind plugin "VolumeBinding": Operation cannot be fulfilled on persistentvolumeclaims "data-kafka-0": the object has been modified; please apply your changes to the latest version and try again
+44s         Normal    ScalingReplicaSet       deployment/ingestion-service               Scaled up replica set ingestion-service-7bbb774bff from 0 to 2
+44s         Normal    Scheduled               pod/ingestion-service-7bbb774bff-snp2z     Successfully assigned assignment-s21/ingestion-service-7bbb774bff-snp2z to capstone-37588149332-1-control-plane
+44s         Normal    SuccessfulCreate        replicaset/ingestion-service-7bbb774bff    Created pod: ingestion-service-7bbb774bff-9f8md
+43s         Normal    Pulled                  pod/frontend-66f9bbf5cb-mvp6k              Container image "ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a" already present on machine and can be accessed by the pod
+25s         Normal    Started                 pod/ingestion-service-7bbb774bff-snp2z     Container started
+22s         Normal    Pulled                  pod/suggestion-service-76568485c8-fqsfp    Container image "ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a" already present on machine and can be accessed by the pod
+25s         Normal    Created                 pod/ingestion-service-7bbb774bff-snp2z     Container created
+25s         Normal    Pulled                  pod/ingestion-service-7bbb774bff-snp2z     Container image "ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a" already present on machine and can be accessed by the pod
+22s         Normal    Created                 pod/suggestion-service-76568485c8-fqsfp    Container created
+25s         Normal    Started                 pod/ingestion-service-7bbb774bff-9f8md     Container started
+25s         Normal    Created                 pod/ingestion-service-7bbb774bff-9f8md     Container created
+25s         Normal    Pulled                  pod/ingestion-service-7bbb774bff-9f8md     Container image "ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a" already present on machine and can be accessed by the pod
+22s         Normal    Started                 pod/suggestion-service-76568485c8-fqsfp    Container started
+43s         Normal    Created                 pod/frontend-66f9bbf5cb-tnfqb              Container created
+43s         Normal    Pulling                 pod/redis-647bfd9f67-vhfgt                 Pulling image "redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+43s         Normal    Pulled                  pod/frontend-66f9bbf5cb-tnfqb              Container image "ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a" already present on machine and can be accessed by the pod
+43s         Normal    Created                 pod/frontend-66f9bbf5cb-mvp6k              Container created
+22s         Normal    Pulled                  pod/suggestion-service-76568485c8-q5fnr    Container image "ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a" already present on machine and can be accessed by the pod
+22s         Normal    Created                 pod/suggestion-service-76568485c8-q5fnr    Container created
+22s         Normal    Started                 pod/suggestion-service-76568485c8-q5fnr    Container started
+42s         Normal    Pulled                  pod/redis-647bfd9f67-vhfgt                 Successfully pulled image "redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499" in 1.247s (1.247s including waiting). Image size: 16260342 bytes.
+42s         Normal    Created                 pod/redis-647bfd9f67-vhfgt                 Container created
+40s         Normal    ExternalProvisioning    persistentvolumeclaim/data-kafka-0         Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.
+42s         Normal    Provisioning            persistentvolumeclaim/data-kafka-0         External provisioner is provisioning volume for claim "assignment-s21/data-kafka-0"
+42s         Normal    Started                 pod/frontend-66f9bbf5cb-tnfqb              Container started
+42s         Normal    Started                 pod/frontend-66f9bbf5cb-mvp6k              Container started
+40s         Normal    ExternalProvisioning    persistentvolumeclaim/data-postgres-0      Waiting for a volume to be created either by the external provisioner 'rancher.io/local-path' or manually by the system administrator. If volume creation is delayed, please verify that the provisioner is running and correctly registered.
+42s         Normal    Provisioning            persistentvolumeclaim/data-postgres-0      External provisioner is provisioning volume for claim "assignment-s21/data-postgres-0"
+41s         Normal    Started                 pod/redis-647bfd9f67-vhfgt                 Container started
+41s         Warning   Unhealthy               pod/redis-647bfd9f67-vhfgt                 Readiness probe failed: Could not connect to Redis at 127.0.0.1:6379: Connection refused
+8s          Warning   Unhealthy               pod/suggestion-service-76568485c8-q5fnr    Startup probe failed: Get "http://10.244.0.5:8081/health/liveness": dial tcp 10.244.0.5:8081: connect: connection refused
+8s          Warning   Unhealthy               pod/ingestion-service-7bbb774bff-snp2z     Startup probe failed: Get "http://10.244.0.8:8082/health/liveness": dial tcp 10.244.0.8:8082: connect: connection refused
+8s          Warning   Unhealthy               pod/suggestion-service-76568485c8-fqsfp    Startup probe failed: Get "http://10.244.0.7:8081/health/liveness": dial tcp 10.244.0.7:8081: connect: connection refused
+8s          Warning   Unhealthy               pod/ingestion-service-7bbb774bff-9f8md     Startup probe failed: Get "http://10.244.0.11:8082/health/liveness": dial tcp 10.244.0.11:8082: connect: connection refused
+35s         Normal    ProvisioningSucceeded   persistentvolumeclaim/data-postgres-0      Successfully provisioned volume pvc-1ee8b8cf-782e-4a75-9d97-80eeae08924f
+35s         Normal    ProvisioningSucceeded   persistentvolumeclaim/data-kafka-0         Successfully provisioned volume pvc-2fab44f9-1f88-479b-a4c0-8c88ed363bf5
+34s         Normal    Scheduled               pod/kafka-0                                Successfully assigned assignment-s21/kafka-0 to capstone-37588149332-1-control-plane
+34s         Normal    Pulling                 pod/kafka-0                                Pulling image "apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f"
+34s         Normal    Scheduled               pod/postgres-0                             Successfully assigned assignment-s21/postgres-0 to capstone-37588149332-1-control-plane
+34s         Normal    Pulling                 pod/postgres-0                             Pulling image "postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea"
+29s         Normal    Pulled                  pod/kafka-0                                Successfully pulled image "apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f" in 4.478s (4.478s including waiting). Image size: 235521471 bytes.
+29s         Normal    Created                 pod/kafka-0                                Container created
+29s         Normal    Started                 pod/kafka-0                                Container started
+19s         Warning   Unhealthy               pod/kafka-0                                Startup probe failed: dial tcp 10.244.0.14:9092: connect: connection refused
+26s         Normal    Pulled                  pod/postgres-0                             Successfully pulled image "postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea" in 3.838s (8.178s including waiting). Image size: 116084812 bytes.
+26s         Normal    Created                 pod/postgres-0                             Container created
+25s         Normal    Started                 pod/postgres-0                             Container started
+20s         Warning   Unhealthy               pod/postgres-0                             Readiness probe failed: /var/run/postgresql:5432 - no response
+23s         Warning   Unhealthy               pod/suggestion-service-76568485c8-fqsfp    Startup probe failed: Get "http://10.244.0.7:8081/health/liveness": EOF
+23s         Warning   Unhealthy               pod/suggestion-service-76568485c8-q5fnr    Readiness probe failed: Get "http://10.244.0.5:8081/health/readiness": dial tcp 10.244.0.5:8081: connect: connection refused

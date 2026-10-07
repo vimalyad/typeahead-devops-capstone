@@ -1,0 +1,18 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ cat evidence/local/hpa-summary.json evidence/local/kubernetes-persistence.json
+[?2004l{
+  "result": "PASS",
+  "service": "suggestion-service",
+  "initialReplicas": 2,
+  "peakReplicas": 3,
+  "finalReplicas": 2,
+  "peakCpuPercent": 403
+}
+{
+  "result": "PASS",
+  "postgresPodReplaced": true,
+  "persistentVolumeClaimUnchanged": true,
+  "querySurvived": true,
+  "allTimeCount": 17,
+  "testRowDeleted": true
+}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

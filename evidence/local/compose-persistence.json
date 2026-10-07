@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "check": "Created row survived PostgreSQL container restart and was read through the API",
+  "allTimeCount": 23,
+  "testRowDeleted": true
+}

@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "service": "suggestion-service",
+  "initialReplicas": 2,
+  "peakReplicas": 3,
+  "finalReplicas": 2,
+  "peakCpuPercent": 403
+}

@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "prometheusTargetsUp": 4,
+  "grafanaDashboard": "Typeahead capstone",
+  "grafanaReturnedFrames": 1,
+  "positiveRequestRateSamples": 6,
+  "maximumObservedRequestsPerSecond": 396.5917703030303
+}

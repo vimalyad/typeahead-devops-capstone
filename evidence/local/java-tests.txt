@@ -1,0 +1,70 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :shared:compileJava UP-TO-DATE
+> Task :shared:processResources NO-SOURCE
+> Task :shared:classes UP-TO-DATE
+> Task :shared:jar UP-TO-DATE
+> Task :ingestion-service:compileJava
+> Task :ingestion-service:processResources UP-TO-DATE
+> Task :ingestion-service:classes
+> Task :ingestion-service:compileTestJava UP-TO-DATE
+> Task :ingestion-service:processTestResources NO-SOURCE
+> Task :ingestion-service:testClasses UP-TO-DATE
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+> Task :ingestion-service:test
+
+QueryControllerTest > reportsDuplicateQueryWithoutSqlDetails() PASSED
+
+QueryControllerTest > deletingMissingQueryReturnsNotFound() PASSED
+
+QueryControllerTest > reportsMissingQuery() PASSED
+
+QueryControllerTest > searchPublishesNormalizedEvent() PASSED
+
+QueryControllerTest > blankSearchDoesNotPublish() PASSED
+
+QueryControllerTest > rejectsNegativeCount() PASSED
+
+QueryControllerTest > updatesQuery() PASSED
+
+QueryControllerTest > readsOneQuery() PASSED
+
+QueryControllerTest > rejectsBlankQuery() PASSED
+
+QueryControllerTest > createsNormalizedQuery() PASSED
+
+QueryControllerTest > deletesExistingQuery() PASSED
+
+QueryControllerTest > listsQueries() PASSED
+
+> Task :shared:compileTestJava NO-SOURCE
+> Task :shared:processTestResources NO-SOURCE
+> Task :shared:testClasses UP-TO-DATE
+> Task :shared:test NO-SOURCE
+> Task :suggestion-service:compileJava UP-TO-DATE
+> Task :suggestion-service:processResources UP-TO-DATE
+> Task :suggestion-service:classes UP-TO-DATE
+> Task :suggestion-service:compileTestJava UP-TO-DATE
+> Task :suggestion-service:processTestResources NO-SOURCE
+> Task :suggestion-service:testClasses UP-TO-DATE
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+
+> Task :suggestion-service:test
+
+SuggestionServiceSingleFlightTest > concurrentMissesOnAColdPrefixTriggerExactlyOneTrieLoad() PASSED
+
+HashRingTest > distributesKeysRoughlyEvenlyAcrossNodes() PASSED
+
+HashRingTest > removingANodeRemapsOnlyAboutOneThirdOfKeys() PASSED
+
+BUILD SUCCESSFUL in 12s
+10 actionable tasks: 3 executed, 7 up-to-date
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.0/userguide/configuration_cache_enabling.html

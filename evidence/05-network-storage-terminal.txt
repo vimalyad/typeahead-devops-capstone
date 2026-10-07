@@ -1,0 +1,24 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ kubectl -n assignment-s21 get services,ingress,hpa,pvc
+[?2004lNAME                         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)             AGE
+service/frontend             ClusterIP   10.97.195.253    <none>        8080/TCP            38m
+service/grafana              ClusterIP   10.105.125.24    <none>        3000/TCP            44m
+service/ingestion-metrics    ClusterIP   None             <none>        8082/TCP            44m
+service/ingestion-service    ClusterIP   10.107.0.184     <none>        8082/TCP            38m
+service/kafka                ClusterIP   None             <none>        9092/TCP,9093/TCP   38m
+service/postgres             ClusterIP   10.111.174.164   <none>        5432/TCP            38m
+service/prometheus           ClusterIP   10.100.89.188    <none>        9090/TCP            44m
+service/redis                ClusterIP   10.102.191.245   <none>        6379/TCP            38m
+service/suggestion-metrics   ClusterIP   None             <none>        8081/TCP            44m
+service/suggestion-service   ClusterIP   10.106.89.213    <none>        8081/TCP            38m
+
+NAME                                  CLASS   HOSTS             ADDRESS        PORTS   AGE
+ingress.networking.k8s.io/typeahead   nginx   typeahead.local   192.168.49.2   80      38m
+
+NAME                                                     REFERENCE                       TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
+horizontalpodautoscaler.autoscaling/ingestion-service    Deployment/ingestion-service    cpu: 16%/70%   2         3         2          38m
+horizontalpodautoscaler.autoscaling/suggestion-service   Deployment/suggestion-service   cpu: 11%/70%   2         3         2          38m
+
+NAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+persistentvolumeclaim/data-kafka-0      Bound    pvc-4a36684b-80a9-4566-a921-7b8d3cc4288d   1Gi        RWO            standard       <unset>                 38m
+persistentvolumeclaim/data-postgres-0   Bound    pvc-ebfbde75-5dd3-463e-99b3-2b8afb230cba   1Gi        RWO            standard       <unset>                 38m
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

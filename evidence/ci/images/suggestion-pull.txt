@@ -1,0 +1,4 @@
+0f8f27c95cae983b8274d649db2435200450c48a: Pulling from vimalyad/typeahead-capstone-suggestion
+Digest: sha256:92639000be78f38e621d72b31f951a60a8ed7e5a3284c3560fc4d73fe62d5d0d
+Status: Image is up to date for ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
+ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a

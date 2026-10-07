@@ -1,0 +1,21 @@
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:09.989Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:11.991Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:13.995Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:15.998Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:18.001Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:23.759Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:25.762Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:27.767Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:29.771Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+2026-10-07T07:19:31.775Z ERROR 1 --- [ingestion-service] [   batch-worker] app.ingest.batch.BatchWorker             : consumer session failed; retrying in two seconds
+Caused by: org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers

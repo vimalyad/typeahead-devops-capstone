@@ -1,0 +1,120 @@
+{
+  "status": "success",
+  "data": {
+    "activeTargets": [
+      {
+        "discoveredLabels": {
+          "__address__": "10.244.0.24:8082",
+          "__always_scrape_classic_histograms__": "false",
+          "__convert_classic_histograms_to_nhcb__": "false",
+          "__meta_dns_name": "ingestion-metrics",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "5s",
+          "__scrape_native_histograms__": "false",
+          "__scrape_timeout__": "5s",
+          "job": "ingestion"
+        },
+        "labels": {
+          "instance": "10.244.0.24:8082",
+          "job": "ingestion"
+        },
+        "scrapePool": "ingestion",
+        "scrapeUrl": "http://10.244.0.24:8082/metrics",
+        "globalUrl": "http://10.244.0.24:8082/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-07T07:21:28.370556154Z",
+        "lastScrapeDuration": 0.012998593,
+        "health": "up",
+        "scrapeInterval": "5s",
+        "scrapeTimeout": "5s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "10.244.0.28:8082",
+          "__always_scrape_classic_histograms__": "false",
+          "__convert_classic_histograms_to_nhcb__": "false",
+          "__meta_dns_name": "ingestion-metrics",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "5s",
+          "__scrape_native_histograms__": "false",
+          "__scrape_timeout__": "5s",
+          "job": "ingestion"
+        },
+        "labels": {
+          "instance": "10.244.0.28:8082",
+          "job": "ingestion"
+        },
+        "scrapePool": "ingestion",
+        "scrapeUrl": "http://10.244.0.28:8082/metrics",
+        "globalUrl": "http://10.244.0.28:8082/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-07T07:21:31.906178951Z",
+        "lastScrapeDuration": 0.008580241,
+        "health": "up",
+        "scrapeInterval": "5s",
+        "scrapeTimeout": "5s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "10.244.0.25:8081",
+          "__always_scrape_classic_histograms__": "false",
+          "__convert_classic_histograms_to_nhcb__": "false",
+          "__meta_dns_name": "suggestion-metrics",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "5s",
+          "__scrape_native_histograms__": "false",
+          "__scrape_timeout__": "5s",
+          "job": "suggestion"
+        },
+        "labels": {
+          "instance": "10.244.0.25:8081",
+          "job": "suggestion"
+        },
+        "scrapePool": "suggestion",
+        "scrapeUrl": "http://10.244.0.25:8081/metrics",
+        "globalUrl": "http://10.244.0.25:8081/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-07T07:21:31.75836973Z",
+        "lastScrapeDuration": 0.008609955,
+        "health": "up",
+        "scrapeInterval": "5s",
+        "scrapeTimeout": "5s"
+      },
+      {
+        "discoveredLabels": {
+          "__address__": "10.244.0.27:8081",
+          "__always_scrape_classic_histograms__": "false",
+          "__convert_classic_histograms_to_nhcb__": "false",
+          "__meta_dns_name": "suggestion-metrics",
+          "__metrics_path__": "/metrics",
+          "__scheme__": "http",
+          "__scrape_interval__": "5s",
+          "__scrape_native_histograms__": "false",
+          "__scrape_timeout__": "5s",
+          "job": "suggestion"
+        },
+        "labels": {
+          "instance": "10.244.0.27:8081",
+          "job": "suggestion"
+        },
+        "scrapePool": "suggestion",
+        "scrapeUrl": "http://10.244.0.27:8081/metrics",
+        "globalUrl": "http://10.244.0.27:8081/metrics",
+        "lastError": "",
+        "lastScrape": "2026-10-07T07:21:31.723433072Z",
+        "lastScrapeDuration": 0.008840077,
+        "health": "up",
+        "scrapeInterval": "5s",
+        "scrapeTimeout": "5s"
+      }
+    ],
+    "droppedTargets": [],
+    "droppedTargetCounts": {
+      "ingestion": 0,
+      "suggestion": 0
+    }
+  }
+}

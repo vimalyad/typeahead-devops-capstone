@@ -1,0 +1,14 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ curl -fsS http://127.0.0.1:19090/api/v1/targets | jq -c '.data.activeTargets[] | {job:.labels.job,health,scrapeUrl}'; cat evidence/local/monitoring-summary.json
+[?2004l{"job":"ingestion","health":"up","scrapeUrl":"http://10.244.0.38:8082/metrics"}
+{"job":"ingestion","health":"up","scrapeUrl":"http://10.244.0.41:8082/metrics"}
+{"job":"suggestion","health":"up","scrapeUrl":"http://10.244.0.39:8081/metrics"}
+{"job":"suggestion","health":"up","scrapeUrl":"http://10.244.0.42:8081/metrics"}
+{
+  "result": "PASS",
+  "prometheusTargetsUp": 4,
+  "grafanaDashboard": "Typeahead capstone",
+  "grafanaReturnedFrames": 1,
+  "positiveRequestRateSamples": 6,
+  "maximumObservedRequestsPerSecond": 396.5917703030303
+}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

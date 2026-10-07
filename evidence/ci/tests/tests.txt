@@ -1,0 +1,80 @@
+Downloading https://services.gradle.org/distributions/gradle-9.8.0-bin.zip
+..............10%..............20%...............30%..............40%...............50%..............60%...............70%..............80%...............90%..............100%
+
+Welcome to Gradle 9.8.0!
+
+Here are the highlights of this release:
+ - Java 27 support
+ - Maven mirror settings reuse
+ - Linked problem locations in build output
+
+For more details see https://docs.gradle.org/9.8.0/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.8.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :compileJava NO-SOURCE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test NO-SOURCE
+> Task :shared:compileJava
+> Task :shared:processResources NO-SOURCE
+> Task :shared:classes
+> Task :shared:jar
+> Task :ingestion-service:compileJava
+> Task :ingestion-service:processResources
+> Task :ingestion-service:classes
+> Task :ingestion-service:compileTestJava
+> Task :ingestion-service:processTestResources NO-SOURCE
+> Task :ingestion-service:testClasses
+
+> Task :ingestion-service:test
+
+QueryControllerTest > reportsDuplicateQueryWithoutSqlDetails() PASSED
+
+QueryControllerTest > deletingMissingQueryReturnsNotFound() PASSED
+
+QueryControllerTest > reportsMissingQuery() PASSED
+
+QueryControllerTest > searchPublishesNormalizedEvent() PASSED
+
+QueryControllerTest > blankSearchDoesNotPublish() PASSED
+
+QueryControllerTest > rejectsNegativeCount() PASSED
+
+QueryControllerTest > updatesQuery() PASSED
+
+QueryControllerTest > readsOneQuery() PASSED
+
+QueryControllerTest > rejectsBlankQuery() PASSED
+
+QueryControllerTest > createsNormalizedQuery() PASSED
+
+QueryControllerTest > deletesExistingQuery() PASSED
+
+QueryControllerTest > listsQueries() PASSED
+
+> Task :shared:compileTestJava NO-SOURCE
+> Task :shared:processTestResources NO-SOURCE
+> Task :shared:testClasses UP-TO-DATE
+> Task :shared:test NO-SOURCE
+> Task :suggestion-service:compileJava
+> Task :suggestion-service:processResources
+> Task :suggestion-service:classes
+> Task :suggestion-service:compileTestJava
+> Task :suggestion-service:processTestResources NO-SOURCE
+> Task :suggestion-service:testClasses
+
+> Task :suggestion-service:test
+
+SuggestionServiceSingleFlightTest > concurrentMissesOnAColdPrefixTriggerExactlyOneTrieLoad() PASSED
+
+HashRingTest > distributesKeysRoughlyEvenlyAcrossNodes() PASSED
+
+HashRingTest > removingANodeRemapsOnlyAboutOneThirdOfKeys() PASSED
+
+BUILD SUCCESSFUL in 1m 1s
+10 actionable tasks: 10 executed
+Consider enabling configuration cache to speed up this build: https://docs.gradle.org/9.8.0/userguide/configuration_cache_enabling.html

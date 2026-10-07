@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "postgresPodReplaced": true,
+  "persistentVolumeClaimUnchanged": true,
+  "querySurvived": true,
+  "allTimeCount": 17,
+  "testRowDeleted": true
+}

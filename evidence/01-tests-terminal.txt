@@ -1,0 +1,18 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ rg 'PASSED|BUILD SUCCESSFUL' evidence/local/java-tests.txt
+[?2004l24:QueryControllerTest > reportsDuplicateQueryWithoutSqlDetails() PASSED
+26:QueryControllerTest > deletingMissingQueryReturnsNotFound() PASSED
+28:QueryControllerTest > reportsMissingQuery() PASSED
+30:QueryControllerTest > searchPublishesNormalizedEvent() PASSED
+32:QueryControllerTest > blankSearchDoesNotPublish() PASSED
+34:QueryControllerTest > rejectsNegativeCount() PASSED
+36:QueryControllerTest > updatesQuery() PASSED
+38:QueryControllerTest > readsOneQuery() PASSED
+40:QueryControllerTest > rejectsBlankQuery() PASSED
+42:QueryControllerTest > createsNormalizedQuery() PASSED
+44:QueryControllerTest > deletesExistingQuery() PASSED
+46:QueryControllerTest > listsQueries() PASSED
+62:SuggestionServiceSingleFlightTest > concurrentMissesOnAColdPrefixTriggerExactlyOneTrieLoad() PASSED
+64:HashRingTest > distributesKeysRoughlyEvenlyAcrossNodes() PASSED
+66:HashRingTest > removingANodeRemapsOnlyAboutOneThirdOfKeys() PASSED
+68:BUILD SUCCESSFUL in 12s
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

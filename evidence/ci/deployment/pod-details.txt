@@ -1,0 +1,576 @@
+Name:             frontend-66f9bbf5cb-mvp6k
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=frontend
+                  pod-template-hash=66f9bbf5cb
+Annotations:      checksum/config: 8be956960b405e28d9e2edffbbbb31828ff8ae1a6f81301377e9f02633aacc4f
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.10
+IPs:
+  IP:           10.244.0.10
+Controlled By:  ReplicaSet/frontend-66f9bbf5cb
+Containers:
+  frontend:
+    Container ID:   containerd://e5c92485c4b6b8b362a4ade46eb507e063e5a34e540e6aa1171a9cf27636c12e
+    Image:          ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
+    Image ID:       docker.io/library/import-2026-10-07@sha256:a293f15c571188937f8388d4ed0670d452f62e34e788b2ddf406ede84b8ce807
+    Port:           8080/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:39:58 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  48Mi
+    Requests:
+      cpu:        20m
+      memory:     24Mi
+    Liveness:     http-get http://:http/health delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:    http-get http://:http/health delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:      http-get http://:http/health delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment:  <none>
+    Mounts:
+      /tmp from temporary (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  temporary:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             frontend-66f9bbf5cb-tnfqb
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=frontend
+                  pod-template-hash=66f9bbf5cb
+Annotations:      checksum/config: 8be956960b405e28d9e2edffbbbb31828ff8ae1a6f81301377e9f02633aacc4f
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.6
+IPs:
+  IP:           10.244.0.6
+Controlled By:  ReplicaSet/frontend-66f9bbf5cb
+Containers:
+  frontend:
+    Container ID:   containerd://3e9b0dbc8565a4ff42254d88fa88603300d9069716a382ea9c802f2792506a13
+    Image:          ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
+    Image ID:       docker.io/library/import-2026-10-07@sha256:a293f15c571188937f8388d4ed0670d452f62e34e788b2ddf406ede84b8ce807
+    Port:           8080/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:39:58 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     200m
+      memory:  48Mi
+    Requests:
+      cpu:        20m
+      memory:     24Mi
+    Liveness:     http-get http://:http/health delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:    http-get http://:http/health delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:      http-get http://:http/health delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment:  <none>
+    Mounts:
+      /tmp from temporary (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  temporary:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             ingestion-service-7bbb774bff-9f8md
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=ingestion-service
+                  pod-template-hash=7bbb774bff
+Annotations:      checksum/config: 8be956960b405e28d9e2edffbbbb31828ff8ae1a6f81301377e9f02633aacc4f
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.11
+IPs:
+  IP:           10.244.0.11
+Controlled By:  ReplicaSet/ingestion-service-7bbb774bff
+Containers:
+  ingestion-service:
+    Container ID:   containerd://fbd44cc239ac7a72a9be84e00d6f8cb2ee52a72532080489bd8a7a3c7c8a5187
+    Image:          ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
+    Image ID:       docker.io/library/import-2026-10-07@sha256:0a61dd6c48f0547fdf1601390f3cb46725e9132c08f27bd8737bf2144faa62b8
+    Port:           8082/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:40:15 +0000
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Wed, 07 Oct 2026 07:39:57 +0000
+      Finished:     Wed, 07 Oct 2026 07:40:14 +0000
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   256Mi
+    Liveness:   http-get http://:http/health/liveness delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  http-get http://:http/health/readiness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:    http-get http://:http/health/liveness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment Variables from:
+      typeahead-config  ConfigMap  Optional: false
+    Environment:
+      SPRING_DATASOURCE_PASSWORD:  <set to the key 'password' in secret 'typeahead-database'>  Optional: false
+    Mounts:
+      /tmp from temporary (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  temporary:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             ingestion-service-7bbb774bff-snp2z
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=ingestion-service
+                  pod-template-hash=7bbb774bff
+Annotations:      checksum/config: 8be956960b405e28d9e2edffbbbb31828ff8ae1a6f81301377e9f02633aacc4f
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.8
+IPs:
+  IP:           10.244.0.8
+Controlled By:  ReplicaSet/ingestion-service-7bbb774bff
+Containers:
+  ingestion-service:
+    Container ID:   containerd://4c00c8f9fce2c6fed32080dc62f28ae47cc38b3dbe6b3e9f437c8de0715ae3fd
+    Image:          ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
+    Image ID:       docker.io/library/import-2026-10-07@sha256:0a61dd6c48f0547fdf1601390f3cb46725e9132c08f27bd8737bf2144faa62b8
+    Port:           8082/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:40:15 +0000
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Wed, 07 Oct 2026 07:39:57 +0000
+      Finished:     Wed, 07 Oct 2026 07:40:13 +0000
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   256Mi
+    Liveness:   http-get http://:http/health/liveness delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  http-get http://:http/health/readiness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:    http-get http://:http/health/liveness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment Variables from:
+      typeahead-config  ConfigMap  Optional: false
+    Environment:
+      SPRING_DATASOURCE_PASSWORD:  <set to the key 'password' in secret 'typeahead-database'>  Optional: false
+    Mounts:
+      /tmp from temporary (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  temporary:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             kafka-0
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:40:06 +0000
+Labels:           app=kafka
+                  apps.kubernetes.io/pod-index=0
+                  controller-revision-hash=kafka-6684d45468
+                  statefulset.kubernetes.io/pod-name=kafka-0
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.14
+IPs:
+  IP:           10.244.0.14
+Controlled By:  StatefulSet/kafka
+Containers:
+  kafka:
+    Container ID:   containerd://c721a8b162aa01e1568012e2d5d7dff0dfb2a1ed4a74e1fb0c36af764008239c
+    Image:          apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f
+    Image ID:       docker.io/apache/kafka@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f
+    Ports:          9092/TCP (tcp), 9093/TCP (controller)
+    Host Ports:     0/TCP (tcp), 0/TCP (controller)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:40:11 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1
+      memory:  640Mi
+    Requests:
+      cpu:      100m
+      memory:   320Mi
+    Liveness:   tcp-socket :9092 delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  tcp-socket :9092 delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:    tcp-socket :9092 delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment:
+      CLUSTER_ID:                                      MkU3OEVBNTcwNTJENDM2Qk
+      KAFKA_NODE_ID:                                   1
+      KAFKA_PROCESS_ROLES:                             broker,controller
+      KAFKA_CONTROLLER_QUORUM_VOTERS:                  1@kafka:9093
+      KAFKA_LISTENERS:                                 PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_ADVERTISED_LISTENERS:                      PLAINTEXT://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP:            PLAINTEXT:PLAINTEXT,CONTROLLER:PLAINTEXT
+      KAFKA_CONTROLLER_LISTENER_NAMES:                 CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME:                PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR:          1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR:  1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR:             1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS:          0
+      KAFKA_LOG_DIRS:                                  /var/lib/kafka/data/logs
+      KAFKA_LOG_RETENTION_HOURS:                       1
+      KAFKA_LOG_SEGMENT_BYTES:                         16777216
+      KAFKA_HEAP_OPTS:                                 -Xms128m -Xmx256m
+    Mounts:
+      /var/lib/kafka/data from data (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  data:
+    Type:        PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:   data-kafka-0
+    ReadOnly:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             postgres-0
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:40:06 +0000
+Labels:           app=postgres
+                  apps.kubernetes.io/pod-index=0
+                  controller-revision-hash=postgres-9d45fcbfd
+                  statefulset.kubernetes.io/pod-name=postgres-0
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.15
+IPs:
+  IP:           10.244.0.15
+Controlled By:  StatefulSet/postgres
+Containers:
+  postgres:
+    Container ID:   containerd://d840edb45115678f92d5a02dd0f0b18ac7c9f9ce13ebec8f2289a4853139904e
+    Image:          postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea
+    Image ID:       docker.io/library/postgres@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea
+    Port:           5432/TCP (tcp)
+    Host Port:      0/TCP (tcp)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:40:15 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  192Mi
+    Requests:
+      cpu:      30m
+      memory:   96Mi
+    Liveness:   exec [pg_isready -U app -d typeahead] delay=30s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  exec [pg_isready -U app -d typeahead] delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Environment:
+      POSTGRES_DB:        typeahead
+      POSTGRES_USER:      app
+      POSTGRES_PASSWORD:  <set to the key 'password' in secret 'typeahead-database'>  Optional: false
+      PGDATA:             /var/lib/postgresql/data/pgdata
+    Mounts:
+      /tmp from tmp (rw)
+      /var/lib/postgresql/data from data (rw)
+      /var/run/postgresql from run (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  data:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  data-postgres-0
+    ReadOnly:   false
+  run:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:     
+    SizeLimit:  <unset>
+  tmp:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   <unset>
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             redis-647bfd9f67-vhfgt
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=redis
+                  pod-template-hash=647bfd9f67
+Annotations:      <none>
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.9
+IPs:
+  IP:           10.244.0.9
+Controlled By:  ReplicaSet/redis-647bfd9f67
+Containers:
+  redis:
+    Container ID:  containerd://e3223da3c21add2c2b6c2865d3cf1133c42b36394969766a6710511014c51cb2
+    Image:         redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    Image ID:      docker.io/library/redis@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+    Port:          6379/TCP (tcp)
+    Host Port:     0/TCP (tcp)
+    Args:
+      --maxmemory
+      16mb
+      --maxmemory-policy
+      allkeys-lru
+      --save
+      
+      --appendonly
+      no
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:39:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     300m
+      memory:  64Mi
+    Requests:
+      cpu:        30m
+      memory:     32Mi
+    Liveness:     exec [redis-cli ping] delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:    exec [redis-cli ping] delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Environment:  <none>
+    Mounts:
+      /data from data (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  data:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   32Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             suggestion-service-76568485c8-fqsfp
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=suggestion-service
+                  pod-template-hash=76568485c8
+Annotations:      checksum/config: 8be956960b405e28d9e2edffbbbb31828ff8ae1a6f81301377e9f02633aacc4f
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.7
+IPs:
+  IP:           10.244.0.7
+Controlled By:  ReplicaSet/suggestion-service-76568485c8
+Containers:
+  suggestion-service:
+    Container ID:   containerd://bcc89c8152a785cab35c6c45b92e44035fc88edc2275988cb0508b523bb4fd7c
+    Image:          ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
+    Image ID:       docker.io/library/import-2026-10-07@sha256:d09aaa29cf9bb48c7820dbfe732d9f0e144e5b18d829dc31fcd0a1a458e38ec4
+    Port:           8081/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:40:18 +0000
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Wed, 07 Oct 2026 07:39:57 +0000
+      Finished:     Wed, 07 Oct 2026 07:40:18 +0000
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   256Mi
+    Liveness:   http-get http://:http/health/liveness delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  http-get http://:http/health/readiness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:    http-get http://:http/health/liveness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment Variables from:
+      typeahead-config  ConfigMap  Optional: false
+    Environment:
+      SPRING_DATASOURCE_PASSWORD:  <set to the key 'password' in secret 'typeahead-database'>  Optional: false
+    Mounts:
+      /tmp from temporary (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  temporary:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+
+
+Name:             suggestion-service-76568485c8-q5fnr
+Namespace:        assignment-s21
+Priority:         0
+Service Account:  default
+Node:             capstone-37588149332-1-control-plane/172.18.0.2
+Start Time:       Wed, 07 Oct 2026 07:39:56 +0000
+Labels:           app=suggestion-service
+                  pod-template-hash=76568485c8
+Annotations:      checksum/config: 8be956960b405e28d9e2edffbbbb31828ff8ae1a6f81301377e9f02633aacc4f
+Status:           Running
+SeccompProfile:   RuntimeDefault
+IP:               10.244.0.5
+IPs:
+  IP:           10.244.0.5
+Controlled By:  ReplicaSet/suggestion-service-76568485c8
+Containers:
+  suggestion-service:
+    Container ID:   containerd://ca91bec91ce7c1db58d011758fc009d644ad44935a71d73d73ce3ec6780d43db
+    Image:          ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
+    Image ID:       docker.io/library/import-2026-10-07@sha256:d09aaa29cf9bb48c7820dbfe732d9f0e144e5b18d829dc31fcd0a1a458e38ec4
+    Port:           8081/TCP (http)
+    Host Port:      0/TCP (http)
+    State:          Running
+      Started:      Wed, 07 Oct 2026 07:40:18 +0000
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    1
+      Started:      Wed, 07 Oct 2026 07:39:57 +0000
+      Finished:     Wed, 07 Oct 2026 07:40:17 +0000
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     1
+      memory:  512Mi
+    Requests:
+      cpu:      100m
+      memory:   256Mi
+    Liveness:   http-get http://:http/health/liveness delay=0s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:  http-get http://:http/health/readiness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=3
+    Startup:    http-get http://:http/health/liveness delay=0s timeout=1s period=5s successThreshold=1 failureThreshold=60
+    Environment Variables from:
+      typeahead-config  ConfigMap  Optional: false
+    Environment:
+      SPRING_DATASOURCE_PASSWORD:  <set to the key 'password' in secret 'typeahead-database'>  Optional: false
+    Mounts:
+      /tmp from temporary (rw)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  temporary:
+    Type:        EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:      
+    SizeLimit:   64Mi
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                 node.kubernetes.io/unreachable:NoExecute op=Exists for 300s

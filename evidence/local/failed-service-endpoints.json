@@ -1,0 +1,40 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "addressType": "IPv4",
+            "apiVersion": "discovery.k8s.io/v1",
+            "endpoints": null,
+            "kind": "EndpointSlice",
+            "metadata": {
+                "creationTimestamp": "2026-10-07T07:09:39Z",
+                "generateName": "ingestion-service-",
+                "generation": 18,
+                "labels": {
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+                    "kubernetes.io/service-name": "ingestion-service"
+                },
+                "name": "ingestion-service-kjzzn",
+                "namespace": "assignment-s21",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Service",
+                        "name": "ingestion-service",
+                        "uid": "537861df-f6d5-4fda-84ce-285ef8eb385a"
+                    }
+                ],
+                "resourceVersion": "12502",
+                "uid": "1d62ed33-8951-4cae-b1f6-baf96b049e9a"
+            },
+            "ports": null
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

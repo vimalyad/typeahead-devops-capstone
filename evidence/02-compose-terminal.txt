@@ -1,0 +1,19 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ docker compose --env-file /var/home/vimal2907/assignment/devops-assignment/.local/session21-compose.env ps --format 'table {{.Service}}\t{{.Status}}' && cat evidence/local/compose-smoke.json
+[?2004lSERVICE              STATUS
+frontend             Up 5 minutes
+ingestion-service    Up 23 minutes
+kafka                Up 38 minutes (healthy)
+postgres             Up 36 minutes (healthy)
+redis                Up 38 minutes (healthy)
+suggestion-service   Up 33 minutes
+{
+  "result": "PASS",
+  "checks": [
+    "create/read/update/delete query",
+    "duplicate and validation errors",
+    "Kafka event persisted to PostgreSQL",
+    "trie suggestion refreshed",
+    "frontend served"
+  ]
+}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

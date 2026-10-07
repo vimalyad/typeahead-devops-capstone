@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "transport": "Playwright connected to existing Chromium through CDP",
+  "checks": [
+    "page loaded",
+    "created a query through the form",
+    "edited count through the form",
+    "deleted query through the form",
+    "cache inspector uses live owner lookup",
+    "expanded cache inspector fits the 390px mobile viewport",
+    "zero browser page errors"
+  ],
+  "screenshots": "None; terminal-only screenshot preference respected"
+}

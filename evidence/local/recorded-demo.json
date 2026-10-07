@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "releaseCommit": "0f8f27c95cae983b8274d649db2435200450c48a",
+  "promotionCommit": "044fcd992a881f610cf778e95419e1972590dc45",
+  "argocd": {
+    "health": "Healthy",
+    "sync": "Synced",
+    "revision": "044fcd992a881f610cf778e95419e1972590dc45"
+  },
+  "httpInfo": {
+    "app": {
+      "name": "ingestion-service",
+      "version": "0f8f27c95cae983b8274d649db2435200450c48a"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+Deleting cluster "capstone-37588149332-1" ...
+Deleted nodes: ["capstone-37588149332-1-control-plane"]
+PASS: temporary cluster is absent

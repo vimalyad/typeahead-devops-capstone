@@ -1,0 +1,33 @@
+2026/10/07 07:39:58 [notice] 1#1: using the "epoll" event method
+2026/10/07 07:39:58 [notice] 1#1: nginx/1.30.5
+2026/10/07 07:39:58 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+2026/10/07 07:39:58 [notice] 1#1: OS: Linux 6.17.0-1022-azure
+2026/10/07 07:39:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1073741816:1073741816
+2026/10/07 07:39:58 [notice] 1#1: start worker processes
+2026/10/07 07:39:58 [notice] 1#1: start worker process 13
+2026/10/07 07:39:58 [notice] 1#1: start worker process 14
+2026/10/07 07:39:58 [notice] 1#1: start worker process 15
+2026/10/07 07:39:58 [notice] 1#1: start worker process 16
+127.0.0.1 - - [07/Oct/2026:07:40:38 +0000] "GET /api/queries HTTP/1.1" 200 275 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "POST /api/queries HTTP/1.1" 201 72 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "GET /api/queries/6 HTTP/1.1" 200 61 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "POST /api/queries HTTP/1.1" 409 45 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "POST /api/queries HTTP/1.1" 400 108 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "PUT /api/queries/6 HTTP/1.1" 200 61 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "POST /api/search HTTP/1.1" 200 22 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "GET /api/queries/6 HTTP/1.1" 200 61 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "GET /api/suggest?q=capstone%20smoke%20d2b403279e HTTP/1.1" 200 77 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "GET / HTTP/1.1" 200 391 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "DELETE /api/queries/6 HTTP/1.1" 204 0 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "GET /api/queries/6 HTTP/1.1" 404 40 "-" "Python-urllib/3.12" "-"
+127.0.0.1 - - [07/Oct/2026:07:40:39 +0000] "DELETE /api/queries/6 HTTP/1.1" 404 108 "-" "Python-urllib/3.12" "-"
+2026/10/07 07:39:58 [notice] 1#1: using the "epoll" event method
+2026/10/07 07:39:58 [notice] 1#1: nginx/1.30.5
+2026/10/07 07:39:58 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+2026/10/07 07:39:58 [notice] 1#1: OS: Linux 6.17.0-1022-azure
+2026/10/07 07:39:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1073741816:1073741816
+2026/10/07 07:39:58 [notice] 1#1: start worker processes
+2026/10/07 07:39:58 [notice] 1#1: start worker process 14
+2026/10/07 07:39:58 [notice] 1#1: start worker process 15
+2026/10/07 07:39:58 [notice] 1#1: start worker process 16
+2026/10/07 07:39:58 [notice] 1#1: start worker process 17

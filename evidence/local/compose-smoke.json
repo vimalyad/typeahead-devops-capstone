@@ -1,0 +1,10 @@
+{
+  "result": "PASS",
+  "checks": [
+    "create/read/update/delete query",
+    "duplicate and validation errors",
+    "Kafka event persisted to PostgreSQL",
+    "trie suggestion refreshed",
+    "frontend served"
+  ]
+}

@@ -1,0 +1,29 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ helm list -n assignment-s21; kubectl -n assignment-s21 get deployments,statefulsets,pods
+[?2004lNAME      	NAMESPACE     	REVISION	UPDATED                                	STATUS  	CHART                     	APP VERSION
+monitoring	assignment-s21	1       	2026-10-07 12:33:41.454255211 +0530 IST	deployed	typeahead-monitoring-0.1.0	           
+typeahead 	assignment-s21	3       	2026-10-07 12:49:10.75871062 +0530 IST 	deployed	typeahead-0.1.0           	0.1.0      
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/frontend             2/2     2            2           43m
+deployment.apps/grafana              1/1     1            1           49m
+deployment.apps/ingestion-service    2/2     2            2           43m
+deployment.apps/prometheus           1/1     1            1           49m
+deployment.apps/redis                1/1     1            1           43m
+deployment.apps/suggestion-service   2/2     2            2           43m
+
+NAME                        READY   AGE
+statefulset.apps/kafka      1/1     43m
+statefulset.apps/postgres   1/1     43m
+
+NAME                                      READY   STATUS    RESTARTS      AGE
+pod/frontend-66f9bbf5cb-5v5c5             1/1     Running   0             9m56s
+pod/frontend-66f9bbf5cb-8lfpd             1/1     Running   0             10m
+pod/grafana-589b7996dd-lswz6              1/1     Running   0             49m
+pod/ingestion-service-7bbb774bff-k2bzs    1/1     Running   0             9m46s
+pod/ingestion-service-7bbb774bff-wsxb7    1/1     Running   0             10m
+pod/kafka-0                               1/1     Running   1 (40m ago)   43m
+pod/postgres-0                            1/1     Running   0             28m
+pod/prometheus-b7bd74db-s4d6k             1/1     Running   0             49m
+pod/redis-647bfd9f67-wnnf2                1/1     Running   0             43m
+pod/suggestion-service-76568485c8-gl6bg   1/1     Running   0             10m
+pod/suggestion-service-76568485c8-twbzb   1/1     Running   0             9m46s
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

@@ -1,0 +1,193 @@
+$ kubectl -n argocd delete application typeahead-capstone --wait=true --timeout=60s
+application.argoproj.io "typeahead-capstone" deleted from argocd namespace
+$ kubectl -n argocd delete appproject typeahead-capstone
+appproject.argoproj.io "typeahead-capstone" deleted from argocd namespace
+$ helm uninstall typeahead monitoring -n assignment-s21 --wait --timeout 5m
+release "typeahead" uninstalled
+release "monitoring" uninstalled
+$ kubectl delete namespace assignment-s21 --wait=true --timeout=180s
+namespace "assignment-s21" deleted
+$ kubectl -n argocd delete -f /var/home/vimal2907/assignment/devops-assignment/.tools/downloads/argocd-core-3.5.3.yaml --ignore-not-found --wait=true --timeout=120s
+Warning: deleting cluster-scoped resources, not scoped to the provided namespace
+customresourcedefinition.apiextensions.k8s.io "applications.argoproj.io" deleted
+customresourcedefinition.apiextensions.k8s.io "applicationsets.argoproj.io" deleted
+customresourcedefinition.apiextensions.k8s.io "appprojects.argoproj.io" deleted
+serviceaccount "argocd-application-controller" deleted from argocd namespace
+serviceaccount "argocd-applicationset-controller" deleted from argocd namespace
+serviceaccount "argocd-redis" deleted from argocd namespace
+serviceaccount "argocd-repo-server" deleted from argocd namespace
+role.rbac.authorization.k8s.io "argocd-application-controller" deleted from argocd namespace
+role.rbac.authorization.k8s.io "argocd-applicationset-controller" deleted from argocd namespace
+role.rbac.authorization.k8s.io "argocd-redis" deleted from argocd namespace
+clusterrole.rbac.authorization.k8s.io "argocd-application-controller" deleted
+rolebinding.rbac.authorization.k8s.io "argocd-application-controller" deleted from argocd namespace
+rolebinding.rbac.authorization.k8s.io "argocd-applicationset-controller" deleted from argocd namespace
+rolebinding.rbac.authorization.k8s.io "argocd-redis" deleted from argocd namespace
+clusterrolebinding.rbac.authorization.k8s.io "argocd-application-controller" deleted
+configmap "argocd-cm" deleted from argocd namespace
+configmap "argocd-cmd-params-cm" deleted from argocd namespace
+configmap "argocd-gpg-keys-cm" deleted from argocd namespace
+configmap "argocd-rbac-cm" deleted from argocd namespace
+configmap "argocd-ssh-known-hosts-cm" deleted from argocd namespace
+configmap "argocd-tls-certs-cm" deleted from argocd namespace
+secret "argocd-secret" deleted from argocd namespace
+service "argocd-applicationset-controller" deleted from argocd namespace
+service "argocd-metrics" deleted from argocd namespace
+service "argocd-redis" deleted from argocd namespace
+service "argocd-repo-server" deleted from argocd namespace
+deployment.apps "argocd-applicationset-controller" deleted from argocd namespace
+deployment.apps "argocd-redis" deleted from argocd namespace
+deployment.apps "argocd-repo-server" deleted from argocd namespace
+statefulset.apps "argocd-application-controller" deleted from argocd namespace
+networkpolicy.networking.k8s.io "argocd-application-controller-network-policy" deleted from argocd namespace
+networkpolicy.networking.k8s.io "argocd-applicationset-controller-network-policy" deleted from argocd namespace
+networkpolicy.networking.k8s.io "argocd-redis-network-policy" deleted from argocd namespace
+networkpolicy.networking.k8s.io "argocd-repo-server-network-policy" deleted from argocd namespace
+$ kubectl delete namespace argocd --wait=true --timeout=120s
+namespace "argocd" deleted
+$ minikube addons disable ingress -p devops-assignment
+* "The 'ingress' addon is disabled
+$ kubectl wait --for=delete namespace/ingress-nginx --timeout=120s
+$ kubectl get namespaces -o json
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Namespace",
+            "metadata": {
+                "creationTimestamp": "2026-10-06T17:43:46Z",
+                "labels": {
+                    "kubernetes.io/metadata.name": "default"
+                },
+                "name": "default",
+                "resourceVersion": "23",
+                "uid": "ba7ff085-5acb-41dd-8caa-06dcec59390b"
+            },
+            "spec": {
+                "finalizers": [
+                    "kubernetes"
+                ]
+            },
+            "status": {
+                "phase": "Active"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Namespace",
+            "metadata": {
+                "creationTimestamp": "2026-10-06T17:43:46Z",
+                "labels": {
+                    "kubernetes.io/metadata.name": "kube-node-lease"
+                },
+                "name": "kube-node-lease",
+                "resourceVersion": "33",
+                "uid": "4e80e486-a0bc-4b77-a7ab-3518ae7139ab"
+            },
+            "spec": {
+                "finalizers": [
+                    "kubernetes"
+                ]
+            },
+            "status": {
+                "phase": "Active"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Namespace",
+            "metadata": {
+                "creationTimestamp": "2026-10-06T17:43:46Z",
+                "labels": {
+                    "kubernetes.io/metadata.name": "kube-public"
+                },
+                "name": "kube-public",
+                "resourceVersion": "15",
+                "uid": "389decef-4d28-4172-b566-efce18ab1fd0"
+            },
+            "spec": {
+                "finalizers": [
+                    "kubernetes"
+                ]
+            },
+            "status": {
+                "phase": "Active"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Namespace",
+            "metadata": {
+                "creationTimestamp": "2026-10-06T17:43:46Z",
+                "labels": {
+                    "kubernetes.io/metadata.name": "kube-system"
+                },
+                "name": "kube-system",
+                "resourceVersion": "4",
+                "uid": "8177f397-dcce-4c78-ba44-4009ad472b72"
+            },
+            "spec": {
+                "finalizers": [
+                    "kubernetes"
+                ]
+            },
+            "status": {
+                "phase": "Active"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}
+$ kubectl get pv -o json
+{
+    "apiVersion": "v1",
+    "items": [],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}
+$ docker compose --env-file /var/home/vimal2907/assignment/devops-assignment/.local/session21-compose.env down --volumes --remove-orphans
+ Container assignment-s21-frontend-1 Stopping 
+ Container assignment-s21-frontend-1 Stopped 
+ Container assignment-s21-frontend-1 Removing 
+ Container assignment-s21-frontend-1 Removed 
+ Container assignment-s21-ingestion-service-1 Stopping 
+ Container assignment-s21-suggestion-service-1 Stopping 
+ Container assignment-s21-suggestion-service-1 Stopped 
+ Container assignment-s21-suggestion-service-1 Removing 
+ Container assignment-s21-suggestion-service-1 Removed 
+ Container assignment-s21-redis-1 Stopping 
+ Container assignment-s21-ingestion-service-1 Stopped 
+ Container assignment-s21-ingestion-service-1 Removing 
+ Container assignment-s21-redis-1 Stopped 
+ Container assignment-s21-redis-1 Removing 
+ Container assignment-s21-ingestion-service-1 Removed 
+ Container assignment-s21-postgres-1 Stopping 
+ Container assignment-s21-kafka-1 Stopping 
+ Container assignment-s21-redis-1 Removed 
+ Container assignment-s21-postgres-1 Stopped 
+ Container assignment-s21-postgres-1 Removing 
+ Container assignment-s21-postgres-1 Removed 
+ Container assignment-s21-kafka-1 Stopped 
+ Container assignment-s21-kafka-1 Removing 
+ Container assignment-s21-kafka-1 Removed 
+ Volume assignment-s21_kafkadata Removing 
+ Volume assignment-s21_pgdata Removing 
+ Network assignment-s21_default Removing 
+ Volume assignment-s21_kafkadata Removed 
+ Volume assignment-s21_pgdata Removed 
+ Network assignment-s21_default Removed 
+$ docker container ls -q --filter label=com.docker.compose.project=assignment-s21
+$ docker network ls -q --filter label=com.docker.compose.project=assignment-s21
+$ docker volume ls -q --filter label=com.docker.compose.project=assignment-s21
+$ minikube stop -p devops-assignment
+* Stopping node "devops-assignment"  ...
+* Powering off "devops-assignment" via SSH ...
+* 1 node stopped.
+$ minikube status -p devops-assignment -o json
+{"Name":"devops-assignment","Host":"Stopped","Kubelet":"Stopped","APIServer":"Stopped","Kubeconfig":"Stopped","Worker":false}

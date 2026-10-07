@@ -1,0 +1,36 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ cat evidence/local/cleanup.json evidence/ci/deployment/cleanup.txt
+[?2004l{
+  "started_at": "2026-10-07T07:53:17.350647+00:00",
+  "finished_at": "2026-10-07T07:54:32.364407+00:00",
+  "application_and_monitoring_uninstalled": true,
+  "argocd_manifest_removed": true,
+  "ingress_addon_disabled": true,
+  "remaining_kubernetes_namespaces": [
+    "default",
+    "kube-node-lease",
+    "kube-public",
+    "kube-system"
+  ],
+  "remaining_assignment_persistent_volumes": 0,
+  "remaining_compose_resources": {
+    "container": [],
+    "network": [],
+    "volume": []
+  },
+  "unrelated_running_container_ids_unchanged": true,
+  "unrelated_running_container_count": 9,
+  "minikube_status": {
+    "Name": "devops-assignment",
+    "Host": "Stopped",
+    "Kubelet": "Stopped",
+    "APIServer": "Stopped",
+    "Kubeconfig": "Stopped",
+    "Worker": false
+  },
+  "capstone_aws_apply_attempted": false,
+  "result": "PASS"
+}
+Deleting cluster "capstone-37588149332-1" ...
+Deleted nodes: ["capstone-37588149332-1-control-plane"]
+PASS: temporary cluster is absent
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

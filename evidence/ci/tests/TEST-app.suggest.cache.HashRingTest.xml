@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.suggest.cache.HashRingTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-07T07:35:34.798Z" hostname="runnervm8df0l" time="0.2">
+  <properties/>
+  <testcase name="distributesKeysRoughlyEvenlyAcrossNodes()" classname="app.suggest.cache.HashRingTest" time="0.101"/>
+  <testcase name="removingANodeRemapsOnlyAboutOneThirdOfKeys()" classname="app.suggest.cache.HashRingTest" time="0.096"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

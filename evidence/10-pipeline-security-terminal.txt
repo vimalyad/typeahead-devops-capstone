@@ -1,0 +1,28 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ jq '{url,headSha,conclusion,jobs:[.jobs[]|{name,conclusion}]}' evidence/ci/run.json; jq -r '[.ArtifactName, ([.Results[]?.Vulnerabilities[]?] | length)] | @tsv' evidence/ci/images/*-trivy.json
+[?2004l{
+  "url": "https://github.com/vimalyad/devops-heros/actions/runs/37588149332",
+  "headSha": "0f8f27c95cae983b8274d649db2435200450c48a",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "name": "test",
+      "conclusion": "success"
+    },
+    {
+      "name": "security",
+      "conclusion": "success"
+    },
+    {
+      "name": "images",
+      "conclusion": "success"
+    },
+    {
+      "name": "deploy",
+      "conclusion": "success"
+    }
+  ]
+}
+ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a	0
+ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a	0
+ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a	0
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

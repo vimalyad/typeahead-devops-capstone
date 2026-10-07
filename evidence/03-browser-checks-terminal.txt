@@ -1,0 +1,22 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ cat evidence/local/browser-ui-check.json evidence/local/compose-persistence.json
+[?2004l{
+  "result": "PASS",
+  "transport": "Playwright connected to existing Chromium through CDP",
+  "checks": [
+    "page loaded",
+    "created a query through the form",
+    "edited count through the form",
+    "deleted query through the form",
+    "cache inspector uses live owner lookup",
+    "expanded cache inspector fits the 390px mobile viewport",
+    "zero browser page errors"
+  ],
+  "screenshots": "None; terminal-only screenshot preference respected"
+}
+{
+  "result": "PASS",
+  "check": "Created row survived PostgreSQL container restart and was read through the API",
+  "allTimeCount": 23,
+  "testRowDeleted": true
+}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

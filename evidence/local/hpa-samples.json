@@ -1,0 +1,938 @@
+[
+  {
+    "at": "2026-10-07T07:21:31.425454+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 30,
+                "averageValue": "30m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 15,
+                "averageValue": "15m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:35.516487+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 30,
+                "averageValue": "30m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 15,
+                "averageValue": "15m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:39.587944+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 30,
+                "averageValue": "30m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 15,
+                "averageValue": "15m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:43.675128+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 2,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:47.726362+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 2,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:51.818871+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 2,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:55.920672+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:21:59.981694+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:04.024932+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:08.103246+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:12.158093+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:16.234150+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:20.300877+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:24.366665+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:28.405835+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:32.445022+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:36.487286+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 19,
+                "averageValue": "19m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 403,
+                "averageValue": "403m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:40.525409+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:44.563740+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:48.608087+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:52.651973+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:22:56.697592+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:23:00.739195+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-10-07T07:23:04.787541+00:00",
+    "hpa": [
+      {
+        "name": "ingestion-service",
+        "current": 2,
+        "desired": 2,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 17,
+                "averageValue": "17m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      },
+      {
+        "name": "suggestion-service",
+        "current": 3,
+        "desired": 3,
+        "metrics": [
+          {
+            "resource": {
+              "current": {
+                "averageUtilization": 272,
+                "averageValue": "272m"
+              },
+              "name": "cpu"
+            },
+            "type": "Resource"
+          }
+        ]
+      }
+    ]
+  }
+]

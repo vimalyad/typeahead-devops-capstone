@@ -1,0 +1,32 @@
+NAME                                      READY   STATUS    RESTARTS      AGE   IP            NODE                                   NOMINATED NODE   READINESS GATES
+pod/frontend-66f9bbf5cb-mvp6k             1/1     Running   0             43s   10.244.0.10   capstone-37588149332-1-control-plane   <none>           <none>
+pod/frontend-66f9bbf5cb-tnfqb             1/1     Running   0             43s   10.244.0.6    capstone-37588149332-1-control-plane   <none>           <none>
+pod/ingestion-service-7bbb774bff-9f8md    1/1     Running   1 (25s ago)   43s   10.244.0.11   capstone-37588149332-1-control-plane   <none>           <none>
+pod/ingestion-service-7bbb774bff-snp2z    1/1     Running   1 (26s ago)   43s   10.244.0.8    capstone-37588149332-1-control-plane   <none>           <none>
+pod/kafka-0                               1/1     Running   0             43s   10.244.0.14   capstone-37588149332-1-control-plane   <none>           <none>
+pod/postgres-0                            1/1     Running   0             43s   10.244.0.15   capstone-37588149332-1-control-plane   <none>           <none>
+pod/redis-647bfd9f67-vhfgt                1/1     Running   0             43s   10.244.0.9    capstone-37588149332-1-control-plane   <none>           <none>
+pod/suggestion-service-76568485c8-fqsfp   1/1     Running   1 (21s ago)   43s   10.244.0.7    capstone-37588149332-1-control-plane   <none>           <none>
+pod/suggestion-service-76568485c8-q5fnr   1/1     Running   1 (22s ago)   43s   10.244.0.5    capstone-37588149332-1-control-plane   <none>           <none>
+
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS           IMAGES                                                                                    SELECTOR
+deployment.apps/frontend             2/2     2            2           43s   frontend             ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a     app=frontend
+deployment.apps/ingestion-service    2/2     2            2           43s   ingestion-service    ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a    app=ingestion-service
+deployment.apps/redis                1/1     1            1           43s   redis                redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499    app=redis
+deployment.apps/suggestion-service   2/2     2            2           43s   suggestion-service   ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a   app=suggestion-service
+
+NAME                        READY   AGE   CONTAINERS   IMAGES
+statefulset.apps/kafka      1/1     43s   kafka        apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f
+statefulset.apps/postgres   1/1     43s   postgres     postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea
+
+NAME                         TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)             AGE   SELECTOR
+service/frontend             ClusterIP   10.96.205.189   <none>        8080/TCP            43s   app=frontend
+service/ingestion-service    ClusterIP   10.96.59.26     <none>        8082/TCP            43s   app=ingestion-service
+service/kafka                ClusterIP   None            <none>        9092/TCP,9093/TCP   43s   app=kafka
+service/postgres             ClusterIP   10.96.98.103    <none>        5432/TCP            43s   app=postgres
+service/redis                ClusterIP   10.96.115.142   <none>        6379/TCP            43s   app=redis
+service/suggestion-service   ClusterIP   10.96.63.233    <none>        8081/TCP            43s   app=suggestion-service
+
+NAME                                    STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE   VOLUMEMODE
+persistentvolumeclaim/data-kafka-0      Bound    pvc-2fab44f9-1f88-479b-a4c0-8c88ed363bf5   1Gi        RWO            standard       <unset>                 43s   Filesystem
+persistentvolumeclaim/data-postgres-0   Bound    pvc-1ee8b8cf-782e-4a75-9d97-80eeae08924f   1Gi        RWO            standard       <unset>                 43s   Filesystem

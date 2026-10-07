@@ -1,0 +1,30 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ kubectl -n argocd get application typeahead-capstone -o json | jq '{health:.status.health.status,sync:.status.sync.status,revision:.status.sync.revision}'; kubectl get --raw /api/v1/namespaces/assignment-s21/services/ingestion-service:8082/proxy/info | jq .; git log --oneline --reverse f14b772..HEAD
+[?2004l{
+  "health": "Healthy",
+  "sync": "Synced",
+  "revision": "044fcd992a881f610cf778e95419e1972590dc45"
+}
+{
+  "app": {
+    "name": "ingestion-service",
+    "version": "0f8f27c95cae983b8274d649db2435200450c48a"
+  }
+}
+[33m6f1f393[m Bring Typeahead services into the capstone workspace
+[33m2ed8bfd[m Add a persistent query catalog with validated CRUD endpoints
+[33m7735fa1[m Add query catalog editing to the Typeahead interface
+[33m694b423[m Update and lock dependencies to clear the vulnerability gate
+[33m9f8b5cb[m Expose health and metrics and isolate replica cache generations
+[33m45ae367[m Define Helm workloads with probes, autoscaling and persistent services
+[33mddb2128[m Define a temporary EKS cluster with one worker and encrypted storage
+[33m452902a[m Provision replica metrics and a Typeahead Grafana dashboard
+[33m6851cc6[m Package the complete stack in non-root multistage containers
+[33mb4179aa[m Gate SHA-tagged releases with tests, security scans and Helm smoke checks
+[33mfc33ce6[m Track Typeahead releases through a scoped Argo CD application
+[33md417521[m Replace the vulnerable Debian runtime and collect every image scan
+[33m7c0f69a[m Publish Kafka controller DNS before broker readiness
+[33m0349d1d[m Restart failed Kafka consumer sessions without losing uncommitted events
+[33mcc9ed2c[m Promote the verified Kafka recovery release to the GitOps deployment
+[33m0f8f27c[m Keep cache diagnostics accurate and readable on small screens
+[33m044fcd9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32massignment/session21-typeahead-capstone[m[33m, [m[1;31mpr-fork/assignment/session21-typeahead-capstone[m[33m)[m Promote the verified catalog interface release
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

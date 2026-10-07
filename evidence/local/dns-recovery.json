@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "fault": "Kafka bootstrap hostname initially had no DNS record",
+  "observed": "Consumer creation failed and the worker retried",
+  "fix": "Added the broker DNS alias on the isolated Compose network",
+  "recovery": "HTTP smoke test confirmed Kafka event reached PostgreSQL and suggestions",
+  "containerRestartedForRecovery": false
+}

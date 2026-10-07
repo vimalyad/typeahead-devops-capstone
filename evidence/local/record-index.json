@@ -1,0 +1,23 @@
+{
+  "session21-consumer-retry-tests.txt": "java-tests.txt",
+  "session21-compose-alpine-smoke.json": "compose-smoke.json",
+  "session21-ui-check.json": "browser-ui-check.json",
+  "session21-compose-persistence.json": "compose-persistence.json",
+  "session21-ingress-retry-smoke.json": "ingress-smoke.json",
+  "session21-kube-persistence.json": "kubernetes-persistence.json",
+  "session21-load.json": "http-load.json",
+  "session21-hpa-samples.json": "hpa-samples.json",
+  "session21-hpa-after-load.json": "hpa-after-load.json",
+  "session21-hpa-summary.json": "hpa-summary.json",
+  "session21-prometheus-targets.json": "prometheus-targets.json",
+  "session21-grafana-query.json": "grafana-query.json",
+  "session21-monitoring-summary.json": "monitoring-summary.json",
+  "session21-dns-recovery.json": "dns-recovery.json",
+  "session21-dns-recovery-smoke.json": "dns-recovery-smoke.json",
+  "session21-service-recovery.json": "service-recovery.json",
+  "session21-service-fault-endpoints.json": "failed-service-endpoints.json",
+  "session21-service-fault-http.txt": "failed-service-http-status.txt",
+  "session21-drift-summary.json": "gitops-drift-repair.json",
+  "session21-terraform-init.txt": "terraform-init.txt",
+  "session21-terraform-plan.txt": "terraform-plan.txt"
+}

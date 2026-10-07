@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "fault": "Service selector pointed at an absent pod label",
+  "diagnosis": "EndpointSlice had zero endpoints",
+  "observedHttpStatus": 503,
+  "fix": "Restored selector app=ingestion-service",
+  "recoveredHttpStatus": 200
+}

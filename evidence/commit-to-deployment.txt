@@ -1,0 +1,1366 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ bash /var/home/vimal2907/assignment/devops-assignment/.local/session21-live-demo.sh
+[?2004l+ git diff -- application/frontend/src/components/CacheInspector.tsx application/frontend/src/components/SearchTypeahead.tsx
+[1mdiff --git a/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/CacheInspector.tsx b/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/CacheInspector.tsx[m
+[1mindex 5634c1a..f3552a0 100644[m
+[1m--- a/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/CacheInspector.tsx[m
+[1m+++ b/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/CacheInspector.tsx[m
+[36m@@ -44,9 +44,9 @@[m [mexport function CacheInspector({ prefix }: CacheInspectorProps) {[m
+ [m
+   return ([m
+     <div className="rounded-xl2 border border-black/[0.06] bg-surface-raised px-5 py-4 text-sm shadow-sm animate-fade-in">[m
+[31m-      <div className="mb-3 flex items-center gap-2 text-ink-faint">[m
+[32m+[m[32m      <div className="mb-3 flex flex-wrap items-center gap-2 text-ink-faint">[m
+         <span className="text-xs font-semibold uppercase tracking-[0.14em]">Cache routing</span>[m
+[31m-        <span className="text-ink-faint/70">— consistent-hash ring over 3 Redis nodes</span>[m
+[32m+[m[32m        <span className="text-ink-faint/70">— live owner lookup</span>[m
+       </div>[m
+ [m
+       {debounced.length === 0 ? ([m
+[36m@@ -79,7 +79,7 @@[m [mexport function CacheInspector({ prefix }: CacheInspectorProps) {[m
+             <span className="font-medium text-ink">v{data.generation}</span>[m
+           </Field>[m
+           <Field label="key">[m
+[31m-            <code className="text-ink-soft">{data.key}</code>[m
+[32m+[m[32m            <code className="min-w-0 break-all text-ink-soft">{data.key}</code>[m
+           </Field>[m
+         </div>[m
+       ) : ([m
+[36m@@ -91,7 +91,7 @@[m [mexport function CacheInspector({ prefix }: CacheInspectorProps) {[m
+ [m
+ function Field({ label, children }: { label: string; children: React.ReactNode }) {[m
+   return ([m
+[31m-    <span className="inline-flex items-center gap-2">[m
+[32m+[m[32m    <span className="inline-flex max-w-full flex-wrap items-center gap-2">[m
+       <span className="text-ink-faint">{label}</span>[m
+       {children}[m
+     </span>[m
+[1mdiff --git a/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/SearchTypeahead.tsx b/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/SearchTypeahead.tsx[m
+[1mindex f0f68bb..f890631 100644[m
+[1m--- a/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/SearchTypeahead.tsx[m
+[1m+++ b/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/frontend/src/components/SearchTypeahead.tsx[m
+[36m@@ -113,7 +113,8 @@[m [mexport function SearchTypeahead({ query, onQueryChange, onSubmit }: SearchTypeah[m
+           onFocus={() => setOpen(true)}[m
+           onBlur={() => setOpen(false)}[m
+           onKeyDown={onKeyDown}[m
+[31m-          placeholder="Search products…"[m
+[32m+[m[32m          placeholder="Search the query catalog…"[m
+[32m+[m[32m          aria-label="Search the query catalog"[m
+           autoComplete="off"[m
+           spellCheck={false}[m
+           role="combobox"[m
++ cd application/frontend
++ npm run build
+
+> typeahead-frontend@0.1.0 build
+> tsc && vite build
+
+vite v8.3.3 building client environment for production...
+[2Ktransforming (12) src/App.tsx[2Ktransforming (23) src/index.css[2K✓ 23 modules transformed.
+[2Krendering chunks (1)...[2Kcomputing gzip size...
+[2Kdist/index.html                   0.39 kB │ gzip:  0.26 kB
+dist/assets/index-Crn5kwdM.css   16.70 kB │ gzip:  4.34 kB
+dist/assets/index-CuX59Hq5.js   154.88 kB │ gzip: 50.14 kB
+
+✓ built in 504ms
+⠙[1G[0K+ git add application/frontend/src/components/CacheInspector.tsx application/frontend/src/components/SearchTypeahead.tsx
++ git -c 'user.name=Vimal Kumar Yadav' -c user.email=174954713+vimalyad@users.noreply.github.com commit -m 'Keep cache diagnostics accurate and readable on small screens'
+[assignment/session21-typeahead-capstone 0f8f27c] Keep cache diagnostics accurate and readable on small screens
+ 2 files changed, 6 insertions(+), 5 deletions(-)
++ git push pr-fork HEAD
+Enumerating objects: 20, done.
+Counting objects:   5% (1/20)Counting objects:  10% (2/20)Counting objects:  15% (3/20)Counting objects:  20% (4/20)Counting objects:  25% (5/20)Counting objects:  30% (6/20)Counting objects:  35% (7/20)Counting objects:  40% (8/20)Counting objects:  45% (9/20)Counting objects:  50% (10/20)Counting objects:  55% (11/20)Counting objects:  60% (12/20)Counting objects:  65% (13/20)Counting objects:  70% (14/20)Counting objects:  75% (15/20)Counting objects:  80% (16/20)Counting objects:  85% (17/20)Counting objects:  90% (18/20)Counting objects:  95% (19/20)Counting objects: 100% (20/20)Counting objects: 100% (20/20), done.
+Delta compression using up to 16 threads
+Compressing objects:  11% (1/9)Compressing objects:  22% (2/9)Compressing objects:  33% (3/9)Compressing objects:  44% (4/9)Compressing objects:  55% (5/9)Compressing objects:  66% (6/9)Compressing objects:  77% (7/9)Compressing objects:  88% (8/9)Compressing objects: 100% (9/9)Compressing objects: 100% (9/9), done.
+Writing objects:   9% (1/11)Writing objects:  18% (2/11)Writing objects:  27% (3/11)Writing objects:  36% (4/11)Writing objects:  45% (5/11)Writing objects:  54% (6/11)Writing objects:  63% (7/11)Writing objects:  72% (8/11)Writing objects:  81% (9/11)Writing objects:  90% (10/11)Writing objects: 100% (11/11)Writing objects: 100% (11/11), 1.34 KiB | 1.34 MiB/s, done.
+Total 11 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  14% (1/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.
+To https://github.com/vimalyad/devops-heros.git
+   cc9ed2c..0f8f27c  HEAD -> assignment/session21-typeahead-capstone
+++ git rev-parse HEAD
++ export RELEASE_SHA=0f8f27c95cae983b8274d649db2435200450c48a
++ RELEASE_SHA=0f8f27c95cae983b8274d649db2435200450c48a
++ python3 /var/home/vimal2907/assignment/devops-assignment/.local/session21-watch-ci.py
+{
+  "databaseId": 37588149332,
+  "headSha": "0f8f27c95cae983b8274d649db2435200450c48a",
+  "status": "queued",
+  "url": "https://github.com/vimalyad/devops-heros/actions/runs/37588149332"
+}
+++ cat /var/home/vimal2907/assignment/devops-assignment/.local/session21-demo-run-id
++ run_id=37588149332
++ gh run watch 37588149332 --repo vimalyad/devops-heros --exit-status --interval 10
+[?1049h[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push less than a minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  * Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push less than a minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push less than a minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push less than a minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push less than a minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 1 minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 1 minute ago
+
+JOBS
+* test (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  * Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 1 minute ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* security (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Install pinned scanners
+  * SAST
+  * Dependency gate
+  * Scan assignment Git history for secrets
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 1 minute ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* security (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Install pinned scanners
+  * SAST
+  * Dependency gate
+  * Scan assignment Git history for secrets
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 1 minute ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* security (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  * Dependency gate
+  * Scan assignment Git history for secrets
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  * Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 2 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 3 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  * Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 3 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 3 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 3 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  * Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 3 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 4 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  * Publish and retrieve immutable SHA images
+  * Log out
+  * Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 4 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* images (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 4 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 4 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 4 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 5 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 5 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 5 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 5 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 5 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 6 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[0;0H[JRefreshing run status every 10 seconds. Press Ctrl+C to quit.
+
+* assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 6 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+* deploy (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  * Verify the complete stack with Helm in temporary Kubernetes
+  * Ensure cluster cleanup
+  * Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  * Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+[?1049l✓ assignment/session21-typeahead-capstone Typeahead capstone · 37588149332
+Triggered via push about 6 minutes ago
+
+JOBS
+✓ test in 1m19s (ID 112682997096)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Run isolated Java tests and build frontend
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+  ✓ Post Run actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ security in 34s (ID 112683456764)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Install pinned scanners
+  ✓ SAST
+  ✓ Dependency gate
+  ✓ Scan assignment Git history for secrets
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ images in 2m24s (ID 112683666735)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Build all three non-root runtime images
+  ✓ Reject HIGH and CRITICAL vulnerabilities in every image
+  ✓ Publish and retrieve immutable SHA images
+  ✓ Log out
+  ✓ Export tested images for the deployment job
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+✓ deploy in 1m52s (ID 112684467580)
+  ✓ Set up job
+  ✓ Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Run actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+  ✓ Install cluster tools and load build artifacts
+  ✓ Verify the complete stack with Helm in temporary Kubernetes
+  ✓ Ensure cluster cleanup
+  ✓ Run actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+  ✓ Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+  ✓ Complete job
+
+✓ Run Typeahead capstone (37588149332) completed with 'success'
++ for component in ingestion suggestion frontend
++ image_ref=ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
++ docker pull ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
+0f8f27c95cae983b8274d649db2435200450c48a: Pulling from vimalyad/typeahead-capstone-ingestion
+
+[1A[2K0049373339b5: Pulling fs layer [1B
+[1A[2K2214e0f0b7c0: Pulling fs layer [1B[1A[2K2214e0f0b7c0: Download complete [1B[1A[2K2214e0f0b7c0: Pull complete [1B[2A[2K0049373339b5: Downloading [=>                                                 ]  1.049MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=>                                                 ]  1.049MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=>                                                 ]  1.049MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=>                                                 ]  1.049MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=>                                                 ]  1.896MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==>                                                ]  2.097MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==>                                                ]  2.097MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===>                                               ]  3.146MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===>                                               ]  3.146MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===>                                               ]  3.146MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===>                                               ]  3.146MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====>                                              ]  4.194MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====>                                              ]  4.194MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====>                                              ]  4.194MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====>                                             ]  5.243MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====>                                             ]  5.243MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====>                                             ]  5.243MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======>                                            ]  6.291MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======>                                            ]  6.291MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=======>                                           ]   7.34MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=======>                                           ]   7.34MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=======>                                           ]   7.34MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========>                                          ]  8.389MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========>                                          ]  8.389MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========>                                          ]  8.389MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========>                                         ]  9.437MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========>                                         ]  9.437MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========>                                        ]  10.49MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========>                                        ]  10.49MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========>                                        ]  10.49MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============>                                      ]  11.53MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============>                                      ]  11.53MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============>                                      ]  11.53MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============>                                     ]  12.58MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============>                                     ]  12.58MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============>                                     ]  12.58MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============>                                    ]  13.63MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============>                                    ]  13.63MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===============>                                   ]  14.68MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===============>                                   ]  14.68MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================>                                  ]  15.73MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================>                                  ]  15.73MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================>                                  ]  15.73MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================>                                  ]  15.73MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================>                                  ]  15.73MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=================>                                 ]  16.78MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================>                                ]  17.83MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================>                                ]  17.83MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================>                                ]  17.83MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================>                                ]  17.83MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===================>                               ]  18.87MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===================>                               ]  18.87MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===================>                               ]  18.87MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================>                              ]  19.92MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================>                              ]  19.92MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================>                              ]  19.92MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================>                              ]  19.92MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================>                              ]  19.92MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================>                              ]  19.92MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====================>                             ]  20.97MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====================>                             ]  20.97MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======================>                            ]  22.02MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======================>                            ]  22.02MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========================>                          ]  23.07MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========================>                          ]  23.07MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========================>                          ]  23.07MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========================>                         ]  24.12MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========================>                         ]  24.12MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========================>                         ]  24.12MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========================>                        ]  25.17MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========================>                        ]  25.17MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========================>                        ]  25.17MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========================>                        ]  25.17MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===========================>                       ]  26.21MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===========================>                       ]  26.21MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===========================>                       ]  26.21MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================>                      ]  27.26MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================>                      ]  27.26MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================>                      ]  27.26MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================>                      ]  27.26MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================>                      ]  27.26MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================>                      ]  27.26MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============================>                     ]  28.31MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================>                    ]  29.36MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================>                    ]  29.36MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================>                    ]  29.36MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================>                    ]  29.36MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===============================>                   ]  30.41MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===============================>                   ]  30.41MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===============================>                   ]  30.41MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================>                  ]  31.46MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================>                  ]  31.46MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================>                  ]  31.46MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================>                  ]  31.46MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================>                  ]  31.46MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================>                  ]  31.46MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=================================>                 ]  32.51MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=================================>                 ]  32.51MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=================================>                 ]  32.51MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================================>                ]  33.55MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================================>                ]  33.55MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================================>                ]  33.55MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==================================>                ]  33.55MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================================>              ]   34.6MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================================>              ]   34.6MB/47.98MB[2B[2A[2K0049373339b5: Downloading [====================================>              ]   34.6MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====================================>             ]  35.65MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====================================>             ]  35.65MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=====================================>             ]  35.65MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======================================>            ]   36.7MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======================================>            ]   36.7MB/47.98MB[2B[2A[2K0049373339b5: Downloading [======================================>            ]   36.7MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=======================================>           ]  37.75MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=======================================>           ]  37.75MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=======================================>           ]  37.75MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========================================>          ]   38.8MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========================================>          ]   38.8MB/47.98MB[2B[2A[2K0049373339b5: Downloading [========================================>          ]   38.8MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========================================>         ]  39.85MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========================================>         ]  39.85MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=========================================>         ]  39.85MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========================================>        ]  40.89MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==========================================>        ]  40.89MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===========================================>       ]  41.94MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===========================================>       ]  41.94MB/47.98MB[2B[2A[2K0049373339b5: Downloading [===========================================>       ]  41.94MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================================>      ]  42.99MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================================>      ]  42.99MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================================>      ]  42.99MB/47.98MB[2B[2A[2K0049373339b5: Downloading [============================================>      ]  42.99MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============================================>     ]  44.04MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============================================>     ]  44.04MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============================================>     ]  44.04MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============================================>     ]  44.04MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=============================================>     ]  44.04MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================================>    ]  45.09MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================================>    ]  45.09MB/47.98MB[2B[2A[2K0049373339b5: Downloading [==============================================>    ]  45.09MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================================>  ]  46.14MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================================>  ]  46.14MB/47.98MB[2B[2A[2K0049373339b5: Downloading [================================================>  ]  46.14MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=================================================> ]  47.19MB/47.98MB[2B[2A[2K0049373339b5: Downloading [=================================================> ]  47.19MB/47.98MB[2B[2A[2K0049373339b5: Download complete [2B[2A[2K0049373339b5: Extracting 1 s[2B[2A[2K0049373339b5: Extracting 1 s[2B[2A[2K0049373339b5: Extracting 1 s[2B[2A[2K0049373339b5: Pull complete [2BDigest: sha256:b1055eb4395c14fab69f0419ab6aa27acb88f09a2498784ff538df26298f9f47
+Status: Downloaded newer image for ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
+ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
++ minikube image load ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a
++ for component in ingestion suggestion frontend
++ image_ref=ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
++ docker pull ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
+0f8f27c95cae983b8274d649db2435200450c48a: Pulling from vimalyad/typeahead-capstone-suggestion
+
+[1A[2K4d30ab922aac: Pulling fs layer [1B[1A[2K4d30ab922aac: Downloading [=>                                                 ]  1.049MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=>                                                 ]  1.049MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=>                                                 ]  1.049MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===>                                               ]  2.097MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===>                                               ]  2.097MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===>                                               ]  2.097MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===>                                               ]  2.097MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===>                                               ]  2.097MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====>                                              ]  3.146MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====>                                              ]  3.146MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======>                                            ]  4.194MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======>                                            ]  4.194MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======>                                            ]  4.194MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======>                                            ]  4.194MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======>                                           ]  5.243MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======>                                           ]  5.243MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======>                                           ]  5.243MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======>                                           ]  5.243MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========>                                         ]  6.291MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========>                                         ]  6.291MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========>                                         ]  6.291MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========>                                         ]  6.291MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========>                                        ]   7.34MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========>                                        ]   7.34MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========>                                        ]   7.34MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============>                                      ]  8.389MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============>                                      ]  8.389MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============>                                      ]  8.389MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============>                                      ]  8.389MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============>                                      ]  8.389MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============>                                     ]  9.437MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============>                                   ]  10.49MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============>                                   ]  10.49MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============>                                   ]  10.49MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============>                                   ]  10.49MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============>                                   ]  10.49MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================>                                  ]  11.53MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==================>                                ]  12.58MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==================>                                ]  12.58MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==================>                                ]  12.58MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==================>                                ]  12.58MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==================>                                ]  12.58MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==================>                                ]  12.58MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [====================>                              ]  13.63MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================>                             ]  14.68MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================>                             ]  14.68MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================>                             ]  14.68MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================>                             ]  14.68MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======================>                           ]  15.73MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======================>                           ]  15.73MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=======================>                           ]  15.73MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================>                          ]  16.78MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================>                          ]  16.78MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================>                          ]  16.78MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========================>                        ]  17.83MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========================>                        ]  17.83MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========================>                        ]  17.83MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==========================>                        ]  17.83MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================>                       ]  18.87MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================>                       ]  18.87MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================>                       ]  18.87MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============================>                     ]  19.92MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=============================>                     ]  19.92MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================>                    ]  20.97MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================>                    ]  20.97MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================>                    ]  20.97MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================>                    ]  20.97MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [================================>                  ]  22.02MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=================================>                 ]  23.07MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===================================>               ]  24.12MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=====================================>             ]  25.17MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======================================>            ]  26.21MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======================================>            ]  26.21MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======================================>            ]  26.21MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======================================>            ]  26.21MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======================================>            ]  26.21MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [======================================>            ]  26.21MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [========================================>          ]  27.26MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========================================>         ]  28.31MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========================================>         ]  28.31MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========================================>         ]  28.31MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========================================>         ]  28.31MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========================================>         ]  28.31MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [=========================================>         ]  28.31MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===========================================>       ]  29.36MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============================================>      ]  30.41MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============================================>      ]  30.41MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [============================================>      ]  30.41MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================================>    ]  31.46MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================================>    ]  31.46MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [==============================================>    ]  31.46MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============================================>   ]  32.51MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============================================>   ]  32.51MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============================================>   ]  32.51MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============================================>   ]  32.51MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============================================>   ]  32.51MB/33.96MB[1B[1A[2K4d30ab922aac: Downloading [===============================================>   ]  32.51MB/33.96MB[1B[1A[2K4d30ab922aac: Download complete [1B[1A[2K4d30ab922aac: Extracting 1 s[1B[1A[2K4d30ab922aac: Extracting 1 s[1B[1A[2K4d30ab922aac: Extracting 1 s[1B[1A[2K4d30ab922aac: Pull complete [1BDigest: sha256:92639000be78f38e621d72b31f951a60a8ed7e5a3284c3560fc4d73fe62d5d0d
+Status: Downloaded newer image for ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
+ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
++ minikube image load ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a
++ for component in ingestion suggestion frontend
++ image_ref=ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
++ docker pull ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
+0f8f27c95cae983b8274d649db2435200450c48a: Pulling from vimalyad/typeahead-capstone-frontend
+
+[1A[2Kf02f497b0583: Pulling fs layer [1B
+[1A[2Ka7d7e408ee5b: Pulling fs layer [1B[2A[2Kf02f497b0583: Download complete [2B[1A[2Ka7d7e408ee5b: Downloading [==================================================>]     501B/501B[1B[1A[2Ka7d7e408ee5b: Download complete [1B[1A[2Ka7d7e408ee5b: Pull complete [1B[2A[2Kf02f497b0583: Pull complete [2BDigest: sha256:29b68f0d528715623e3cd4abfdd031a69e557cb79dd49af14bb07a674cffe385
+Status: Downloaded newer image for ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
+ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
++ minikube image load ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a
++ python3 -
++ git diff -- gitops/values.yaml
+[1mdiff --git a/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/gitops/values.yaml b/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/gitops/values.yaml[m
+[1mindex 685a8ff..394e031 100644[m
+[1m--- a/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/gitops/values.yaml[m
+[1m+++ b/session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/gitops/values.yaml[m
+[36m@@ -1,3 +1,2 @@[m
+[31m-# Verified by https://github.com/vimalyad/devops-heros/actions/runs/37586435056[m
+[31m-imageTag: 0349d1dba78fa5278b2058e162c3157b11c82657[m
+[31m-version: 0349d1dba78fa5278b2058e162c3157b11c82657[m
+[32m+[m[32mimageTag: 0f8f27c95cae983b8274d649db2435200450c48a[m
+[32m+[m[32mversion: 0f8f27c95cae983b8274d649db2435200450c48a[m
++ git add gitops/values.yaml
++ git -c 'user.name=Vimal Kumar Yadav' -c user.email=174954713+vimalyad@users.noreply.github.com commit -m 'Promote the verified catalog interface release'
+[assignment/session21-typeahead-capstone 044fcd9] Promote the verified catalog interface release
+ 1 file changed, 2 insertions(+), 3 deletions(-)
++ git push pr-fork HEAD
+Enumerating objects: 12, done.
+Counting objects:   8% (1/12)Counting objects:  16% (2/12)Counting objects:  25% (3/12)Counting objects:  33% (4/12)Counting objects:  41% (5/12)Counting objects:  50% (6/12)Counting objects:  58% (7/12)Counting objects:  66% (8/12)Counting objects:  75% (9/12)Counting objects:  83% (10/12)Counting objects:  91% (11/12)Counting objects: 100% (12/12)Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects:  20% (1/5)Compressing objects:  40% (2/5)Compressing objects:  60% (3/5)Compressing objects:  80% (4/5)Compressing objects: 100% (5/5)Compressing objects: 100% (5/5), done.
+Writing objects:  14% (1/7)Writing objects:  28% (2/7)Writing objects:  42% (3/7)Writing objects:  57% (4/7)Writing objects:  71% (5/7)Writing objects:  85% (6/7)Writing objects: 100% (7/7)Writing objects: 100% (7/7), 1.02 KiB | 1.02 MiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/1)[Kremote: Resolving deltas: 100% (1/1)[Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/vimalyad/devops-heros.git
+   0f8f27c..044fcd9  HEAD -> assignment/session21-typeahead-capstone
++ python3 /var/home/vimal2907/assignment/devops-assignment/.local/session21-watch-argocd.py
+{"health": "Healthy", "sync": "Synced", "revision": "0f8f27c95cae983b8274d649db2435200450c48a"}
+{"health": "Progressing", "sync": "Synced", "revision": "044fcd992a881f610cf778e95419e1972590dc45"}
+{"health": "Degraded", "sync": "Synced", "revision": "044fcd992a881f610cf778e95419e1972590dc45"}
+{"health": "Healthy", "sync": "Synced", "revision": "044fcd992a881f610cf778e95419e1972590dc45"}
+{
+  "result": "PASS",
+  "releaseCommit": "0f8f27c95cae983b8274d649db2435200450c48a",
+  "promotionCommit": "044fcd992a881f610cf778e95419e1972590dc45",
+  "argocd": {
+    "health": "Healthy",
+    "sync": "Synced",
+    "revision": "044fcd992a881f610cf778e95419e1972590dc45"
+  },
+  "httpInfo": {
+    "app": {
+      "name": "ingestion-service",
+      "version": "0f8f27c95cae983b8274d649db2435200450c48a"
+    }
+  }
+}
++ kubectl get --raw /api/v1/namespaces/assignment-s21/services/ingestion-service:8082/proxy/info
+{"app":{"name":"ingestion-service","version":"0f8f27c95cae983b8274d649db2435200450c48a"}}+ python3 scripts/smoke.py --url http://127.0.0.1:18080 --host typeahead.local
+{
+  "result": "PASS",
+  "checks": [
+    "create/read/update/delete query",
+    "duplicate and validation errors",
+    "Kafka event persisted to PostgreSQL",
+    "trie suggestion refreshed",
+    "frontend served"
+  ]
+}
++ kubectl -n assignment-s21 get deployment,pods
+NAME                                 READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/frontend             2/2     2            2           35m
+deployment.apps/grafana              1/1     1            1           41m
+deployment.apps/ingestion-service    2/2     2            2           35m
+deployment.apps/prometheus           1/1     1            1           41m
+deployment.apps/redis                1/1     1            1           35m
+deployment.apps/suggestion-service   2/2     2            2           35m
+
+NAME                                      READY   STATUS    RESTARTS      AGE
+pod/frontend-66f9bbf5cb-5v5c5             1/1     Running   0             2m1s
+pod/frontend-66f9bbf5cb-8lfpd             1/1     Running   0             2m7s
+pod/grafana-589b7996dd-lswz6              1/1     Running   0             41m
+pod/ingestion-service-7bbb774bff-k2bzs    1/1     Running   0             111s
+pod/ingestion-service-7bbb774bff-wsxb7    1/1     Running   0             2m7s
+pod/kafka-0                               1/1     Running   1 (32m ago)   35m
+pod/postgres-0                            1/1     Running   0             20m
+pod/prometheus-b7bd74db-s4d6k             1/1     Running   0             41m
+pod/redis-647bfd9f67-wnnf2                1/1     Running   0             35m
+pod/suggestion-service-76568485c8-gl6bg   1/1     Running   0             2m7s
+pod/suggestion-service-76568485c8-twbzb   1/1     Running   0             111s
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

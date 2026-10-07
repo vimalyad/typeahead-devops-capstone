@@ -1,0 +1,37 @@
+{
+  "checkedOn": "2026-10-07",
+  "checks": [
+    {
+      "service": "eks",
+      "action": "describe_cluster",
+      "code": "AccessDeniedException"
+    },
+    {
+      "service": "iam",
+      "action": "get_role",
+      "code": "AccessDenied"
+    },
+    {
+      "service": "ec2",
+      "action": "describe_instance_types",
+      "result": "allowed"
+    },
+    {
+      "action": "create_vpc",
+      "code": "DryRunOperation",
+      "allowed": true
+    },
+    {
+      "action": "create_internet_gateway",
+      "code": "DryRunOperation",
+      "allowed": true
+    },
+    {
+      "action": "create_launch_template",
+      "code": "UnauthorizedOperation",
+      "allowed": false
+    }
+  ],
+  "resourcesApplied": false,
+  "plan": "21 to add, 0 to change, 0 to destroy"
+}

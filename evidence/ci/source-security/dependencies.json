@@ -1,0 +1,6534 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.75.0"
+  },
+  "ReportID": "01a1154a-ac20-7307-b35e-744ee94f74da",
+  "CreatedAt": "2026-10-07T07:36:17.696199559Z",
+  "ArtifactName": "application",
+  "ArtifactType": "filesystem",
+  "Results": [
+    {
+      "Target": "frontend/package-lock.json",
+      "Class": "lang-pkgs",
+      "Type": "npm",
+      "Packages": [
+        {
+          "ID": "@tailwindcss/postcss@4.3.3",
+          "Name": "@tailwindcss/postcss",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/postcss@4.3.3",
+            "UID": "9d381f450d8ff602"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "@alloc/quick-lru@5.2.0",
+            "@tailwindcss/node@4.3.3",
+            "@tailwindcss/oxide@4.3.3",
+            "postcss@8.5.29",
+            "tailwindcss@4.3.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 922,
+              "EndLine": 935
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@types/node@20.19.43",
+          "Name": "@types/node",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/node@20.19.43",
+            "UID": "cb421df32593868f"
+          },
+          "Version": "20.19.43",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "undici-types@6.21.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 936,
+              "EndLine": 945
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@types/react@18.3.31",
+          "Name": "@types/react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react@18.3.31",
+            "UID": "158ad26ad57f8258"
+          },
+          "Version": "18.3.31",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "@types/prop-types@15.7.15",
+            "csstype@3.2.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 953,
+              "EndLine": 963
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@types/react-dom@18.3.7",
+          "Name": "@types/react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/react-dom@18.3.7",
+            "UID": "33bac82046f5fc64"
+          },
+          "Version": "18.3.7",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "@types/react@18.3.31"
+          ],
+          "Locations": [
+            {
+              "StartLine": 964,
+              "EndLine": 973
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@vitejs/plugin-react@6.1.2",
+          "Name": "@vitejs/plugin-react",
+          "Identifier": {
+            "PURL": "pkg:npm/%40vitejs/plugin-react@6.1.2",
+            "UID": "487dc19f66a414a4"
+          },
+          "Version": "6.1.2",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "@rolldown/pluginutils@1.0.1",
+            "vite@8.3.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 974,
+              "EndLine": 1003
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "autoprefixer@10.5.0",
+          "Name": "autoprefixer",
+          "Identifier": {
+            "PURL": "pkg:npm/autoprefixer@10.5.0",
+            "UID": "8ecd6f24d69392aa"
+          },
+          "Version": "10.5.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "browserslist@4.29.3",
+            "caniuse-lite@1.0.30001814",
+            "fraction.js@5.3.4",
+            "picocolors@1.1.1",
+            "postcss-value-parser@4.2.0",
+            "postcss@8.5.29"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1004,
+              "EndLine": 1040
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "postcss@8.5.29",
+          "Name": "postcss",
+          "Identifier": {
+            "PURL": "pkg:npm/postcss@8.5.29",
+            "UID": "e6260f61518170f4"
+          },
+          "Version": "8.5.29",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "nanoid@3.3.20",
+            "picocolors@1.1.1",
+            "source-map-js@1.2.2"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1540,
+              "EndLine": 1568
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "react@18.3.1",
+          "Name": "react",
+          "Identifier": {
+            "PURL": "pkg:npm/react@18.3.1",
+            "UID": "9a53a6b39c2c50f1"
+          },
+          "Version": "18.3.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1576,
+              "EndLine": 1587
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "react-dom@18.3.1",
+          "Name": "react-dom",
+          "Identifier": {
+            "PURL": "pkg:npm/react-dom@18.3.1",
+            "UID": "e5a5e3b22b0f89b6"
+          },
+          "Version": "18.3.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "loose-envify@1.4.0",
+            "react@18.3.1",
+            "scheduler@0.23.2"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1588,
+              "EndLine": 1600
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "tailwindcss@4.3.3",
+          "Name": "tailwindcss",
+          "Identifier": {
+            "PURL": "pkg:npm/tailwindcss@4.3.3",
+            "UID": "c9365a884381d394"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 1654,
+              "EndLine": 1660
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "typescript@5.9.3",
+          "Name": "typescript",
+          "Identifier": {
+            "PURL": "pkg:npm/typescript@5.9.3",
+            "UID": "f4ff7857d5572058"
+          },
+          "Version": "5.9.3",
+          "Dev": true,
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 1723,
+              "EndLine": 1736
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "vite@8.3.3",
+          "Name": "vite",
+          "Identifier": {
+            "PURL": "pkg:npm/vite@8.3.3",
+            "UID": "a79307aa570a94fa"
+          },
+          "Version": "8.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "@types/node@20.19.43",
+            "fsevents@2.3.3",
+            "jiti@2.7.0",
+            "lightningcss@1.33.0",
+            "picomatch@4.0.7",
+            "postcss@8.5.29",
+            "rolldown@1.2.12",
+            "tinyglobby@0.2.17"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1775,
+              "EndLine": 1852
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@alloc/quick-lru@5.2.0",
+          "Name": "@alloc/quick-lru",
+          "Identifier": {
+            "PURL": "pkg:npm/%40alloc/quick-lru@5.2.0",
+            "UID": "d3903961938bdabb"
+          },
+          "Version": "5.2.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 27,
+              "EndLine": 39
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@jridgewell/gen-mapping@0.3.13",
+          "Name": "@jridgewell/gen-mapping",
+          "Identifier": {
+            "PURL": "pkg:npm/%40jridgewell/gen-mapping@0.3.13",
+            "UID": "ba372ddb29205904"
+          },
+          "Version": "0.3.13",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@jridgewell/sourcemap-codec@1.6.0",
+            "@jridgewell/trace-mapping@0.3.31"
+          ],
+          "Locations": [
+            {
+              "StartLine": 40,
+              "EndLine": 50
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@jridgewell/remapping@2.3.5",
+          "Name": "@jridgewell/remapping",
+          "Identifier": {
+            "PURL": "pkg:npm/%40jridgewell/remapping@2.3.5",
+            "UID": "145dc2a5fc3266d5"
+          },
+          "Version": "2.3.5",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@jridgewell/gen-mapping@0.3.13",
+            "@jridgewell/trace-mapping@0.3.31"
+          ],
+          "Locations": [
+            {
+              "StartLine": 51,
+              "EndLine": 61
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@jridgewell/resolve-uri@3.1.2",
+          "Name": "@jridgewell/resolve-uri",
+          "Identifier": {
+            "PURL": "pkg:npm/%40jridgewell/resolve-uri@3.1.2",
+            "UID": "ac273e711c85ee0c"
+          },
+          "Version": "3.1.2",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 62,
+              "EndLine": 71
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@jridgewell/sourcemap-codec@1.6.0",
+          "Name": "@jridgewell/sourcemap-codec",
+          "Identifier": {
+            "PURL": "pkg:npm/%40jridgewell/sourcemap-codec@1.6.0",
+            "UID": "a486e7d1b901e554"
+          },
+          "Version": "1.6.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 72,
+              "EndLine": 78
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@jridgewell/trace-mapping@0.3.31",
+          "Name": "@jridgewell/trace-mapping",
+          "Identifier": {
+            "PURL": "pkg:npm/%40jridgewell/trace-mapping@0.3.31",
+            "UID": "eb59b5ba3d3b77f7"
+          },
+          "Version": "0.3.31",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@jridgewell/resolve-uri@3.1.2",
+            "@jridgewell/sourcemap-codec@1.6.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 79,
+              "EndLine": 89
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@oxc-project/types@0.152.0",
+          "Name": "@oxc-project/types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40oxc-project/types@0.152.0",
+            "UID": "108dbf63c1244fcf"
+          },
+          "Version": "0.152.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 90,
+              "EndLine": 99
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-android-arm-eabi@1.2.12",
+          "Name": "@rolldown/binding-android-arm-eabi",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-android-arm-eabi@1.2.12",
+            "UID": "af15d43e37968c94"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 100,
+              "EndLine": 116
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-android-arm64@1.2.12",
+          "Name": "@rolldown/binding-android-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-android-arm64@1.2.12",
+            "UID": "16b2d89989a6f991"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 117,
+              "EndLine": 133
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-darwin-arm64@1.2.12",
+          "Name": "@rolldown/binding-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-darwin-arm64@1.2.12",
+            "UID": "5a171adae2c300c5"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 134,
+              "EndLine": 150
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-darwin-x64@1.2.12",
+          "Name": "@rolldown/binding-darwin-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-darwin-x64@1.2.12",
+            "UID": "21971888c0ddb354"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 151,
+              "EndLine": 167
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-freebsd-x64@1.2.12",
+          "Name": "@rolldown/binding-freebsd-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-freebsd-x64@1.2.12",
+            "UID": "6cf2d7f957fd1260"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 168,
+              "EndLine": 184
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-arm-gnueabihf@1.2.12",
+          "Name": "@rolldown/binding-linux-arm-gnueabihf",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-arm-gnueabihf@1.2.12",
+            "UID": "86484af8217dcdfe"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 185,
+              "EndLine": 201
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-arm64-gnu@1.2.12",
+          "Name": "@rolldown/binding-linux-arm64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-arm64-gnu@1.2.12",
+            "UID": "52aab74dc33d73b7"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 202,
+              "EndLine": 221
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-arm64-musl@1.2.12",
+          "Name": "@rolldown/binding-linux-arm64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-arm64-musl@1.2.12",
+            "UID": "bd3068309225891"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 222,
+              "EndLine": 241
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-ppc64-gnu@1.2.12",
+          "Name": "@rolldown/binding-linux-ppc64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-ppc64-gnu@1.2.12",
+            "UID": "ef9729fa97cdf2c6"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 242,
+              "EndLine": 261
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-s390x-gnu@1.2.12",
+          "Name": "@rolldown/binding-linux-s390x-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-s390x-gnu@1.2.12",
+            "UID": "360a5cfe5bad2d6e"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 262,
+              "EndLine": 281
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-x64-gnu@1.2.12",
+          "Name": "@rolldown/binding-linux-x64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-x64-gnu@1.2.12",
+            "UID": "709bfb2f6e1a58af"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 282,
+              "EndLine": 301
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-linux-x64-musl@1.2.12",
+          "Name": "@rolldown/binding-linux-x64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-linux-x64-musl@1.2.12",
+            "UID": "650909906283dcc4"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 302,
+              "EndLine": 321
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-openharmony-arm64@1.2.12",
+          "Name": "@rolldown/binding-openharmony-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-openharmony-arm64@1.2.12",
+            "UID": "4b8661db69653acd"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 322,
+              "EndLine": 338
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-win32-arm64-msvc@1.2.12",
+          "Name": "@rolldown/binding-win32-arm64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-win32-arm64-msvc@1.2.12",
+            "UID": "c4b8708467fc6ff9"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 339,
+              "EndLine": 355
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/binding-win32-x64-msvc@1.2.12",
+          "Name": "@rolldown/binding-win32-x64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/binding-win32-x64-msvc@1.2.12",
+            "UID": "d7c15781902a85eb"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 356,
+              "EndLine": 372
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@rolldown/pluginutils@1.0.1",
+          "Name": "@rolldown/pluginutils",
+          "Identifier": {
+            "PURL": "pkg:npm/%40rolldown/pluginutils@1.0.1",
+            "UID": "1b396ea304d1da31"
+          },
+          "Version": "1.0.1",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 373,
+              "EndLine": 379
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/node@4.3.3",
+          "Name": "@tailwindcss/node",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/node@4.3.3",
+            "UID": "f3cee9417891d8d5"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@jridgewell/remapping@2.3.5",
+            "enhanced-resolve@5.26.0",
+            "jiti@2.7.0",
+            "lightningcss@1.32.0",
+            "magic-string@0.30.21",
+            "source-map-js@1.2.2",
+            "tailwindcss@4.3.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 380,
+              "EndLine": 395
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide@4.3.3",
+          "Name": "@tailwindcss/oxide",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide@4.3.3",
+            "UID": "5d8be2a6269de24e"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@tailwindcss/oxide-android-arm64@4.3.3",
+            "@tailwindcss/oxide-darwin-arm64@4.3.3",
+            "@tailwindcss/oxide-darwin-x64@4.3.3",
+            "@tailwindcss/oxide-freebsd-x64@4.3.3",
+            "@tailwindcss/oxide-linux-arm-gnueabihf@4.3.3",
+            "@tailwindcss/oxide-linux-arm64-gnu@4.3.3",
+            "@tailwindcss/oxide-linux-arm64-musl@4.3.3",
+            "@tailwindcss/oxide-linux-x64-gnu@4.3.3",
+            "@tailwindcss/oxide-linux-x64-musl@4.3.3",
+            "@tailwindcss/oxide-wasm32-wasi@4.3.3",
+            "@tailwindcss/oxide-win32-arm64-msvc@4.3.3",
+            "@tailwindcss/oxide-win32-x64-msvc@4.3.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 669,
+              "EndLine": 692
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-android-arm64@4.3.3",
+          "Name": "@tailwindcss/oxide-android-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-android-arm64@4.3.3",
+            "UID": "ee71a5a814e895c2"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 693,
+              "EndLine": 709
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-darwin-arm64@4.3.3",
+          "Name": "@tailwindcss/oxide-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-darwin-arm64@4.3.3",
+            "UID": "a621439abac7d344"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 710,
+              "EndLine": 726
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-darwin-x64@4.3.3",
+          "Name": "@tailwindcss/oxide-darwin-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-darwin-x64@4.3.3",
+            "UID": "1a5cc566d524ade5"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 727,
+              "EndLine": 743
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-freebsd-x64@4.3.3",
+          "Name": "@tailwindcss/oxide-freebsd-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-freebsd-x64@4.3.3",
+            "UID": "87e423c66ac5fc62"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 744,
+              "EndLine": 760
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-linux-arm-gnueabihf@4.3.3",
+          "Name": "@tailwindcss/oxide-linux-arm-gnueabihf",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-linux-arm-gnueabihf@4.3.3",
+            "UID": "309a01d32a1df128"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 761,
+              "EndLine": 777
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-linux-arm64-gnu@4.3.3",
+          "Name": "@tailwindcss/oxide-linux-arm64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-linux-arm64-gnu@4.3.3",
+            "UID": "c6244e3a0d563a1b"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 778,
+              "EndLine": 797
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-linux-arm64-musl@4.3.3",
+          "Name": "@tailwindcss/oxide-linux-arm64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-linux-arm64-musl@4.3.3",
+            "UID": "7f600534a2802f7b"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 798,
+              "EndLine": 817
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-linux-x64-gnu@4.3.3",
+          "Name": "@tailwindcss/oxide-linux-x64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-linux-x64-gnu@4.3.3",
+            "UID": "dbcadb83f900d94a"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 818,
+              "EndLine": 837
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-linux-x64-musl@4.3.3",
+          "Name": "@tailwindcss/oxide-linux-x64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-linux-x64-musl@4.3.3",
+            "UID": "38a31930158df548"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 838,
+              "EndLine": 857
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-wasm32-wasi@4.3.3",
+          "Name": "@tailwindcss/oxide-wasm32-wasi",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-wasm32-wasi@4.3.3",
+            "UID": "7172f879e895c7ce"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 858,
+              "EndLine": 887
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-win32-arm64-msvc@4.3.3",
+          "Name": "@tailwindcss/oxide-win32-arm64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-win32-arm64-msvc@4.3.3",
+            "UID": "3e5f26f984f9a192"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 888,
+              "EndLine": 904
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@tailwindcss/oxide-win32-x64-msvc@4.3.3",
+          "Name": "@tailwindcss/oxide-win32-x64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/%40tailwindcss/oxide-win32-x64-msvc@4.3.3",
+            "UID": "37ef82ad475e0486"
+          },
+          "Version": "4.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 905,
+              "EndLine": 921
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "@types/prop-types@15.7.15",
+          "Name": "@types/prop-types",
+          "Identifier": {
+            "PURL": "pkg:npm/%40types/prop-types@15.7.15",
+            "UID": "4050f8010122724c"
+          },
+          "Version": "15.7.15",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 946,
+              "EndLine": 952
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "baseline-browser-mapping@2.11.27",
+          "Name": "baseline-browser-mapping",
+          "Identifier": {
+            "PURL": "pkg:npm/baseline-browser-mapping@2.11.27",
+            "UID": "a6bc58badade970b"
+          },
+          "Version": "2.11.27",
+          "Dev": true,
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1041,
+              "EndLine": 1053
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "browserslist@4.29.3",
+          "Name": "browserslist",
+          "Identifier": {
+            "PURL": "pkg:npm/browserslist@4.29.3",
+            "UID": "d3403f9ed4b0414f"
+          },
+          "Version": "4.29.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "baseline-browser-mapping@2.11.27",
+            "caniuse-lite@1.0.30001814",
+            "electron-to-chromium@1.5.449",
+            "node-releases@2.0.57",
+            "update-browserslist-db@1.3.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1054,
+              "EndLine": 1087
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "caniuse-lite@1.0.30001814",
+          "Name": "caniuse-lite",
+          "Identifier": {
+            "PURL": "pkg:npm/caniuse-lite@1.0.30001814",
+            "UID": "454617cd709ab994"
+          },
+          "Version": "1.0.30001814",
+          "Dev": true,
+          "Licenses": [
+            "CC-BY-4.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1088,
+              "EndLine": 1108
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "csstype@3.2.3",
+          "Name": "csstype",
+          "Identifier": {
+            "PURL": "pkg:npm/csstype@3.2.3",
+            "UID": "6d3496377d8b818c"
+          },
+          "Version": "3.2.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1109,
+              "EndLine": 1115
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "detect-libc@2.1.2",
+          "Name": "detect-libc",
+          "Identifier": {
+            "PURL": "pkg:npm/detect-libc@2.1.2",
+            "UID": "9965a5eb5e87d185"
+          },
+          "Version": "2.1.2",
+          "Dev": true,
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1116,
+              "EndLine": 1125
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "electron-to-chromium@1.5.449",
+          "Name": "electron-to-chromium",
+          "Identifier": {
+            "PURL": "pkg:npm/electron-to-chromium@1.5.449",
+            "UID": "b5c647ef579c1b2"
+          },
+          "Version": "1.5.449",
+          "Dev": true,
+          "Licenses": [
+            "ISC"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1126,
+              "EndLine": 1132
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "enhanced-resolve@5.26.0",
+          "Name": "enhanced-resolve",
+          "Identifier": {
+            "PURL": "pkg:npm/enhanced-resolve@5.26.0",
+            "UID": "413672bfc123f07b"
+          },
+          "Version": "5.26.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "graceful-fs@4.2.11",
+            "tapable@2.3.3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1133,
+              "EndLine": 1146
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "escalade@3.2.0",
+          "Name": "escalade",
+          "Identifier": {
+            "PURL": "pkg:npm/escalade@3.2.0",
+            "UID": "7c27721afb86f757"
+          },
+          "Version": "3.2.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1147,
+              "EndLine": 1156
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "fdir@6.5.0",
+          "Name": "fdir",
+          "Identifier": {
+            "PURL": "pkg:npm/fdir@6.5.0",
+            "UID": "2dfe4c7609d58dfc"
+          },
+          "Version": "6.5.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "picomatch@4.0.4"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1692,
+              "EndLine": 1709
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "fraction.js@5.3.4",
+          "Name": "fraction.js",
+          "Identifier": {
+            "PURL": "pkg:npm/fraction.js@5.3.4",
+            "UID": "63c937d8551d0584"
+          },
+          "Version": "5.3.4",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1157,
+              "EndLine": 1170
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "fsevents@2.3.3",
+          "Name": "fsevents",
+          "Identifier": {
+            "PURL": "pkg:npm/fsevents@2.3.3",
+            "UID": "5ffbbe7a08dcab8f"
+          },
+          "Version": "2.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1171,
+              "EndLine": 1185
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "graceful-fs@4.2.11",
+          "Name": "graceful-fs",
+          "Identifier": {
+            "PURL": "pkg:npm/graceful-fs@4.2.11",
+            "UID": "38493c257287f104"
+          },
+          "Version": "4.2.11",
+          "Dev": true,
+          "Licenses": [
+            "ISC"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1186,
+              "EndLine": 1192
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "jiti@2.7.0",
+          "Name": "jiti",
+          "Identifier": {
+            "PURL": "pkg:npm/jiti@2.7.0",
+            "UID": "bfd8eef830448f04"
+          },
+          "Version": "2.7.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1193,
+              "EndLine": 1202
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "js-tokens@4.0.0",
+          "Name": "js-tokens",
+          "Identifier": {
+            "PURL": "pkg:npm/js-tokens@4.0.0",
+            "UID": "4e83cdb91cbfed98"
+          },
+          "Version": "4.0.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1203,
+              "EndLine": 1208
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss@1.32.0",
+          "Name": "lightningcss",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss@1.32.0",
+            "UID": "1a28d01b9495e548"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "detect-libc@2.1.2",
+            "lightningcss-android-arm64@1.32.0",
+            "lightningcss-darwin-arm64@1.32.0",
+            "lightningcss-darwin-x64@1.32.0",
+            "lightningcss-freebsd-x64@1.32.0",
+            "lightningcss-linux-arm-gnueabihf@1.32.0",
+            "lightningcss-linux-arm64-gnu@1.32.0",
+            "lightningcss-linux-arm64-musl@1.32.0",
+            "lightningcss-linux-x64-gnu@1.32.0",
+            "lightningcss-linux-x64-musl@1.32.0",
+            "lightningcss-win32-arm64-msvc@1.32.0",
+            "lightningcss-win32-x64-msvc@1.32.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 396,
+              "EndLine": 425
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss@1.33.0",
+          "Name": "lightningcss",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss@1.33.0",
+            "UID": "8ca6bd26dd7d20ec"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "detect-libc@2.1.2",
+            "lightningcss-android-arm64@1.33.0",
+            "lightningcss-darwin-arm64@1.33.0",
+            "lightningcss-darwin-x64@1.33.0",
+            "lightningcss-freebsd-x64@1.33.0",
+            "lightningcss-linux-arm-gnueabihf@1.33.0",
+            "lightningcss-linux-arm64-gnu@1.33.0",
+            "lightningcss-linux-arm64-musl@1.33.0",
+            "lightningcss-linux-x64-gnu@1.33.0",
+            "lightningcss-linux-x64-musl@1.33.0",
+            "lightningcss-win32-arm64-msvc@1.33.0",
+            "lightningcss-win32-x64-msvc@1.33.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1209,
+              "EndLine": 1238
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-android-arm64@1.32.0",
+          "Name": "lightningcss-android-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-android-arm64@1.32.0",
+            "UID": "de25b0cf2683bfca"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 426,
+              "EndLine": 446
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-android-arm64@1.33.0",
+          "Name": "lightningcss-android-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-android-arm64@1.33.0",
+            "UID": "a8c1951061c431e6"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1239,
+              "EndLine": 1259
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-darwin-arm64@1.32.0",
+          "Name": "lightningcss-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-darwin-arm64@1.32.0",
+            "UID": "37d277ab18856d9"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 447,
+              "EndLine": 467
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-darwin-arm64@1.33.0",
+          "Name": "lightningcss-darwin-arm64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-darwin-arm64@1.33.0",
+            "UID": "c9721727978a5410"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1260,
+              "EndLine": 1280
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-darwin-x64@1.32.0",
+          "Name": "lightningcss-darwin-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-darwin-x64@1.32.0",
+            "UID": "306e2df72017b161"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 468,
+              "EndLine": 488
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-darwin-x64@1.33.0",
+          "Name": "lightningcss-darwin-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-darwin-x64@1.33.0",
+            "UID": "b127065bd6a889b0"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1281,
+              "EndLine": 1301
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-freebsd-x64@1.32.0",
+          "Name": "lightningcss-freebsd-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-freebsd-x64@1.32.0",
+            "UID": "9ea2780d26fedd13"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 489,
+              "EndLine": 509
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-freebsd-x64@1.33.0",
+          "Name": "lightningcss-freebsd-x64",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-freebsd-x64@1.33.0",
+            "UID": "62672ae42018b8c3"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1302,
+              "EndLine": 1322
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-arm-gnueabihf@1.32.0",
+          "Name": "lightningcss-linux-arm-gnueabihf",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-arm-gnueabihf@1.32.0",
+            "UID": "c4150d6a9ab4865f"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 510,
+              "EndLine": 530
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-arm-gnueabihf@1.33.0",
+          "Name": "lightningcss-linux-arm-gnueabihf",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-arm-gnueabihf@1.33.0",
+            "UID": "780030ba2bc6453a"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1323,
+              "EndLine": 1343
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-arm64-gnu@1.32.0",
+          "Name": "lightningcss-linux-arm64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-arm64-gnu@1.32.0",
+            "UID": "da8a43017d370df3"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 531,
+              "EndLine": 554
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-arm64-gnu@1.33.0",
+          "Name": "lightningcss-linux-arm64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-arm64-gnu@1.33.0",
+            "UID": "db930843f29163ef"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1344,
+              "EndLine": 1367
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-arm64-musl@1.32.0",
+          "Name": "lightningcss-linux-arm64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-arm64-musl@1.32.0",
+            "UID": "c4e5731af279f631"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 555,
+              "EndLine": 578
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-arm64-musl@1.33.0",
+          "Name": "lightningcss-linux-arm64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-arm64-musl@1.33.0",
+            "UID": "3cc2d389c971ee7c"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1368,
+              "EndLine": 1391
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-x64-gnu@1.32.0",
+          "Name": "lightningcss-linux-x64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-x64-gnu@1.32.0",
+            "UID": "47f3bbd594fbb7f3"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 579,
+              "EndLine": 602
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-x64-gnu@1.33.0",
+          "Name": "lightningcss-linux-x64-gnu",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-x64-gnu@1.33.0",
+            "UID": "36517f949e7d41dd"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1392,
+              "EndLine": 1415
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-x64-musl@1.32.0",
+          "Name": "lightningcss-linux-x64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-x64-musl@1.32.0",
+            "UID": "55a7ab38104f66a3"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 603,
+              "EndLine": 626
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-linux-x64-musl@1.33.0",
+          "Name": "lightningcss-linux-x64-musl",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-linux-x64-musl@1.33.0",
+            "UID": "b9e4f6d39463c25f"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1416,
+              "EndLine": 1439
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-win32-arm64-msvc@1.32.0",
+          "Name": "lightningcss-win32-arm64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-win32-arm64-msvc@1.32.0",
+            "UID": "1f6e909288bc4793"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 627,
+              "EndLine": 647
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-win32-arm64-msvc@1.33.0",
+          "Name": "lightningcss-win32-arm64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-win32-arm64-msvc@1.33.0",
+            "UID": "6f995ed979289837"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1440,
+              "EndLine": 1460
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-win32-x64-msvc@1.32.0",
+          "Name": "lightningcss-win32-x64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-win32-x64-msvc@1.32.0",
+            "UID": "d420545add883bb4"
+          },
+          "Version": "1.32.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 648,
+              "EndLine": 668
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "lightningcss-win32-x64-msvc@1.33.0",
+          "Name": "lightningcss-win32-x64-msvc",
+          "Identifier": {
+            "PURL": "pkg:npm/lightningcss-win32-x64-msvc@1.33.0",
+            "UID": "2ee57a65d94ce0cf"
+          },
+          "Version": "1.33.0",
+          "Dev": true,
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1461,
+              "EndLine": 1481
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "loose-envify@1.4.0",
+          "Name": "loose-envify",
+          "Identifier": {
+            "PURL": "pkg:npm/loose-envify@1.4.0",
+            "UID": "d1d578a2f820db10"
+          },
+          "Version": "1.4.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "js-tokens@4.0.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1482,
+              "EndLine": 1493
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "magic-string@0.30.21",
+          "Name": "magic-string",
+          "Identifier": {
+            "PURL": "pkg:npm/magic-string@0.30.21",
+            "UID": "b2790ca27e265495"
+          },
+          "Version": "0.30.21",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@jridgewell/sourcemap-codec@1.6.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1494,
+              "EndLine": 1503
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "nanoid@3.3.20",
+          "Name": "nanoid",
+          "Identifier": {
+            "PURL": "pkg:npm/nanoid@3.3.20",
+            "UID": "ca6d17de23a518f6"
+          },
+          "Version": "3.3.20",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1504,
+              "EndLine": 1522
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "node-releases@2.0.57",
+          "Name": "node-releases",
+          "Identifier": {
+            "PURL": "pkg:npm/node-releases@2.0.57",
+            "UID": "cae173fe8f85a988"
+          },
+          "Version": "2.0.57",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1523,
+              "EndLine": 1532
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "picocolors@1.1.1",
+          "Name": "picocolors",
+          "Identifier": {
+            "PURL": "pkg:npm/picocolors@1.1.1",
+            "UID": "33e1e343436229f1"
+          },
+          "Version": "1.1.1",
+          "Dev": true,
+          "Licenses": [
+            "ISC"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1533,
+              "EndLine": 1539
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "picomatch@4.0.4",
+          "Name": "picomatch",
+          "Identifier": {
+            "PURL": "pkg:npm/picomatch@4.0.4",
+            "UID": "ccf5194b4379022f"
+          },
+          "Version": "4.0.4",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1710,
+              "EndLine": 1722
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "picomatch@4.0.7",
+          "Name": "picomatch",
+          "Identifier": {
+            "PURL": "pkg:npm/picomatch@4.0.7",
+            "UID": "534ccfdff90a3a7e"
+          },
+          "Version": "4.0.7",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1853,
+              "EndLine": 1865
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "postcss-value-parser@4.2.0",
+          "Name": "postcss-value-parser",
+          "Identifier": {
+            "PURL": "pkg:npm/postcss-value-parser@4.2.0",
+            "UID": "4b0e3ff85f816fd5"
+          },
+          "Version": "4.2.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1569,
+              "EndLine": 1575
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "rolldown@1.2.12",
+          "Name": "rolldown",
+          "Identifier": {
+            "PURL": "pkg:npm/rolldown@1.2.12",
+            "UID": "d098fc3eb04fb38b"
+          },
+          "Version": "1.2.12",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "@oxc-project/types@0.152.0",
+            "@rolldown/binding-android-arm-eabi@1.2.12",
+            "@rolldown/binding-android-arm64@1.2.12",
+            "@rolldown/binding-darwin-arm64@1.2.12",
+            "@rolldown/binding-darwin-x64@1.2.12",
+            "@rolldown/binding-freebsd-x64@1.2.12",
+            "@rolldown/binding-linux-arm-gnueabihf@1.2.12",
+            "@rolldown/binding-linux-arm64-gnu@1.2.12",
+            "@rolldown/binding-linux-arm64-musl@1.2.12",
+            "@rolldown/binding-linux-ppc64-gnu@1.2.12",
+            "@rolldown/binding-linux-s390x-gnu@1.2.12",
+            "@rolldown/binding-linux-x64-gnu@1.2.12",
+            "@rolldown/binding-linux-x64-musl@1.2.12",
+            "@rolldown/binding-openharmony-arm64@1.2.12",
+            "@rolldown/binding-win32-arm64-msvc@1.2.12",
+            "@rolldown/binding-win32-x64-msvc@1.2.12",
+            "@rolldown/pluginutils@1.0.1"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1601,
+              "EndLine": 1634
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "scheduler@0.23.2",
+          "Name": "scheduler",
+          "Identifier": {
+            "PURL": "pkg:npm/scheduler@0.23.2",
+            "UID": "5b2d09a9aaa6b56d"
+          },
+          "Version": "0.23.2",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "loose-envify@1.4.0"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1635,
+              "EndLine": 1643
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "source-map-js@1.2.2",
+          "Name": "source-map-js",
+          "Identifier": {
+            "PURL": "pkg:npm/source-map-js@1.2.2",
+            "UID": "cd8b65c8d8e03ee8"
+          },
+          "Version": "1.2.2",
+          "Dev": true,
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1644,
+              "EndLine": 1653
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "tapable@2.3.3",
+          "Name": "tapable",
+          "Identifier": {
+            "PURL": "pkg:npm/tapable@2.3.3",
+            "UID": "feac9e37582245"
+          },
+          "Version": "2.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1661,
+              "EndLine": 1674
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "tinyglobby@0.2.17",
+          "Name": "tinyglobby",
+          "Identifier": {
+            "PURL": "pkg:npm/tinyglobby@0.2.17",
+            "UID": "ef3e47bac45ad03c"
+          },
+          "Version": "0.2.17",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "fdir@6.5.0",
+            "picomatch@4.0.4"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1675,
+              "EndLine": 1691
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "undici-types@6.21.0",
+          "Name": "undici-types",
+          "Identifier": {
+            "PURL": "pkg:npm/undici-types@6.21.0",
+            "UID": "854aeabda146ef98"
+          },
+          "Version": "6.21.0",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "Locations": [
+            {
+              "StartLine": 1737,
+              "EndLine": 1743
+            }
+          ],
+          "AnalyzedBy": "npm"
+        },
+        {
+          "ID": "update-browserslist-db@1.3.3",
+          "Name": "update-browserslist-db",
+          "Identifier": {
+            "PURL": "pkg:npm/update-browserslist-db@1.3.3",
+            "UID": "782893a7c3a59526"
+          },
+          "Version": "1.3.3",
+          "Dev": true,
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "browserslist@4.29.3",
+            "escalade@3.2.0",
+            "picocolors@1.1.1"
+          ],
+          "Locations": [
+            {
+              "StartLine": 1744,
+              "EndLine": 1774
+            }
+          ],
+          "AnalyzedBy": "npm"
+        }
+      ]
+    },
+    {
+      "Target": "ingestion-service/gradle.lockfile",
+      "Class": "lang-pkgs",
+      "Type": "gradle",
+      "Packages": [
+        {
+          "ID": "at.yawk.lz4:lz4-java:1.10.1",
+          "Name": "at.yawk.lz4:lz4-java",
+          "Identifier": {
+            "PURL": "pkg:maven/at.yawk.lz4/lz4-java@1.10.1",
+            "UID": "699bef72997fb136"
+          },
+          "Version": "1.10.1",
+          "Locations": [
+            {
+              "StartLine": 5,
+              "EndLine": 5
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "biz.aQute.bnd:biz.aQute.bnd.annotation:7.1.0",
+          "Name": "biz.aQute.bnd:biz.aQute.bnd.annotation",
+          "Identifier": {
+            "PURL": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.annotation@7.1.0",
+            "UID": "71413e7e419bcdf3"
+          },
+          "Version": "7.1.0",
+          "Locations": [
+            {
+              "StartLine": 6,
+              "EndLine": 6
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "ch.qos.logback:logback-classic:1.5.38",
+          "Name": "ch.qos.logback:logback-classic",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+            "UID": "dab2942888a77c14"
+          },
+          "Version": "1.5.38",
+          "Locations": [
+            {
+              "StartLine": 7,
+              "EndLine": 7
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "ch.qos.logback:logback-core:1.5.38",
+          "Name": "ch.qos.logback:logback-core",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+            "UID": "8fa33c8f8d79d160"
+          },
+          "Version": "1.5.38",
+          "Locations": [
+            {
+              "StartLine": 8,
+              "EndLine": 8
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.21",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+            "UID": "34b2ba2f1e890cfb"
+          },
+          "Version": "2.21",
+          "Locations": [
+            {
+              "StartLine": 9,
+              "EndLine": 9
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.fasterxml:classmate:1.7.3",
+          "Name": "com.fasterxml:classmate",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml/classmate@1.7.3",
+            "UID": "179afd563b0813e1"
+          },
+          "Version": "1.7.3",
+          "Locations": [
+            {
+              "StartLine": 10,
+              "EndLine": 10
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.github.luben:zstd-jni:1.5.6-10",
+          "Name": "com.github.luben:zstd-jni",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.luben/zstd-jni@1.5.6-10",
+            "UID": "ed416115ed67fad1"
+          },
+          "Version": "1.5.6-10",
+          "Locations": [
+            {
+              "StartLine": 11,
+              "EndLine": 11
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.38.0",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.38.0",
+            "UID": "130615c5d165fe53"
+          },
+          "Version": "2.38.0",
+          "Locations": [
+            {
+              "StartLine": 12,
+              "EndLine": 12
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.jayway.jsonpath:json-path:2.10.0",
+          "Name": "com.jayway.jsonpath:json-path",
+          "Identifier": {
+            "PURL": "pkg:maven/com.jayway.jsonpath/json-path@2.10.0",
+            "UID": "1bc687b5b2c9d563"
+          },
+          "Version": "2.10.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 13,
+              "EndLine": 13
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.vaadin.external.google:android-json:0.0.20131108.vaadin1",
+          "Name": "com.vaadin.external.google:android-json",
+          "Identifier": {
+            "PURL": "pkg:maven/com.vaadin.external.google/android-json@0.0.20131108.vaadin1",
+            "UID": "ad979474760a9881"
+          },
+          "Version": "0.0.20131108.vaadin1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 14,
+              "EndLine": 14
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.zaxxer:HikariCP:7.0.2",
+          "Name": "com.zaxxer:HikariCP",
+          "Identifier": {
+            "PURL": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+            "UID": "171e4bd9940d9ee8"
+          },
+          "Version": "7.0.2",
+          "Locations": [
+            {
+              "StartLine": 15,
+              "EndLine": 15
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.3.6",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.3.6",
+            "UID": "1236053f4af2f249"
+          },
+          "Version": "1.3.6",
+          "Locations": [
+            {
+              "StartLine": 16,
+              "EndLine": 16
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-commons:1.17.1",
+          "Name": "io.micrometer:micrometer-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+            "UID": "84310be477264055"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 17,
+              "EndLine": 17
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-core:1.17.1",
+          "Name": "io.micrometer:micrometer-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+            "UID": "182d07750d3c738f"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 18,
+              "EndLine": 18
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-jakarta9:1.17.1",
+          "Name": "io.micrometer:micrometer-jakarta9",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.1",
+            "UID": "53e04bd874f32895"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 19,
+              "EndLine": 19
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-observation:1.17.1",
+          "Name": "io.micrometer:micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+            "UID": "349716566f683f8c"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 20,
+              "EndLine": 20
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-registry-prometheus:1.17.1",
+          "Name": "io.micrometer:micrometer-registry-prometheus",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+            "UID": "5fb95130c0afb7a1"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 21,
+              "EndLine": 21
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-config:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-config",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-config@1.7.0",
+            "UID": "dc7364ff3d1d0bf3"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 22,
+              "EndLine": 22
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-core:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-core@1.7.0",
+            "UID": "616b9a90b53684aa"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 23,
+              "EndLine": 23
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-exposition-formats:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-exposition-formats",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.7.0",
+            "UID": "6acd53b7e8c3f144"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 24,
+              "EndLine": 24
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-exposition-textformats:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-exposition-textformats",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.7.0",
+            "UID": "754054e6a1bb0d76"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 25,
+              "EndLine": 25
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-model:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-model",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-model@1.7.0",
+            "UID": "b86af2575c82adaf"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 26,
+              "EndLine": 26
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-tracer-common:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-tracer-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.7.0",
+            "UID": "a1d31d15c39c1e4e"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 27,
+              "EndLine": 27
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.activation:jakarta.activation-api:2.1.4",
+          "Name": "jakarta.activation:jakarta.activation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+            "UID": "8d2ab3f7481aac44"
+          },
+          "Version": "2.1.4",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 28,
+              "EndLine": 28
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:3.0.0",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+            "UID": "60e677c18f005efe"
+          },
+          "Version": "3.0.0",
+          "Locations": [
+            {
+              "StartLine": 29,
+              "EndLine": 29
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.validation:jakarta.validation-api:3.1.1",
+          "Name": "jakarta.validation:jakarta.validation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1",
+            "UID": "be7047ef8bc6f307"
+          },
+          "Version": "3.1.1",
+          "Locations": [
+            {
+              "StartLine": 30,
+              "EndLine": 30
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+          "Name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+            "UID": "f621af72b10571e5"
+          },
+          "Version": "4.0.5",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 31,
+              "EndLine": 31
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy:1.18.11",
+          "Name": "net.bytebuddy:byte-buddy",
+          "Identifier": {
+            "PURL": "pkg:maven/net.bytebuddy/byte-buddy@1.18.11",
+            "UID": "87a4a0a5cbe2725d"
+          },
+          "Version": "1.18.11",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 33,
+              "EndLine": 33
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy-agent:1.18.11",
+          "Name": "net.bytebuddy:byte-buddy-agent",
+          "Identifier": {
+            "PURL": "pkg:maven/net.bytebuddy/byte-buddy-agent@1.18.11",
+            "UID": "76de2cd9fdb6a8d3"
+          },
+          "Version": "1.18.11",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 32,
+              "EndLine": 32
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.minidev:accessors-smart:2.6.0",
+          "Name": "net.minidev:accessors-smart",
+          "Identifier": {
+            "PURL": "pkg:maven/net.minidev/accessors-smart@2.6.0",
+            "UID": "3ebecca9fe0e6dd2"
+          },
+          "Version": "2.6.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 34,
+              "EndLine": 34
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.minidev:json-smart:2.6.0",
+          "Name": "net.minidev:json-smart",
+          "Identifier": {
+            "PURL": "pkg:maven/net.minidev/json-smart@2.6.0",
+            "UID": "b9bff8479de21377"
+          },
+          "Version": "2.6.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 35,
+              "EndLine": 35
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.kafka:kafka-clients:4.2.1",
+          "Name": "org.apache.kafka:kafka-clients",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.kafka/kafka-clients@4.2.1",
+            "UID": "67aa19de6013e280"
+          },
+          "Version": "4.2.1",
+          "Locations": [
+            {
+              "StartLine": 36,
+              "EndLine": 36
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "f7d3f7de90c5bf43"
+          },
+          "Version": "2.25.5",
+          "Locations": [
+            {
+              "StartLine": 37,
+              "EndLine": 37
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "7408e4238a5d3fe9"
+          },
+          "Version": "2.25.5",
+          "Locations": [
+            {
+              "StartLine": 38,
+              "EndLine": 38
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-core:11.0.25",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.25",
+            "UID": "57ae452fa3f54a9"
+          },
+          "Version": "11.0.25",
+          "Locations": [
+            {
+              "StartLine": 39,
+              "EndLine": 39
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-el:11.0.25",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.25",
+            "UID": "3e6134a4f1b122e1"
+          },
+          "Version": "11.0.25",
+          "Locations": [
+            {
+              "StartLine": 40,
+              "EndLine": 40
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-websocket:11.0.25",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.25",
+            "UID": "b16c04b00f825cfa"
+          },
+          "Version": "11.0.25",
+          "Locations": [
+            {
+              "StartLine": 41,
+              "EndLine": 41
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apiguardian:apiguardian-api:1.1.2",
+          "Name": "org.apiguardian:apiguardian-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apiguardian/apiguardian-api@1.1.2",
+            "UID": "439881a98dc7c5c"
+          },
+          "Version": "1.1.2",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 42,
+              "EndLine": 42
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.assertj:assertj-core:3.27.7",
+          "Name": "org.assertj:assertj-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.assertj/assertj-core@3.27.7",
+            "UID": "d14ee0ab1de736b"
+          },
+          "Version": "3.27.7",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 43,
+              "EndLine": 43
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.awaitility:awaitility:4.3.0",
+          "Name": "org.awaitility:awaitility",
+          "Identifier": {
+            "PURL": "pkg:maven/org.awaitility/awaitility@4.3.0",
+            "UID": "b3e157a2e668560a"
+          },
+          "Version": "4.3.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 44,
+              "EndLine": 44
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.55.1",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+            "UID": "ec826e2ee46d3063"
+          },
+          "Version": "3.55.1",
+          "Locations": [
+            {
+              "StartLine": 45,
+              "EndLine": 45
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.flywaydb:flyway-core:12.4.0",
+          "Name": "org.flywaydb:flyway-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.flywaydb/flyway-core@12.4.0",
+            "UID": "dbb253011a7b5aee"
+          },
+          "Version": "12.4.0",
+          "Locations": [
+            {
+              "StartLine": 46,
+              "EndLine": 46
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.flywaydb:flyway-database-postgresql:12.4.0",
+          "Name": "org.flywaydb:flyway-database-postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.flywaydb/flyway-database-postgresql@12.4.0",
+            "UID": "f6ea6194c623f839"
+          },
+          "Version": "12.4.0",
+          "Locations": [
+            {
+              "StartLine": 47,
+              "EndLine": 47
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.hamcrest:hamcrest:3.0",
+          "Name": "org.hamcrest:hamcrest",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hamcrest/hamcrest@3.0",
+            "UID": "9edf26d6f4e5e55b"
+          },
+          "Version": "3.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 48,
+              "EndLine": 48
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.hdrhistogram:HdrHistogram:2.2.2",
+          "Name": "org.hdrhistogram:HdrHistogram",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+            "UID": "1cf1c072c18e341f"
+          },
+          "Version": "2.2.2",
+          "Locations": [
+            {
+              "StartLine": 49,
+              "EndLine": 49
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.hibernate.validator:hibernate-validator:9.1.3.Final",
+          "Name": "org.hibernate.validator:hibernate-validator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.3.Final",
+            "UID": "7515656bbfd9433d"
+          },
+          "Version": "9.1.3.Final",
+          "Locations": [
+            {
+              "StartLine": 50,
+              "EndLine": 50
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.jboss.logging:jboss-logging:3.6.3.Final",
+          "Name": "org.jboss.logging:jboss-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+            "UID": "2e342f5fa8a0e398"
+          },
+          "Version": "3.6.3.Final",
+          "Locations": [
+            {
+              "StartLine": 51,
+              "EndLine": 51
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.jspecify:jspecify:1.0.1",
+          "Name": "org.jspecify:jspecify",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jspecify/jspecify@1.0.1",
+            "UID": "5cebc4fbed013d77"
+          },
+          "Version": "1.0.1",
+          "Locations": [
+            {
+              "StartLine": 52,
+              "EndLine": 52
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3",
+            "UID": "4f1653afe3d6b4b5"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 56,
+              "EndLine": 56
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter-api:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter-api@6.0.3",
+            "UID": "568988fa75d823d4"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 53,
+              "EndLine": 53
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter-engine:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter-engine",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter-engine@6.0.3",
+            "UID": "456995bf9e98558d"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 54,
+              "EndLine": 54
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter-params:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter-params",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter-params@6.0.3",
+            "UID": "e353bc7f2901c85c"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 55,
+              "EndLine": 55
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.platform:junit-platform-commons:6.0.3",
+          "Name": "org.junit.platform:junit-platform-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.platform/junit-platform-commons@6.0.3",
+            "UID": "2e3f85558eb28856"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 57,
+              "EndLine": 57
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.platform:junit-platform-engine:6.0.3",
+          "Name": "org.junit.platform:junit-platform-engine",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.platform/junit-platform-engine@6.0.3",
+            "UID": "d5d4b089a043b66c"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 58,
+              "EndLine": 58
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.platform:junit-platform-launcher:6.0.3",
+          "Name": "org.junit.platform:junit-platform-launcher",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.platform/junit-platform-launcher@6.0.3",
+            "UID": "1e9e10c7028a297f"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 59,
+              "EndLine": 59
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit:junit-bom:6.0.3",
+          "Name": "org.junit:junit-bom",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit/junit-bom@6.0.3",
+            "UID": "937879ef3510f13c"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 60,
+              "EndLine": 60
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.mockito:mockito-core:5.23.0",
+          "Name": "org.mockito:mockito-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.mockito/mockito-core@5.23.0",
+            "UID": "c26329823c1d82f"
+          },
+          "Version": "5.23.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 61,
+              "EndLine": 61
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.mockito:mockito-junit-jupiter:5.23.0",
+          "Name": "org.mockito:mockito-junit-jupiter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.mockito/mockito-junit-jupiter@5.23.0",
+            "UID": "e9babbefde17bde5"
+          },
+          "Version": "5.23.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 62,
+              "EndLine": 62
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.objenesis:objenesis:3.3",
+          "Name": "org.objenesis:objenesis",
+          "Identifier": {
+            "PURL": "pkg:maven/org.objenesis/objenesis@3.3",
+            "UID": "47ef8a6a76cca74f"
+          },
+          "Version": "3.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 63,
+              "EndLine": 63
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.opentest4j:opentest4j:1.3.0",
+          "Name": "org.opentest4j:opentest4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.opentest4j/opentest4j@1.3.0",
+            "UID": "ed5330b058174ad"
+          },
+          "Version": "1.3.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 64,
+              "EndLine": 64
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.annotation.bundle:2.0.0",
+          "Name": "org.osgi:org.osgi.annotation.bundle",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.annotation.bundle@2.0.0",
+            "UID": "3cda53c8969ec864"
+          },
+          "Version": "2.0.0",
+          "Locations": [
+            {
+              "StartLine": 65,
+              "EndLine": 65
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.annotation.versioning:1.1.2",
+          "Name": "org.osgi:org.osgi.annotation.versioning",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2",
+            "UID": "7e30429150124159"
+          },
+          "Version": "1.1.2",
+          "Locations": [
+            {
+              "StartLine": 66,
+              "EndLine": 66
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.resource:1.0.0",
+          "Name": "org.osgi:org.osgi.resource",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.resource@1.0.0",
+            "UID": "633353c06f7c929d"
+          },
+          "Version": "1.0.0",
+          "Locations": [
+            {
+              "StartLine": 67,
+              "EndLine": 67
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.service.serviceloader:1.0.0",
+          "Name": "org.osgi:org.osgi.service.serviceloader",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.service.serviceloader@1.0.0",
+            "UID": "a0b4f81749de0412"
+          },
+          "Version": "1.0.0",
+          "Locations": [
+            {
+              "StartLine": 68,
+              "EndLine": 68
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.ow2.asm:asm:9.7.1",
+          "Name": "org.ow2.asm:asm",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm@9.7.1",
+            "UID": "8a9e3bb86ef275fe"
+          },
+          "Version": "9.7.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 69,
+              "EndLine": 69
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.postgresql:postgresql:42.7.13",
+          "Name": "org.postgresql:postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.postgresql/postgresql@42.7.13",
+            "UID": "1351c09b9b1d133e"
+          },
+          "Version": "42.7.13",
+          "Locations": [
+            {
+              "StartLine": 70,
+              "EndLine": 70
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.skyscreamer:jsonassert:1.5.3",
+          "Name": "org.skyscreamer:jsonassert",
+          "Identifier": {
+            "PURL": "pkg:maven/org.skyscreamer/jsonassert@1.5.3",
+            "UID": "2eb262576cf5a704"
+          },
+          "Version": "1.5.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 71,
+              "EndLine": 71
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.slf4j:jul-to-slf4j:2.0.18",
+          "Name": "org.slf4j:jul-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.18",
+            "UID": "1e3653464a736f0d"
+          },
+          "Version": "2.0.18",
+          "Locations": [
+            {
+              "StartLine": 72,
+              "EndLine": 72
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:2.0.18",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+            "UID": "400a7d09c0b9ec3c"
+          },
+          "Version": "2.0.18",
+          "Locations": [
+            {
+              "StartLine": 73,
+              "EndLine": 73
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot:4.1.1",
+          "Name": "org.springframework.boot:spring-boot",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot@4.1.1",
+            "UID": "18854fbbbc71908"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 112,
+              "EndLine": 112
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-actuator:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.1",
+            "UID": "82c2d54f01363569"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 75,
+              "EndLine": 75
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-actuator-autoconfigure:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.1",
+            "UID": "330ddc94fb578806"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 74,
+              "EndLine": 74
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-autoconfigure:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.1",
+            "UID": "730aa1cfd1c3ccd3"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 76,
+              "EndLine": 76
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-flyway:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-flyway",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-flyway@4.1.1",
+            "UID": "6066dcd5a92f29a7"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 77,
+              "EndLine": 77
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-health:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-health",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.1",
+            "UID": "191f52ff5de301cb"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 78,
+              "EndLine": 78
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-http-converter:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-http-converter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.1",
+            "UID": "cbb2ab0bd92b0f1c"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 79,
+              "EndLine": 79
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jackson:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.1",
+            "UID": "8992988ef60bb5c2"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 80,
+              "EndLine": 80
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jdbc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.1",
+            "UID": "5fa99b1f81fffbdb"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 81,
+              "EndLine": 81
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-kafka:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-kafka",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-kafka@4.1.1",
+            "UID": "43f50d5266f64689"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 82,
+              "EndLine": 82
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-micrometer-metrics:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.1",
+            "UID": "9f39000c5bbd2596"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 83,
+              "EndLine": 83
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-micrometer-observation:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.1",
+            "UID": "b870b9df31e04c67"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 84,
+              "EndLine": 84
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-persistence:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-persistence",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.1",
+            "UID": "47feea7bcdd8057a"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 85,
+              "EndLine": 85
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-resttestclient:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-resttestclient",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-resttestclient@4.1.1",
+            "UID": "f0091fe20c9e5363"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 86,
+              "EndLine": 86
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-servlet:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-servlet",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.1",
+            "UID": "5848b66f08d089b3"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 87,
+              "EndLine": 87
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-sql:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-sql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.1",
+            "UID": "fff7a697dd4a9b89"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 88,
+              "EndLine": 88
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter@4.1.1",
+            "UID": "f2682d9159d9c751"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 103,
+              "EndLine": 103
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-actuator:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.1.1",
+            "UID": "d8ce9e13303e58ee"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 89,
+              "EndLine": 89
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-flyway:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-flyway",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-flyway@4.1.1",
+            "UID": "209675a6a36beb2e"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 90,
+              "EndLine": 90
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jackson:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.1.1",
+            "UID": "6c33817f1e3106d1"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 92,
+              "EndLine": 92
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jackson-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-jackson-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson-test@4.1.1",
+            "UID": "353e00f33de075b7"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 91,
+              "EndLine": 91
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jdbc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.1.1",
+            "UID": "7805c557cb80b027"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 93,
+              "EndLine": 93
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-kafka:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-kafka",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-kafka@4.1.1",
+            "UID": "16978336c3e17d4f"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 94,
+              "EndLine": 94
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-logging:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.1.1",
+            "UID": "98c39c1b1a232aaf"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 95,
+              "EndLine": 95
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-micrometer-metrics:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.1.1",
+            "UID": "ee102515042c3881"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 96,
+              "EndLine": 96
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-test@4.1.1",
+            "UID": "efb72f02346ef85"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 97,
+              "EndLine": 97
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.1.1",
+            "UID": "9b49cb6308f71e8d"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 99,
+              "EndLine": 99
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat-runtime:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.1.1",
+            "UID": "f4ca90487536c53c"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 98,
+              "EndLine": 98
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-validation:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-validation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.1.1",
+            "UID": "44879e45d553d3a9"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 100,
+              "EndLine": 100
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-webmvc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.1.1",
+            "UID": "5231a89c9607f46e"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 102,
+              "EndLine": 102
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-webmvc-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-webmvc-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc-test@4.1.1",
+            "UID": "dd90c0d95bcfffb8"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 101,
+              "EndLine": 101
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-test@4.1.1",
+            "UID": "e9feb73bc0a10c86"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 105,
+              "EndLine": 105
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-test-autoconfigure:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-test-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-test-autoconfigure@4.1.1",
+            "UID": "a2c814a3eea71b7a"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 104,
+              "EndLine": 104
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-tomcat:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.1",
+            "UID": "2af9ff717d7c4a0a"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 106,
+              "EndLine": 106
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-transaction:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-transaction",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.1",
+            "UID": "69b0746510e5f7c6"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 107,
+              "EndLine": 107
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-validation:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-validation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-validation@4.1.1",
+            "UID": "1ede6fe99e8d19ba"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 108,
+              "EndLine": 108
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-web-server:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-web-server",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.1",
+            "UID": "9382a45e1dcf9d0b"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 109,
+              "EndLine": 109
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-webmvc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.1",
+            "UID": "cf8c2bdb95f84434"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 111,
+              "EndLine": 111
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-webmvc-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-webmvc-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-webmvc-test@4.1.1",
+            "UID": "28298cb726c36bf7"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 110,
+              "EndLine": 110
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.kafka:spring-kafka:4.1.1",
+          "Name": "org.springframework.kafka:spring-kafka",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.kafka/spring-kafka@4.1.1",
+            "UID": "27e004186ab93700"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 113,
+              "EndLine": 113
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-aop:7.0.9",
+          "Name": "org.springframework:spring-aop",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aop@7.0.9",
+            "UID": "cda75de006524cd"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 114,
+              "EndLine": 114
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-beans:7.0.9",
+          "Name": "org.springframework:spring-beans",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-beans@7.0.9",
+            "UID": "e05beae9ed758c90"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 115,
+              "EndLine": 115
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-context:7.0.9",
+          "Name": "org.springframework:spring-context",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context@7.0.9",
+            "UID": "ba0a7d4b999dafe6"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 116,
+              "EndLine": 116
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-core:7.0.9",
+          "Name": "org.springframework:spring-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-core@7.0.9",
+            "UID": "58a59dffe69d7c3c"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 117,
+              "EndLine": 117
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-expression:7.0.9",
+          "Name": "org.springframework:spring-expression",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-expression@7.0.9",
+            "UID": "1e0827dc1e061e8f"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 118,
+              "EndLine": 118
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-jdbc:7.0.9",
+          "Name": "org.springframework:spring-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-jdbc@7.0.9",
+            "UID": "327a4b03e4f15756"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 119,
+              "EndLine": 119
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-messaging:7.0.9",
+          "Name": "org.springframework:spring-messaging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-messaging@7.0.9",
+            "UID": "1b7cf4ddbc898f1b"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 120,
+              "EndLine": 120
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-test:7.0.9",
+          "Name": "org.springframework:spring-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-test@7.0.9",
+            "UID": "550188eaa0f1f2ab"
+          },
+          "Version": "7.0.9",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 121,
+              "EndLine": 121
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-tx:7.0.9",
+          "Name": "org.springframework:spring-tx",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-tx@7.0.9",
+            "UID": "a32094be2ee42fb8"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 122,
+              "EndLine": 122
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-web:7.0.9",
+          "Name": "org.springframework:spring-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-web@7.0.9",
+            "UID": "3a6171005b5a7fe3"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 123,
+              "EndLine": 123
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-webmvc:7.0.9",
+          "Name": "org.springframework:spring-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-webmvc@7.0.9",
+            "UID": "78c99b5c3b6f0d16"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 124,
+              "EndLine": 124
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.xerial.snappy:snappy-java:1.1.10.7",
+          "Name": "org.xerial.snappy:snappy-java",
+          "Identifier": {
+            "PURL": "pkg:maven/org.xerial.snappy/snappy-java@1.1.10.7",
+            "UID": "d6d471ace0fc2f02"
+          },
+          "Version": "1.1.10.7",
+          "Locations": [
+            {
+              "StartLine": 125,
+              "EndLine": 125
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.xmlunit:xmlunit-core:2.11.0",
+          "Name": "org.xmlunit:xmlunit-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.xmlunit/xmlunit-core@2.11.0",
+            "UID": "793f91e2a09c6f1b"
+          },
+          "Version": "2.11.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 126,
+              "EndLine": 126
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.yaml:snakeyaml:2.6",
+          "Name": "org.yaml:snakeyaml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.yaml/snakeyaml@2.6",
+            "UID": "edb3865c9dd43f1a"
+          },
+          "Version": "2.6",
+          "Locations": [
+            {
+              "StartLine": 127,
+              "EndLine": 127
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "tools.jackson.core:jackson-core:3.1.7",
+          "Name": "tools.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+            "UID": "ef4de632fe640d2b"
+          },
+          "Version": "3.1.7",
+          "Locations": [
+            {
+              "StartLine": 128,
+              "EndLine": 128
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "tools.jackson.core:jackson-databind:3.1.7",
+          "Name": "tools.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+            "UID": "c2fe6969e64c62a6"
+          },
+          "Version": "3.1.7",
+          "Locations": [
+            {
+              "StartLine": 129,
+              "EndLine": 129
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "tools.jackson:jackson-bom:3.1.7",
+          "Name": "tools.jackson:jackson-bom",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson/jackson-bom@3.1.7",
+            "UID": "5596e3048f62c4ac"
+          },
+          "Version": "3.1.7",
+          "Locations": [
+            {
+              "StartLine": 130,
+              "EndLine": 130
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        }
+      ]
+    },
+    {
+      "Target": "suggestion-service/gradle.lockfile",
+      "Class": "lang-pkgs",
+      "Type": "gradle",
+      "Packages": [
+        {
+          "ID": "biz.aQute.bnd:biz.aQute.bnd.annotation:7.1.0",
+          "Name": "biz.aQute.bnd:biz.aQute.bnd.annotation",
+          "Identifier": {
+            "PURL": "pkg:maven/biz.aQute.bnd/biz.aQute.bnd.annotation@7.1.0",
+            "UID": "557610ea4ffce22a"
+          },
+          "Version": "7.1.0",
+          "Locations": [
+            {
+              "StartLine": 5,
+              "EndLine": 5
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "ch.qos.logback:logback-classic:1.5.38",
+          "Name": "ch.qos.logback:logback-classic",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+            "UID": "2f3520bc592e76c1"
+          },
+          "Version": "1.5.38",
+          "Locations": [
+            {
+              "StartLine": 6,
+              "EndLine": 6
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "ch.qos.logback:logback-core:1.5.38",
+          "Name": "ch.qos.logback:logback-core",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+            "UID": "24e45c7833c5608b"
+          },
+          "Version": "1.5.38",
+          "Locations": [
+            {
+              "StartLine": 7,
+              "EndLine": 7
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.21",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+            "UID": "1ed1f4453504b4dc"
+          },
+          "Version": "2.21",
+          "Locations": [
+            {
+              "StartLine": 8,
+              "EndLine": 8
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.50.0",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.50.0",
+            "UID": "eef7619cb9559e96"
+          },
+          "Version": "2.50.0",
+          "Locations": [
+            {
+              "StartLine": 9,
+              "EndLine": 9
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.google.guava:failureaccess:1.0.3",
+          "Name": "com.google.guava:failureaccess",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/failureaccess@1.0.3",
+            "UID": "b68a137b519e7597"
+          },
+          "Version": "1.0.3",
+          "Locations": [
+            {
+              "StartLine": 10,
+              "EndLine": 10
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.google.guava:guava:33.7.2-jre",
+          "Name": "com.google.guava:guava",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/guava@33.7.2-jre",
+            "UID": "d8581a18e6cb1b83"
+          },
+          "Version": "33.7.2-jre",
+          "Locations": [
+            {
+              "StartLine": 11,
+              "EndLine": 11
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava",
+          "Name": "com.google.guava:listenablefuture",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+            "UID": "552ca9149db57227"
+          },
+          "Version": "9999.0-empty-to-avoid-conflict-with-guava",
+          "Locations": [
+            {
+              "StartLine": 12,
+              "EndLine": 12
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.google.j2objc:j2objc-annotations:3.1",
+          "Name": "com.google.j2objc:j2objc-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.j2objc/j2objc-annotations@3.1",
+            "UID": "28d5872329e91f4d"
+          },
+          "Version": "3.1",
+          "Locations": [
+            {
+              "StartLine": 13,
+              "EndLine": 13
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.jayway.jsonpath:json-path:2.10.0",
+          "Name": "com.jayway.jsonpath:json-path",
+          "Identifier": {
+            "PURL": "pkg:maven/com.jayway.jsonpath/json-path@2.10.0",
+            "UID": "fc6a953e805d4632"
+          },
+          "Version": "2.10.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 14,
+              "EndLine": 14
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.vaadin.external.google:android-json:0.0.20131108.vaadin1",
+          "Name": "com.vaadin.external.google:android-json",
+          "Identifier": {
+            "PURL": "pkg:maven/com.vaadin.external.google/android-json@0.0.20131108.vaadin1",
+            "UID": "c8f05091d44c02f2"
+          },
+          "Version": "0.0.20131108.vaadin1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 15,
+              "EndLine": 15
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "com.zaxxer:HikariCP:7.0.2",
+          "Name": "com.zaxxer:HikariCP",
+          "Identifier": {
+            "PURL": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+            "UID": "f0fafcf2550797c5"
+          },
+          "Version": "7.0.2",
+          "Locations": [
+            {
+              "StartLine": 16,
+              "EndLine": 16
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.3.6",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.3.6",
+            "UID": "79984148263f43b9"
+          },
+          "Version": "1.3.6",
+          "Locations": [
+            {
+              "StartLine": 17,
+              "EndLine": 17
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.lettuce:lettuce-core:7.5.2.RELEASE",
+          "Name": "io.lettuce:lettuce-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.lettuce/lettuce-core@7.5.2.RELEASE",
+            "UID": "d0a7309ada76baed"
+          },
+          "Version": "7.5.2.RELEASE",
+          "Locations": [
+            {
+              "StartLine": 18,
+              "EndLine": 18
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-commons:1.17.1",
+          "Name": "io.micrometer:micrometer-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-commons@1.17.1",
+            "UID": "c9ed2d6c03af440b"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 19,
+              "EndLine": 19
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-core:1.17.1",
+          "Name": "io.micrometer:micrometer-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-core@1.17.1",
+            "UID": "eb55cfc9994e7242"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 20,
+              "EndLine": 20
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-jakarta9:1.17.1",
+          "Name": "io.micrometer:micrometer-jakarta9",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.1",
+            "UID": "98ed917c788fab3b"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 21,
+              "EndLine": 21
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-observation:1.17.1",
+          "Name": "io.micrometer:micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-observation@1.17.1",
+            "UID": "563bb1d164376987"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 22,
+              "EndLine": 22
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.micrometer:micrometer-registry-prometheus:1.17.1",
+          "Name": "io.micrometer:micrometer-registry-prometheus",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-registry-prometheus@1.17.1",
+            "UID": "276a2a4d3d451f80"
+          },
+          "Version": "1.17.1",
+          "Locations": [
+            {
+              "StartLine": 23,
+              "EndLine": 23
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-buffer:4.2.17.Final",
+          "Name": "io.netty:netty-buffer",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-buffer@4.2.17.Final",
+            "UID": "42ed7c94e3fac18b"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 24,
+              "EndLine": 24
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-codec-base:4.2.17.Final",
+          "Name": "io.netty:netty-codec-base",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-codec-base@4.2.17.Final",
+            "UID": "5edd611091ba8372"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 25,
+              "EndLine": 25
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-codec-dns:4.2.17.Final",
+          "Name": "io.netty:netty-codec-dns",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-codec-dns@4.2.17.Final",
+            "UID": "1fb6d883df23876b"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 26,
+              "EndLine": 26
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-common:4.2.17.Final",
+          "Name": "io.netty:netty-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-common@4.2.17.Final",
+            "UID": "7e295616dde195ee"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 27,
+              "EndLine": 27
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-handler:4.2.17.Final",
+          "Name": "io.netty:netty-handler",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-handler@4.2.17.Final",
+            "UID": "c2d973a2406f5fc9"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 28,
+              "EndLine": 28
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-resolver:4.2.17.Final",
+          "Name": "io.netty:netty-resolver",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-resolver@4.2.17.Final",
+            "UID": "595a187c019249f7"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 30,
+              "EndLine": 30
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-resolver-dns:4.2.17.Final",
+          "Name": "io.netty:netty-resolver-dns",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-resolver-dns@4.2.17.Final",
+            "UID": "a5c01a021a955dd3"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 29,
+              "EndLine": 29
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-transport:4.2.17.Final",
+          "Name": "io.netty:netty-transport",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-transport@4.2.17.Final",
+            "UID": "a6104393bbc33b3c"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 32,
+              "EndLine": 32
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.netty:netty-transport-native-unix-common:4.2.17.Final",
+          "Name": "io.netty:netty-transport-native-unix-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.netty/netty-transport-native-unix-common@4.2.17.Final",
+            "UID": "52dea1e458fa2232"
+          },
+          "Version": "4.2.17.Final",
+          "Locations": [
+            {
+              "StartLine": 31,
+              "EndLine": 31
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.projectreactor:reactor-core:3.8.7",
+          "Name": "io.projectreactor:reactor-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.projectreactor/reactor-core@3.8.7",
+            "UID": "ea6906e1f1870b6f"
+          },
+          "Version": "3.8.7",
+          "Locations": [
+            {
+              "StartLine": 33,
+              "EndLine": 33
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-config:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-config",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-config@1.7.0",
+            "UID": "c98d95ce284a70ad"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 34,
+              "EndLine": 34
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-core:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-core@1.7.0",
+            "UID": "5a13978ac27f7b78"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 35,
+              "EndLine": 35
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-exposition-formats:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-exposition-formats",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-exposition-formats@1.7.0",
+            "UID": "6979ec2d23b89f9b"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 36,
+              "EndLine": 36
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-exposition-textformats:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-exposition-textformats",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-exposition-textformats@1.7.0",
+            "UID": "774ec07f0f9ac9a6"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 37,
+              "EndLine": 37
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-model:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-model",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-model@1.7.0",
+            "UID": "7788549bf1c00547"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 38,
+              "EndLine": 38
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "io.prometheus:prometheus-metrics-tracer-common:1.7.0",
+          "Name": "io.prometheus:prometheus-metrics-tracer-common",
+          "Identifier": {
+            "PURL": "pkg:maven/io.prometheus/prometheus-metrics-tracer-common@1.7.0",
+            "UID": "275379b2cb2c33ec"
+          },
+          "Version": "1.7.0",
+          "Locations": [
+            {
+              "StartLine": 39,
+              "EndLine": 39
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.activation:jakarta.activation-api:2.1.4",
+          "Name": "jakarta.activation:jakarta.activation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+            "UID": "3def42641a95b28"
+          },
+          "Version": "2.1.4",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 40,
+              "EndLine": 40
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:3.0.0",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+            "UID": "e96202736c7456a1"
+          },
+          "Version": "3.0.0",
+          "Locations": [
+            {
+              "StartLine": 41,
+              "EndLine": 41
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+          "Name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+            "UID": "5c27925cd08e6881"
+          },
+          "Version": "4.0.5",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 42,
+              "EndLine": 42
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy:1.18.11",
+          "Name": "net.bytebuddy:byte-buddy",
+          "Identifier": {
+            "PURL": "pkg:maven/net.bytebuddy/byte-buddy@1.18.11",
+            "UID": "53ed9110390c5f6f"
+          },
+          "Version": "1.18.11",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 44,
+              "EndLine": 44
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy-agent:1.18.11",
+          "Name": "net.bytebuddy:byte-buddy-agent",
+          "Identifier": {
+            "PURL": "pkg:maven/net.bytebuddy/byte-buddy-agent@1.18.11",
+            "UID": "899ca46239feb2d1"
+          },
+          "Version": "1.18.11",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 43,
+              "EndLine": 43
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.minidev:accessors-smart:2.6.0",
+          "Name": "net.minidev:accessors-smart",
+          "Identifier": {
+            "PURL": "pkg:maven/net.minidev/accessors-smart@2.6.0",
+            "UID": "e06f9e1ff8fdb3be"
+          },
+          "Version": "2.6.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 45,
+              "EndLine": 45
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "net.minidev:json-smart:2.6.0",
+          "Name": "net.minidev:json-smart",
+          "Identifier": {
+            "PURL": "pkg:maven/net.minidev/json-smart@2.6.0",
+            "UID": "397617d5b3095990"
+          },
+          "Version": "2.6.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 46,
+              "EndLine": 46
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "e9a5777623477388"
+          },
+          "Version": "2.25.5",
+          "Locations": [
+            {
+              "StartLine": 47,
+              "EndLine": 47
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "b89e274ba975f36e"
+          },
+          "Version": "2.25.5",
+          "Locations": [
+            {
+              "StartLine": 48,
+              "EndLine": 48
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-core:11.0.25",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.25",
+            "UID": "86ce9782e0ce8af2"
+          },
+          "Version": "11.0.25",
+          "Locations": [
+            {
+              "StartLine": 49,
+              "EndLine": 49
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-el:11.0.25",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.25",
+            "UID": "4e8d1050105e9d20"
+          },
+          "Version": "11.0.25",
+          "Locations": [
+            {
+              "StartLine": 50,
+              "EndLine": 50
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-websocket:11.0.25",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.25",
+            "UID": "323472cef80625e4"
+          },
+          "Version": "11.0.25",
+          "Locations": [
+            {
+              "StartLine": 51,
+              "EndLine": 51
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.apiguardian:apiguardian-api:1.1.2",
+          "Name": "org.apiguardian:apiguardian-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apiguardian/apiguardian-api@1.1.2",
+            "UID": "30fcb1a68956fcce"
+          },
+          "Version": "1.1.2",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 52,
+              "EndLine": 52
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.assertj:assertj-core:3.27.7",
+          "Name": "org.assertj:assertj-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.assertj/assertj-core@3.27.7",
+            "UID": "5454d0fd676ce6ed"
+          },
+          "Version": "3.27.7",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 53,
+              "EndLine": 53
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.awaitility:awaitility:4.3.0",
+          "Name": "org.awaitility:awaitility",
+          "Identifier": {
+            "PURL": "pkg:maven/org.awaitility/awaitility@4.3.0",
+            "UID": "2cda5908e2840872"
+          },
+          "Version": "4.3.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 54,
+              "EndLine": 54
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.55.1",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+            "UID": "9121dcfa0eb997ee"
+          },
+          "Version": "3.55.1",
+          "Locations": [
+            {
+              "StartLine": 55,
+              "EndLine": 55
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.hamcrest:hamcrest:3.0",
+          "Name": "org.hamcrest:hamcrest",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hamcrest/hamcrest@3.0",
+            "UID": "186aec9ded0dab26"
+          },
+          "Version": "3.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 56,
+              "EndLine": 56
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.hdrhistogram:HdrHistogram:2.2.2",
+          "Name": "org.hdrhistogram:HdrHistogram",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+            "UID": "c4a099ae16222cac"
+          },
+          "Version": "2.2.2",
+          "Locations": [
+            {
+              "StartLine": 57,
+              "EndLine": 57
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.jspecify:jspecify:1.0.1",
+          "Name": "org.jspecify:jspecify",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jspecify/jspecify@1.0.1",
+            "UID": "2573375b39970138"
+          },
+          "Version": "1.0.1",
+          "Locations": [
+            {
+              "StartLine": 58,
+              "EndLine": 58
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3",
+            "UID": "4b5db33ff9fcdfce"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 62,
+              "EndLine": 62
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter-api:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter-api@6.0.3",
+            "UID": "1f785ab2f4044d49"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 59,
+              "EndLine": 59
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter-engine:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter-engine",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter-engine@6.0.3",
+            "UID": "9334102ce81d14bd"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 60,
+              "EndLine": 60
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.jupiter:junit-jupiter-params:6.0.3",
+          "Name": "org.junit.jupiter:junit-jupiter-params",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.jupiter/junit-jupiter-params@6.0.3",
+            "UID": "3a10069b01ebe047"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 61,
+              "EndLine": 61
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.platform:junit-platform-commons:6.0.3",
+          "Name": "org.junit.platform:junit-platform-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.platform/junit-platform-commons@6.0.3",
+            "UID": "c8e526659173e777"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 63,
+              "EndLine": 63
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.platform:junit-platform-engine:6.0.3",
+          "Name": "org.junit.platform:junit-platform-engine",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.platform/junit-platform-engine@6.0.3",
+            "UID": "911255f11472b791"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 64,
+              "EndLine": 64
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit.platform:junit-platform-launcher:6.0.3",
+          "Name": "org.junit.platform:junit-platform-launcher",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit.platform/junit-platform-launcher@6.0.3",
+            "UID": "91c15762b2840df9"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 65,
+              "EndLine": 65
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.junit:junit-bom:6.0.3",
+          "Name": "org.junit:junit-bom",
+          "Identifier": {
+            "PURL": "pkg:maven/org.junit/junit-bom@6.0.3",
+            "UID": "54f08fcd7c0d5441"
+          },
+          "Version": "6.0.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 66,
+              "EndLine": 66
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.mockito:mockito-core:5.23.0",
+          "Name": "org.mockito:mockito-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.mockito/mockito-core@5.23.0",
+            "UID": "898185472a0bc86a"
+          },
+          "Version": "5.23.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 67,
+              "EndLine": 67
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.mockito:mockito-junit-jupiter:5.23.0",
+          "Name": "org.mockito:mockito-junit-jupiter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.mockito/mockito-junit-jupiter@5.23.0",
+            "UID": "60ad21aa20149af0"
+          },
+          "Version": "5.23.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 68,
+              "EndLine": 68
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.objenesis:objenesis:3.3",
+          "Name": "org.objenesis:objenesis",
+          "Identifier": {
+            "PURL": "pkg:maven/org.objenesis/objenesis@3.3",
+            "UID": "c16364de5e5206f2"
+          },
+          "Version": "3.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 69,
+              "EndLine": 69
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.opentest4j:opentest4j:1.3.0",
+          "Name": "org.opentest4j:opentest4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.opentest4j/opentest4j@1.3.0",
+            "UID": "e5a21235ec5f66ed"
+          },
+          "Version": "1.3.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 70,
+              "EndLine": 70
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.annotation.bundle:2.0.0",
+          "Name": "org.osgi:org.osgi.annotation.bundle",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.annotation.bundle@2.0.0",
+            "UID": "332004aff8e6732b"
+          },
+          "Version": "2.0.0",
+          "Locations": [
+            {
+              "StartLine": 71,
+              "EndLine": 71
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.annotation.versioning:1.1.2",
+          "Name": "org.osgi:org.osgi.annotation.versioning",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.annotation.versioning@1.1.2",
+            "UID": "1ed29c0c156d821"
+          },
+          "Version": "1.1.2",
+          "Locations": [
+            {
+              "StartLine": 72,
+              "EndLine": 72
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.resource:1.0.0",
+          "Name": "org.osgi:org.osgi.resource",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.resource@1.0.0",
+            "UID": "32e27ccf58a1af03"
+          },
+          "Version": "1.0.0",
+          "Locations": [
+            {
+              "StartLine": 73,
+              "EndLine": 73
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.osgi:org.osgi.service.serviceloader:1.0.0",
+          "Name": "org.osgi:org.osgi.service.serviceloader",
+          "Identifier": {
+            "PURL": "pkg:maven/org.osgi/org.osgi.service.serviceloader@1.0.0",
+            "UID": "3658e4aff575c02"
+          },
+          "Version": "1.0.0",
+          "Locations": [
+            {
+              "StartLine": 74,
+              "EndLine": 74
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.ow2.asm:asm:9.7.1",
+          "Name": "org.ow2.asm:asm",
+          "Identifier": {
+            "PURL": "pkg:maven/org.ow2.asm/asm@9.7.1",
+            "UID": "a5658a1f197bdc84"
+          },
+          "Version": "9.7.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 75,
+              "EndLine": 75
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.postgresql:postgresql:42.7.13",
+          "Name": "org.postgresql:postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.postgresql/postgresql@42.7.13",
+            "UID": "8c08925bdc4bf2d"
+          },
+          "Version": "42.7.13",
+          "Locations": [
+            {
+              "StartLine": 76,
+              "EndLine": 76
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.reactivestreams:reactive-streams:1.0.4",
+          "Name": "org.reactivestreams:reactive-streams",
+          "Identifier": {
+            "PURL": "pkg:maven/org.reactivestreams/reactive-streams@1.0.4",
+            "UID": "1207b833d7db4b4f"
+          },
+          "Version": "1.0.4",
+          "Locations": [
+            {
+              "StartLine": 77,
+              "EndLine": 77
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.skyscreamer:jsonassert:1.5.3",
+          "Name": "org.skyscreamer:jsonassert",
+          "Identifier": {
+            "PURL": "pkg:maven/org.skyscreamer/jsonassert@1.5.3",
+            "UID": "845e423b30d2131c"
+          },
+          "Version": "1.5.3",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 78,
+              "EndLine": 78
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.slf4j:jul-to-slf4j:2.0.18",
+          "Name": "org.slf4j:jul-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.18",
+            "UID": "240d7c6e2944de54"
+          },
+          "Version": "2.0.18",
+          "Locations": [
+            {
+              "StartLine": 79,
+              "EndLine": 79
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:2.0.18",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@2.0.18",
+            "UID": "d06f08dd775e0b0"
+          },
+          "Version": "2.0.18",
+          "Locations": [
+            {
+              "StartLine": 80,
+              "EndLine": 80
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot:4.1.1",
+          "Name": "org.springframework.boot:spring-boot",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot@4.1.1",
+            "UID": "c9cf55487d3e18f7"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 113,
+              "EndLine": 113
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-actuator:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.1",
+            "UID": "8ad0611abdaabd55"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 82,
+              "EndLine": 82
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-actuator-autoconfigure:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.1",
+            "UID": "1a0d6b830ccbf0cb"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 81,
+              "EndLine": 81
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-autoconfigure:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.1",
+            "UID": "88e96dd96cfec8f7"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 83,
+              "EndLine": 83
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-health:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-health",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.1",
+            "UID": "6d75fb3f84376256"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 84,
+              "EndLine": 84
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-http-converter:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-http-converter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.1",
+            "UID": "40d5ed6bb990990a"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 85,
+              "EndLine": 85
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jackson:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.1",
+            "UID": "53373640d5f6bd0a"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 86,
+              "EndLine": 86
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jdbc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.1",
+            "UID": "ce9da27f10e6b06e"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 87,
+              "EndLine": 87
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-micrometer-metrics:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.1",
+            "UID": "93c34488f93f27f"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 88,
+              "EndLine": 88
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-micrometer-observation:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.1",
+            "UID": "e787628e08969b34"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 89,
+              "EndLine": 89
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-persistence:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-persistence",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.1",
+            "UID": "f0700787647cc251"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 90,
+              "EndLine": 90
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-resttestclient:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-resttestclient",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-resttestclient@4.1.1",
+            "UID": "6e97b975b322fd4f"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 91,
+              "EndLine": 91
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-servlet:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-servlet",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.1",
+            "UID": "e08698beebc4789a"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 92,
+              "EndLine": 92
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-sql:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-sql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.1",
+            "UID": "7d666148651fcc3e"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 93,
+              "EndLine": 93
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter@4.1.1",
+            "UID": "ca1f52d9b53b8582"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 105,
+              "EndLine": 105
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-actuator:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.1.1",
+            "UID": "c4c2fd5844f2cc6"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 94,
+              "EndLine": 94
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jackson:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.1.1",
+            "UID": "99f9057a512edd9b"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 96,
+              "EndLine": 96
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jackson-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-jackson-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson-test@4.1.1",
+            "UID": "ad2d71e7f7de9bd"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 95,
+              "EndLine": 95
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jdbc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.1.1",
+            "UID": "a8a02b1b40a72f52"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 97,
+              "EndLine": 97
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-logging:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.1.1",
+            "UID": "d5b91348ca1d3382"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 98,
+              "EndLine": 98
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-micrometer-metrics:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.1.1",
+            "UID": "95915ad65a5507a0"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 99,
+              "EndLine": 99
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-test@4.1.1",
+            "UID": "a76414d9f575188b"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 100,
+              "EndLine": 100
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.1.1",
+            "UID": "ac43118f9d29707e"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 102,
+              "EndLine": 102
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat-runtime:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.1.1",
+            "UID": "8db58fab2b6f333a"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 101,
+              "EndLine": 101
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-webmvc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.1.1",
+            "UID": "2800e697afa32a19"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 104,
+              "EndLine": 104
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-webmvc-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-starter-webmvc-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc-test@4.1.1",
+            "UID": "498aa5a4bd543b5c"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 103,
+              "EndLine": 103
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-test@4.1.1",
+            "UID": "53102ffee7daf450"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 107,
+              "EndLine": 107
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-test-autoconfigure:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-test-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-test-autoconfigure@4.1.1",
+            "UID": "a2bd1fc58638ef4a"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 106,
+              "EndLine": 106
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-tomcat:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.1",
+            "UID": "28e8e69ac8465c7b"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 108,
+              "EndLine": 108
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-transaction:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-transaction",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.1",
+            "UID": "5eb8cb56e6593a40"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 109,
+              "EndLine": 109
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-web-server:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-web-server",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.1",
+            "UID": "c8671f7833675174"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 110,
+              "EndLine": 110
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-webmvc:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.1",
+            "UID": "40bb34f9da1c4ba5"
+          },
+          "Version": "4.1.1",
+          "Locations": [
+            {
+              "StartLine": 112,
+              "EndLine": 112
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-webmvc-test:4.1.1",
+          "Name": "org.springframework.boot:spring-boot-webmvc-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-webmvc-test@4.1.1",
+            "UID": "239216163e0382a1"
+          },
+          "Version": "4.1.1",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 111,
+              "EndLine": 111
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-aop:7.0.9",
+          "Name": "org.springframework:spring-aop",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aop@7.0.9",
+            "UID": "d9a8a96ea2fc6f27"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 114,
+              "EndLine": 114
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-beans:7.0.9",
+          "Name": "org.springframework:spring-beans",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-beans@7.0.9",
+            "UID": "f79e7c6666f3e16e"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 115,
+              "EndLine": 115
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-context:7.0.9",
+          "Name": "org.springframework:spring-context",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context@7.0.9",
+            "UID": "1f45562523b6f97c"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 116,
+              "EndLine": 116
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-core:7.0.9",
+          "Name": "org.springframework:spring-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-core@7.0.9",
+            "UID": "68f4665fd72201da"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 117,
+              "EndLine": 117
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-expression:7.0.9",
+          "Name": "org.springframework:spring-expression",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-expression@7.0.9",
+            "UID": "7d45625ba57c169d"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 118,
+              "EndLine": 118
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-jdbc:7.0.9",
+          "Name": "org.springframework:spring-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-jdbc@7.0.9",
+            "UID": "8206cee0e08b594"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 119,
+              "EndLine": 119
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-test:7.0.9",
+          "Name": "org.springframework:spring-test",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-test@7.0.9",
+            "UID": "4a9d6cf6440770ff"
+          },
+          "Version": "7.0.9",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 120,
+              "EndLine": 120
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-tx:7.0.9",
+          "Name": "org.springframework:spring-tx",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-tx@7.0.9",
+            "UID": "ac45d1a93d174ad7"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 121,
+              "EndLine": 121
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-web:7.0.9",
+          "Name": "org.springframework:spring-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-web@7.0.9",
+            "UID": "5374d73d423502ca"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 122,
+              "EndLine": 122
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.springframework:spring-webmvc:7.0.9",
+          "Name": "org.springframework:spring-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-webmvc@7.0.9",
+            "UID": "4a287c1fa1ee9b9f"
+          },
+          "Version": "7.0.9",
+          "Locations": [
+            {
+              "StartLine": 123,
+              "EndLine": 123
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.xmlunit:xmlunit-core:2.11.0",
+          "Name": "org.xmlunit:xmlunit-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.xmlunit/xmlunit-core@2.11.0",
+            "UID": "a9b76da87036c5b8"
+          },
+          "Version": "2.11.0",
+          "Dev": true,
+          "Locations": [
+            {
+              "StartLine": 124,
+              "EndLine": 124
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "org.yaml:snakeyaml:2.6",
+          "Name": "org.yaml:snakeyaml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.yaml/snakeyaml@2.6",
+            "UID": "fd9074c15b12dfca"
+          },
+          "Version": "2.6",
+          "Locations": [
+            {
+              "StartLine": 125,
+              "EndLine": 125
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "redis.clients.authentication:redis-authx-core:0.1.1-beta2",
+          "Name": "redis.clients.authentication:redis-authx-core",
+          "Identifier": {
+            "PURL": "pkg:maven/redis.clients.authentication/redis-authx-core@0.1.1-beta2",
+            "UID": "a14aa7886e40bc18"
+          },
+          "Version": "0.1.1-beta2",
+          "Locations": [
+            {
+              "StartLine": 126,
+              "EndLine": 126
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "tools.jackson.core:jackson-core:3.1.7",
+          "Name": "tools.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+            "UID": "c917038357370e20"
+          },
+          "Version": "3.1.7",
+          "Locations": [
+            {
+              "StartLine": 127,
+              "EndLine": 127
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "tools.jackson.core:jackson-databind:3.1.7",
+          "Name": "tools.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+            "UID": "d8b7cd1c20888c8e"
+          },
+          "Version": "3.1.7",
+          "Locations": [
+            {
+              "StartLine": 128,
+              "EndLine": 128
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        },
+        {
+          "ID": "tools.jackson:jackson-bom:3.1.7",
+          "Name": "tools.jackson:jackson-bom",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson/jackson-bom@3.1.7",
+            "UID": "1a7e5a13370d139d"
+          },
+          "Version": "3.1.7",
+          "Locations": [
+            {
+              "StartLine": 129,
+              "EndLine": 129
+            }
+          ],
+          "AnalyzedBy": "gradle-lockfile"
+        }
+      ]
+    }
+  ]
+}

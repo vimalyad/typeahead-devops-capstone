@@ -1,0 +1,37 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ jq . evidence/local/{dns-recovery,service-recovery,gitops-drift-repair}.json
+[?2004l{
+  "result": "PASS",
+  "fault": "Kafka bootstrap hostname initially had no DNS record",
+  "observed": "Consumer creation failed and the worker retried",
+  "fix": "Added the broker DNS alias on the isolated Compose network",
+  "recovery": "HTTP smoke test confirmed Kafka event reached PostgreSQL and suggestions",
+  "containerRestartedForRecovery": false
+}
+{
+  "result": "PASS",
+  "fault": "Service selector pointed at an absent pod label",
+  "diagnosis": "EndpointSlice had zero endpoints",
+  "observedHttpStatus": 503,
+  "fix": "Restored selector app=ingestion-service",
+  "recoveredHttpStatus": 200
+}
+{
+  "result": "PASS",
+  "drift": "frontend Service selector changed to frontend-drift",
+  "observedPatchedValue": "frontend-drift",
+  "restoredValue": "frontend",
+  "restoredBy": "Argo CD automated selfHeal",
+  "secondsUntilObservedRestored": 2.09,
+  "revision": "0f8f27c95cae983b8274d649db2435200450c48a",
+  "observations": [
+    {
+      "at": "2026-10-07T07:35:18.063192+00:00",
+      "selector": "frontend-drift"
+    },
+    {
+      "at": "2026-10-07T07:35:20.103799+00:00",
+      "selector": "frontend"
+    }
+  ]
+}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

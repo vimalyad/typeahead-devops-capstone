@@ -1,0 +1,11 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ terraform -chdir=terraform validate && rg '^Plan:' evidence/local/terraform-plan.txt && jq -c '.checks[]' evidence/local/aws-access-summary.json
+[?2004l[32m[1mSuccess![0m The configuration is valid.
+[0m
+528:Plan: 21 to add, 0 to change, 0 to destroy.
+{"service":"eks","action":"describe_cluster","code":"AccessDeniedException"}
+{"service":"iam","action":"get_role","code":"AccessDenied"}
+{"service":"ec2","action":"describe_instance_types","result":"allowed"}
+{"action":"create_vpc","code":"DryRunOperation","allowed":true}
+{"action":"create_internet_gateway","code":"DryRunOperation","allowed":true}
+{"action":"create_launch_template","code":"UnauthorizedOperation","allowed":false}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

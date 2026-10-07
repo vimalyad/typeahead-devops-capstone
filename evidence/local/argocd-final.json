@@ -1,0 +1,517 @@
+{
+  "apiVersion": "argoproj.io/v1alpha1",
+  "kind": "Application",
+  "metadata": {
+    "annotations": {
+      "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"argoproj.io/v1alpha1\",\"kind\":\"Application\",\"metadata\":{\"annotations\":{},\"name\":\"typeahead-capstone\",\"namespace\":\"argocd\"},\"spec\":{\"destination\":{\"namespace\":\"assignment-s21\",\"server\":\"https://kubernetes.default.svc\"},\"ignoreDifferences\":[{\"group\":\"apps\",\"jsonPointers\":[\"/spec/replicas\"],\"kind\":\"Deployment\"}],\"project\":\"typeahead-capstone\",\"source\":{\"helm\":{\"releaseName\":\"typeahead\",\"valueFiles\":[\"../gitops/values.yaml\"]},\"path\":\"session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm\",\"repoURL\":\"https://github.com/vimalyad/devops-heros.git\",\"targetRevision\":\"assignment/session21-typeahead-capstone\"},\"syncPolicy\":{\"automated\":{\"prune\":true,\"selfHeal\":true},\"syncOptions\":[\"PruneLast=true\",\"RespectIgnoreDifferences=true\"]}}}\n"
+    },
+    "creationTimestamp": "2026-10-07T07:28:22Z",
+    "generation": 50,
+    "name": "typeahead-capstone",
+    "namespace": "argocd",
+    "resourceVersion": "14630",
+    "uid": "971367e3-e933-40b4-a5a6-031307bc2c82"
+  },
+  "spec": {
+    "destination": {
+      "namespace": "assignment-s21",
+      "server": "https://kubernetes.default.svc"
+    },
+    "ignoreDifferences": [
+      {
+        "group": "apps",
+        "jsonPointers": [
+          "/spec/replicas"
+        ],
+        "kind": "Deployment"
+      }
+    ],
+    "project": "typeahead-capstone",
+    "source": {
+      "helm": {
+        "releaseName": "typeahead",
+        "valueFiles": [
+          "../gitops/values.yaml"
+        ]
+      },
+      "path": "session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm",
+      "repoURL": "https://github.com/vimalyad/devops-heros.git",
+      "targetRevision": "assignment/session21-typeahead-capstone"
+    },
+    "syncPolicy": {
+      "automated": {
+        "prune": true,
+        "selfHeal": true
+      },
+      "syncOptions": [
+        "PruneLast=true",
+        "RespectIgnoreDifferences=true"
+      ]
+    }
+  },
+  "status": {
+    "controllerNamespace": "argocd",
+    "health": {
+      "lastTransitionTime": "2026-10-07T07:44:41Z",
+      "status": "Healthy"
+    },
+    "history": [
+      {
+        "deployStartedAt": "2026-10-07T07:28:50Z",
+        "deployedAt": "2026-10-07T07:28:51Z",
+        "id": 0,
+        "initiatedBy": {
+          "automated": true
+        },
+        "revision": "cc9ed2cdbd593ce29ca66dced3795f56d5c30bfa",
+        "source": {
+          "helm": {
+            "releaseName": "typeahead",
+            "valueFiles": [
+              "../gitops/values.yaml"
+            ]
+          },
+          "path": "session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm",
+          "repoURL": "https://github.com/vimalyad/devops-heros.git",
+          "targetRevision": "assignment/session21-typeahead-capstone"
+        }
+      },
+      {
+        "deployStartedAt": "2026-10-07T07:42:43Z",
+        "deployedAt": "2026-10-07T07:42:43Z",
+        "id": 1,
+        "initiatedBy": {
+          "automated": true
+        },
+        "revision": "044fcd992a881f610cf778e95419e1972590dc45",
+        "source": {
+          "helm": {
+            "releaseName": "typeahead",
+            "valueFiles": [
+              "../gitops/values.yaml"
+            ]
+          },
+          "path": "session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm",
+          "repoURL": "https://github.com/vimalyad/devops-heros.git",
+          "targetRevision": "assignment/session21-typeahead-capstone"
+        }
+      }
+    ],
+    "operationState": {
+      "finishedAt": "2026-10-07T07:42:43Z",
+      "message": "successfully synced (all tasks run)",
+      "operation": {
+        "initiatedBy": {
+          "automated": true
+        },
+        "retry": {
+          "limit": 5
+        },
+        "sync": {
+          "prune": true,
+          "revision": "044fcd992a881f610cf778e95419e1972590dc45",
+          "source": {
+            "helm": {
+              "releaseName": "typeahead",
+              "valueFiles": [
+                "../gitops/values.yaml"
+              ]
+            },
+            "path": "session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm",
+            "repoURL": "https://github.com/vimalyad/devops-heros.git",
+            "targetRevision": "assignment/session21-typeahead-capstone"
+          },
+          "syncOptions": [
+            "PruneLast=true",
+            "RespectIgnoreDifferences=true"
+          ]
+        }
+      },
+      "phase": "Succeeded",
+      "startedAt": "2026-10-07T07:42:43Z",
+      "syncResult": {
+        "resources": [
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "ConfigMap",
+            "message": "configmap/typeahead-config configured",
+            "name": "typeahead-config",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "Service",
+            "message": "service/frontend unchanged",
+            "name": "frontend",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "Service",
+            "message": "service/ingestion-service unchanged",
+            "name": "ingestion-service",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "Service",
+            "message": "service/postgres unchanged",
+            "name": "postgres",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "Service",
+            "message": "service/redis unchanged",
+            "name": "redis",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "Service",
+            "message": "service/suggestion-service unchanged",
+            "name": "suggestion-service",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "",
+            "hookPhase": "Running",
+            "kind": "Service",
+            "message": "service/kafka unchanged",
+            "name": "kafka",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "apps",
+            "hookPhase": "Running",
+            "images": [
+              "redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+            ],
+            "kind": "Deployment",
+            "message": "deployment.apps/redis unchanged",
+            "name": "redis",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "apps",
+            "hookPhase": "Running",
+            "images": [
+              "ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a"
+            ],
+            "kind": "Deployment",
+            "message": "deployment.apps/frontend configured",
+            "name": "frontend",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "apps",
+            "hookPhase": "Running",
+            "images": [
+              "ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a"
+            ],
+            "kind": "Deployment",
+            "message": "deployment.apps/suggestion-service configured",
+            "name": "suggestion-service",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "apps",
+            "hookPhase": "Running",
+            "images": [
+              "ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a"
+            ],
+            "kind": "Deployment",
+            "message": "deployment.apps/ingestion-service configured",
+            "name": "ingestion-service",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "autoscaling",
+            "hookPhase": "Running",
+            "kind": "HorizontalPodAutoscaler",
+            "message": "horizontalpodautoscaler.autoscaling/suggestion-service unchanged",
+            "name": "suggestion-service",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v2"
+          },
+          {
+            "group": "autoscaling",
+            "hookPhase": "Running",
+            "kind": "HorizontalPodAutoscaler",
+            "message": "horizontalpodautoscaler.autoscaling/ingestion-service unchanged",
+            "name": "ingestion-service",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v2"
+          },
+          {
+            "group": "apps",
+            "hookPhase": "Running",
+            "images": [
+              "apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f"
+            ],
+            "kind": "StatefulSet",
+            "message": "statefulset.apps/kafka configured",
+            "name": "kafka",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "apps",
+            "hookPhase": "Running",
+            "images": [
+              "postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea"
+            ],
+            "kind": "StatefulSet",
+            "message": "statefulset.apps/postgres configured",
+            "name": "postgres",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          },
+          {
+            "group": "networking.k8s.io",
+            "hookPhase": "Running",
+            "kind": "Ingress",
+            "message": "ingress.networking.k8s.io/typeahead unchanged",
+            "name": "typeahead",
+            "namespace": "assignment-s21",
+            "status": "Synced",
+            "syncPhase": "Sync",
+            "version": "v1"
+          }
+        ],
+        "revision": "044fcd992a881f610cf778e95419e1972590dc45",
+        "source": {
+          "helm": {
+            "releaseName": "typeahead",
+            "valueFiles": [
+              "../gitops/values.yaml"
+            ]
+          },
+          "path": "session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm",
+          "repoURL": "https://github.com/vimalyad/devops-heros.git",
+          "targetRevision": "assignment/session21-typeahead-capstone"
+        }
+      }
+    },
+    "reconciledAt": "2026-10-07T07:44:31Z",
+    "resourceHealthSource": "appTree",
+    "resources": [
+      {
+        "kind": "ConfigMap",
+        "name": "typeahead-config",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "kind": "Service",
+        "name": "frontend",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "kind": "Service",
+        "name": "ingestion-service",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "kind": "Service",
+        "name": "kafka",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "kind": "Service",
+        "name": "postgres",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "kind": "Service",
+        "name": "redis",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "kind": "Service",
+        "name": "suggestion-service",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "apps",
+        "kind": "Deployment",
+        "name": "frontend",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "apps",
+        "kind": "Deployment",
+        "name": "ingestion-service",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "apps",
+        "kind": "Deployment",
+        "name": "redis",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "apps",
+        "kind": "Deployment",
+        "name": "suggestion-service",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "apps",
+        "kind": "StatefulSet",
+        "name": "kafka",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "apps",
+        "kind": "StatefulSet",
+        "name": "postgres",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      },
+      {
+        "group": "autoscaling",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "ingestion-service",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v2"
+      },
+      {
+        "group": "autoscaling",
+        "kind": "HorizontalPodAutoscaler",
+        "name": "suggestion-service",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v2"
+      },
+      {
+        "group": "networking.k8s.io",
+        "kind": "Ingress",
+        "name": "typeahead",
+        "namespace": "assignment-s21",
+        "status": "Synced",
+        "version": "v1"
+      }
+    ],
+    "sourceHydrator": {},
+    "sourceType": "Helm",
+    "summary": {
+      "externalURLs": [
+        "http://typeahead.local/",
+        "http://typeahead.local/api",
+        "http://typeahead.local/api/queries",
+        "http://typeahead.local/api/search"
+      ],
+      "images": [
+        "apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f",
+        "ghcr.io/vimalyad/typeahead-capstone-frontend:0f8f27c95cae983b8274d649db2435200450c48a",
+        "ghcr.io/vimalyad/typeahead-capstone-ingestion:0f8f27c95cae983b8274d649db2435200450c48a",
+        "ghcr.io/vimalyad/typeahead-capstone-suggestion:0f8f27c95cae983b8274d649db2435200450c48a",
+        "postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea",
+        "redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+      ]
+    },
+    "sync": {
+      "comparedTo": {
+        "destination": {
+          "namespace": "assignment-s21",
+          "server": "https://kubernetes.default.svc"
+        },
+        "ignoreDifferences": [
+          {
+            "group": "apps",
+            "jsonPointers": [
+              "/spec/replicas"
+            ],
+            "kind": "Deployment"
+          }
+        ],
+        "source": {
+          "helm": {
+            "releaseName": "typeahead",
+            "valueFiles": [
+              "../gitops/values.yaml"
+            ]
+          },
+          "path": "session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm",
+          "repoURL": "https://github.com/vimalyad/devops-heros.git",
+          "targetRevision": "assignment/session21-typeahead-capstone"
+        }
+      },
+      "revision": "044fcd992a881f610cf778e95419e1972590dc45",
+      "status": "Synced"
+    }
+  }
+}

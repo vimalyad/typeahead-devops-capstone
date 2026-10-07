@@ -1,0 +1,18 @@
+The push refers to repository [ghcr.io/vimalyad/typeahead-capstone-ingestion]
+eef4c8638283: Preparing
+8b903d264c99: Preparing
+d2abfe9c8331: Preparing
+9248f3d0047d: Preparing
+d87dbc49b44c: Preparing
+baf1a350e0e1: Preparing
+74d97c428c51: Preparing
+baf1a350e0e1: Waiting
+74d97c428c51: Waiting
+d2abfe9c8331: Layer already exists
+d87dbc49b44c: Layer already exists
+9248f3d0047d: Layer already exists
+74d97c428c51: Layer already exists
+baf1a350e0e1: Layer already exists
+8b903d264c99: Pushed
+eef4c8638283: Pushed
+0f8f27c95cae983b8274d649db2435200450c48a: digest: sha256:b1055eb4395c14fab69f0419ab6aa27acb88f09a2498784ff538df26298f9f47 size: 1785
