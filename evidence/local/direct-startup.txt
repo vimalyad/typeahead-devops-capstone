@@ -1,0 +1,22 @@
+f77431d8b40d0d9742748887afd7040315d3f54ca2fcbfb761eac15ff9c3cbdd
+assignment-s21-direct-pgdata
+assignment-s21-direct-kafkadata
+505d9b4e8131ceb515f9104021ff4c851aea6034133a694cf0437e87be7ef0d6
+901dc6894eb1dea5cc837e510a8b9d0ed19824fb3de8104651255a8aef9c4e46
+b4594144d903fd257637f5c4ab28cdd3650442624fd53309beca791024a6fdaa
+/var/run/postgresql:5432 - rejecting connections
+/var/run/postgresql:5432 - accepting connections
+db5872206a2535e031e4b48098fea3142186a699e0e8993f6cfb760599cb8f8b
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+4e4b58e57ca528a8864b9e8284484c6d2ec4b6453261ee2740586c5f94d7c8cb
+curl: (56) Recv failure: Connection reset by peer
+curl: (56) Recv failure: Connection reset by peer
+8c593051848874ad3fe622edf3c931ce8937300b54af90d7f54282f7ebaa5837
+NAMES                              STATUS                  PORTS
+assignment-s21-direct-frontend     Up Less than a second   127.0.0.1:13081->8080/tcp
+assignment-s21-direct-suggestion   Up 4 seconds            8082/tcp, 127.0.0.1:19881->8081/tcp
+assignment-s21-direct-ingestion    Up 9 seconds            8081/tcp, 127.0.0.1:19882->8082/tcp
+assignment-s21-direct-kafka        Up 12 seconds           9092/tcp
+assignment-s21-direct-redis        Up 12 seconds           6379/tcp
+assignment-s21-direct-postgres     Up 13 seconds           5432/tcp

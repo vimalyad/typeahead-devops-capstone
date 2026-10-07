@@ -4,6 +4,8 @@ Typeahead is a searchable query catalog. The interface can create, edit and dele
 
 The approved Java equivalent uses Spring Boot, JUnit/MockMvc and Flyway in place of FastAPI, pytest and Alembic. PostgreSQL, React, Docker, GitHub Actions, Terraform, EKS, Helm, Prometheus, Grafana and Argo CD cover the remaining modules.
 
+Current submission: both container deployment methods shown in [Aryen's final deployment](https://github.com/aryen1101/Learn_DEVOPS/blob/bc73ce6b8663b92b8ac7310418fa5ac7f4c39afd/Class_Assignments/Final_Deploy/Readme.md) have been reproduced with this application: individual `docker run` commands and Docker Compose. The full CI, local Kubernetes, monitoring and GitOps evidence is also included. Actual EKS deployment remains unverified because the required AWS calls still return AccessDenied; the reference's local screenshots do not establish an EKS deployment either.
+
 ```mermaid
 flowchart LR
   User[Browser] --> Ingress[Ingress / Nginx]
@@ -47,6 +49,24 @@ unset DATABASE_PASSWORD
 ```
 
 The Compose teardown removes this demo's data. Container images are built from source in separate build stages. Runtime users are 65532 for Java and 101 for Nginx; application containers have read-only roots, dropped capabilities and temporary `/tmp` mounts.
+
+## Run with individual Docker containers
+
+The [direct-container script](run-containers.sh) uses individual `docker run` commands for PostgreSQL, Redis, Kafka, both Java services and the frontend. It uses the same published release already tested and scanned by CI. Passwords are generated into a private temporary environment file, and ports bind only to loopback.
+
+```bash
+bash run-containers.sh up
+bash run-containers.sh check
+# Open http://localhost:13081 while the lab is running.
+bash run-containers.sh down
+```
+
+The actual run passed frontend CRUD/mobile checks through Playwright/CDP, both backend health/readiness endpoints, and the PostgreSQL/Kafka/search integration smoke check. Application containers used non-root users and read-only filesystems. Their published image digests and filesystem layers matched the release artifacts. The six containers, network and two volumes were then removed; nine unrelated containers retained their IDs.
+
+![Direct Docker deployment and checks](screenshots/15-direct-containers.png)
+![Browser assertions and cleanup](screenshots/16-direct-cleanup.png)
+
+The first image contains actual live command output. The second displays saved browser assertions and cleanup results through a real terminal. Both follow the terminal-only screenshot instruction. See [direct-run verification](evidence/local/direct-verification.json) and [cleanup](evidence/local/direct-cleanup.json).
 
 ## API and tests
 
@@ -138,14 +158,14 @@ aws eks update-kubeconfig --region us-east-1 --name vimal-typeahead-capstone
 
 Apply `kubernetes/storageclass-eks.yaml` and use `-f helm/values-eks.yaml` for EBS-backed volumes. Inspect the node's available memory before deploying all services. The cloud run is temporary: collect evidence, delete the Argo application without cascading into unrelated namespaces, uninstall the application/monitoring charts, remove their PVCs, wait for EBS deletion, then run `terraform destroy`. Retain state until AWS confirms the cluster, worker instances, EBS volumes and VPC are absent.
 
-**Cloud status:** Terraform validation and a plan of 21 additions passed. EKS and IAM reads and launch-template creation permission are currently denied, so no capstone AWS resources have been created. Successful apply and destroy evidence is still pending.
+**Cloud status:** Terraform validation and a plan of 21 additions passed. The [latest AWS permission checks](evidence/local/aws-access-latest.json), repeated on 7 October 2026, still deny EKS and IAM reads and launch-template creation. No capstone AWS resources have been created. Successful apply and destroy evidence is still pending.
 
 ## Evidence and presentation
 
 See the [requirement map](REQUIREMENTS.md), [failure exercises](FAULTS.md), [evidence provenance](evidence/README.md), and [presentation walkthrough](DEMO.md). The first complete green release is [run 37586435056](https://github.com/vimalyad/devops-heros/actions/runs/37586435056); the recorded interface release is [run 37588149332](https://github.com/vimalyad/devops-heros/actions/runs/37588149332), also fully green. [Release evidence](evidence/release-summary.json) ties the source SHA, promotion SHA and live application version together.
 
 
-Evidence is recorded from actual commands. Published screenshots contain only real terminals captured from spawned PTYs through Playwright/CDP. Any display of a saved log is identified by the visible `cat`/`jq` command. Browser, AWS Console and Grafana screenshots in the rubric remain a separate evidence-format decision because the requested format is terminal-only.
+Evidence is recorded from actual commands. Published screenshots contain only real terminals captured from spawned PTYs through Playwright/CDP. Any display of a saved log is identified by the visible `cat`/`jq` command. Browser, AWS Console and Grafana screenshots requested by the rubric are not included under the terminal-only instruction; actual browser assertions and dashboard API records are supplied as terminal evidence.
 
 The local lab has been cleaned up: assignment containers, volumes and Kubernetes resources are gone, the dedicated Minikube cluster is stopped, and unrelated applications are unchanged. [Cleanup assertions](evidence/local/cleanup.json) and the CI cluster-deletion log are retained with the evidence.
 

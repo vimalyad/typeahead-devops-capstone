@@ -1,0 +1,23 @@
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ bash run-containers.sh check
+[?2004lNAMES                              STATUS          PORTS
+assignment-s21-direct-frontend     Up 14 seconds   127.0.0.1:13081->8080/tcp
+assignment-s21-direct-suggestion   Up 18 seconds   8082/tcp, 127.0.0.1:19881->8081/tcp
+assignment-s21-direct-ingestion    Up 23 seconds   8081/tcp, 127.0.0.1:19882->8082/tcp
+assignment-s21-direct-kafka        Up 26 seconds   9092/tcp
+assignment-s21-direct-redis        Up 26 seconds   6379/tcp
+assignment-s21-direct-postgres     Up 27 seconds   5432/tcp
+{"groups":["liveness","readiness"],"status":"UP"}
+{"status":"UP"}
+{"groups":["liveness","readiness"],"status":"UP"}
+{"status":"UP"}
+{
+  "result": "PASS",
+  "checks": [
+    "create/read/update/delete query",
+    "duplicate and validation errors",
+    "Kafka event persisted to PostgreSQL",
+    "trie suggestion refreshed",
+    "frontend served"
+  ]
+}
+]133;A[?2004hvimal2907@vimalaura:final-devops-project$ 

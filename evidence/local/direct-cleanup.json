@@ -1,0 +1,12 @@
+{
+  "result": "PASS",
+  "finished_at": "2026-10-07T15:50:34.662122+00:00",
+  "remaining": {
+    "container": [],
+    "network": [],
+    "volume": []
+  },
+  "unrelated_container_ids_unchanged": true,
+  "unrelated_container_count": 9,
+  "aws_used": false
+}

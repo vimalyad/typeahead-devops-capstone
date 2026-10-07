@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-10-07T15:40:47.855354+00:00",
+  "checks": [
+    {
+      "check": "eks_cluster_read",
+      "exit_code": 254,
+      "error_code": "AccessDeniedException",
+      "operation": [
+        "eks",
+        "describe-cluster"
+      ]
+    },
+    {
+      "check": "iam_cluster_role_read",
+      "exit_code": 254,
+      "error_code": "AccessDenied",
+      "operation": [
+        "iam",
+        "get-role"
+      ]
+    },
+    {
+      "check": "launch_template_dry_run",
+      "exit_code": 254,
+      "error_code": "UnauthorizedOperation",
+      "operation": [
+        "ec2",
+        "create-launch-template"
+      ]
+    }
+  ],
+  "resources_created": false
+}

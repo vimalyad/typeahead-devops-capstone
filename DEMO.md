@@ -23,4 +23,4 @@ Use the recording and saved records to cover these points:
 7. Show the promotion commit, Argo's matching revision, and the application's reported version.
 8. Finish with the actual AWS plan and state the outstanding cloud permission/apply/destroy work. Add real AWS evidence before presenting that module as complete.
 
-Browser, AWS Console, Prometheus Targets and Grafana screenshots are explicitly requested by the rubric. The current terminal-only preference leaves those visual evidence items pending; an API response is not described as a browser screenshot.
+Browser, AWS Console, Prometheus Targets and Grafana screenshots are explicitly requested by the rubric. They are omitted under the terminal-only instruction; the supplied browser assertions and API responses are not described as browser screenshots.

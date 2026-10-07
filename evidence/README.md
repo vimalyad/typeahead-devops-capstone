@@ -8,7 +8,7 @@ Screenshots are captures of the xterm surface connected to a real Bash PTY, usin
 
 `commit-to-deployment.cast` records real PTY output chunks with elapsed timestamps in asciicast v2 format. `commit-to-deployment.txt` preserves the same terminal stream for text inspection. The recording includes real waiting time for CI and GitOps reconciliation. No fabricated command output or simulated cloud resources are included.
 
-AWS capstone evidence currently consists of initialization, validation/planning and permission checks. There is no successful EKS apply or destroy record yet. Terminal API evidence for Grafana and Prometheus is distinct from the browser screenshots requested by the rubric.
+AWS capstone evidence currently consists of initialization, validation/planning and permission checks. The [latest checks](local/aws-access-latest.json) still returned access denials on 7 October 2026. There is no successful EKS apply or destroy record yet. Terminal API evidence for Grafana and Prometheus is distinct from the browser screenshots requested by the rubric.
 
 ## Verified release
 
@@ -34,6 +34,8 @@ The complete [recorded pipeline run](https://github.com/vimalyad/devops-heros/ac
 | [12 Recorded release](../screenshots/12-recorded-release-demo.png) | Final screen of the actual timed commit-to-deployment recording |
 | [13 Terraform/access](../screenshots/13-terraform-and-access.png) | Validation/plan and explicit AWS access failures |
 | [14 Cleanup](../screenshots/14-cleanup.png) | Actual local teardown, stopped cluster and CI kind deletion |
+| [15 Direct containers](../screenshots/15-direct-containers.png) | Live `docker run` deployment, both backends' health/readiness and full-stack smoke |
+| [16 Direct-run cleanup](../screenshots/16-direct-cleanup.png) | Playwright/CDP browser assertions and removal of all direct-run resources |
 
 The corresponding `NN-*-terminal.txt` files preserve captured terminal streams, including control sequences. [The asciicast recording](commit-to-deployment.cast) preserves elapsed time; [its transcript](commit-to-deployment.txt) is also available as text.
 
@@ -42,3 +44,5 @@ The corresponding `NN-*-terminal.txt` files preserve captured terminal streams, 
 [Local cleanup assertions](local/cleanup.json) passed after the application, monitoring, Argo CD and ingress resources were removed. Only the four default Kubernetes namespaces remained, no assignment PersistentVolumes remained, and the Compose project had no containers, networks or volumes. The dedicated Minikube cluster was then stopped. The nine unrelated running containers kept their original IDs.
 
 [Cleanup command output](local/cleanup-command-extract.txt) preserves the actual teardown output, omitting the two global `docker container ls --format json` command blocks because they expose unrelated applications' metadata. The full raw log remains in the private workspace. No other lines were rewritten. [CI cleanup](ci/deployment/cleanup.txt) independently confirms deletion of its temporary kind cluster. No capstone AWS apply was attempted.
+
+The later direct-container run is recorded separately in [direct verification](local/direct-verification.json), [browser checks](local/direct-browser-check.json), [startup output](local/direct-startup.txt), [cleanup output](local/direct-cleanup.txt), and [cleanup assertions](local/direct-cleanup.json). Docker's containerd image store reports manifest digests; Trivy's `ImageID` identifies the image config. This record compares published repository digests and scanned filesystem-layer digests explicitly instead of treating the two kinds of digest as interchangeable.

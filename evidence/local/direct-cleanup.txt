@@ -1,0 +1,9 @@
+8c5930518488
+4e4b58e57ca5
+db5872206a25
+b4594144d903
+901dc6894eb1
+505d9b4e8131
+assignment-s21-direct-kafkadata
+assignment-s21-direct-pgdata
+f77431d8b40d

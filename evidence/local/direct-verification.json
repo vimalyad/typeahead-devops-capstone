@@ -1,0 +1,70 @@
+{
+  "checked_at": "2026-10-07T15:50:33.084957+00:00",
+  "result": "PASS",
+  "method": "individual docker run commands",
+  "containers": [
+    {
+      "name": "assignment-s21-direct-frontend",
+      "state": "running",
+      "user": "101:101",
+      "read_only": true,
+      "image_id": "sha256:29b68f0d528715623e3cd4abfdd031a69e557cb79dd49af14bb07a674cffe385",
+      "published_repo_digests": [
+        "ghcr.io/vimalyad/typeahead-capstone-frontend@sha256:29b68f0d528715623e3cd4abfdd031a69e557cb79dd49af14bb07a674cffe385"
+      ],
+      "matches_published_digest": true,
+      "layers_match_scan": true,
+      "scanned_config_id": "sha256:72f1fdf1c633f8ba5a532ee1ca8003e3891f74a1e36a8a39bdd6081e4f95e3d4"
+    },
+    {
+      "name": "assignment-s21-direct-suggestion",
+      "state": "running",
+      "user": "65532:65532",
+      "read_only": true,
+      "image_id": "sha256:92639000be78f38e621d72b31f951a60a8ed7e5a3284c3560fc4d73fe62d5d0d",
+      "published_repo_digests": [
+        "ghcr.io/vimalyad/typeahead-capstone-suggestion@sha256:92639000be78f38e621d72b31f951a60a8ed7e5a3284c3560fc4d73fe62d5d0d"
+      ],
+      "matches_published_digest": true,
+      "layers_match_scan": true,
+      "scanned_config_id": "sha256:64a53be0d2cfe9679bc42f03dcfd9d05e4b6f002446d08631777a26c27cb920e"
+    },
+    {
+      "name": "assignment-s21-direct-ingestion",
+      "state": "running",
+      "user": "65532:65532",
+      "read_only": true,
+      "image_id": "sha256:b1055eb4395c14fab69f0419ab6aa27acb88f09a2498784ff538df26298f9f47",
+      "published_repo_digests": [
+        "ghcr.io/vimalyad/typeahead-capstone-ingestion@sha256:b1055eb4395c14fab69f0419ab6aa27acb88f09a2498784ff538df26298f9f47"
+      ],
+      "matches_published_digest": true,
+      "layers_match_scan": true,
+      "scanned_config_id": "sha256:2de219b0f6e81e59e4390fff8e15908d88ed723abd5eaa170c7654fc9cac3e03"
+    },
+    {
+      "name": "assignment-s21-direct-kafka",
+      "state": "running",
+      "user": "1000:1000",
+      "read_only": false,
+      "image_id": "sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f"
+    },
+    {
+      "name": "assignment-s21-direct-redis",
+      "state": "running",
+      "user": "999:999",
+      "read_only": false,
+      "image_id": "sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499"
+    },
+    {
+      "name": "assignment-s21-direct-postgres",
+      "state": "running",
+      "user": "70:70",
+      "read_only": false,
+      "image_id": "sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea"
+    }
+  ],
+  "http_smoke": "PASS",
+  "health_and_readiness": "both backends UP",
+  "browser_check": "direct-browser-check.json"
+}
