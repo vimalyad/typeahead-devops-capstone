@@ -1,0 +1,118 @@
+{{- range $name, $service := .Values.services }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+spec:
+{{- if or (not $service.backend) (not $.Values.autoscaling.enabled) }}
+  replicas: {{ $service.replicas }}
+{{- end }}
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: {{ $name }}
+  template:
+    metadata:
+      labels:
+        app: {{ $name }}
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/config.yaml") $ | sha256sum }}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: {{ $service.uid }}
+        fsGroup: {{ $service.uid }}
+        seccompProfile:
+          type: RuntimeDefault
+{{- with $.Values.imagePullSecrets }}
+      imagePullSecrets:
+{{ toYaml . | indent 8 }}
+{{- end }}
+      containers:
+      - name: {{ $name }}
+        image: "{{ $service.image }}:{{ $.Values.imageTag }}"
+        imagePullPolicy: {{ $.Values.imagePullPolicy }}
+        ports:
+        - name: http
+          containerPort: {{ $service.port }}
+{{- if $service.backend }}
+        envFrom:
+        - configMapRef:
+            name: typeahead-config
+        env:
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ $.Values.databaseSecret }}
+              key: password
+{{- end }}
+        resources:
+{{ toYaml $service.resources | indent 10 }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop: [ALL]
+        startupProbe:
+          httpGet:
+            path: {{ if $service.backend }}/health/liveness{{ else }}/health{{ end }}
+            port: http
+          periodSeconds: 5
+          failureThreshold: 60
+        readinessProbe:
+          httpGet:
+            path: {{ if $service.backend }}/health/readiness{{ else }}/health{{ end }}
+            port: http
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: {{ if $service.backend }}/health/liveness{{ else }}/health{{ end }}
+            port: http
+          periodSeconds: 10
+        volumeMounts:
+        - name: temporary
+          mountPath: /tmp
+      volumes:
+      - name: temporary
+        emptyDir:
+          sizeLimit: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}
+spec:
+  type: ClusterIP
+  selector:
+    app: {{ $name }}
+  ports:
+  - name: http
+    port: {{ $service.port }}
+    targetPort: http
+{{- if and $service.backend $.Values.autoscaling.enabled }}
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: {{ $name }}
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: {{ $name }}
+  minReplicas: {{ $.Values.autoscaling.minReplicas }}
+  maxReplicas: {{ $.Values.autoscaling.maxReplicas }}
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 30
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: {{ $.Values.autoscaling.cpuTarget }}
+{{- end }}
+{{- end }}

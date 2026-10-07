@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: typeahead-config
+data:
+  SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/typeahead
+  SPRING_DATASOURCE_USERNAME: app
+  SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+  APP_REDIS_NODES: redis:6379
+  APP_VERSION: {{ .Values.version | quote }}

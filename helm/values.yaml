@@ -1,0 +1,62 @@
+imageTag: local
+version: local
+imagePullPolicy: IfNotPresent
+imagePullSecrets: []
+databaseSecret: typeahead-database
+storageClass: standard
+services:
+  ingestion-service:
+    image: ghcr.io/vimalyad/typeahead-capstone-ingestion
+    port: 8082
+    uid: 65532
+    backend: true
+    replicas: 2
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: '1'
+        memory: 512Mi
+  suggestion-service:
+    image: ghcr.io/vimalyad/typeahead-capstone-suggestion
+    port: 8081
+    uid: 65532
+    backend: true
+    replicas: 2
+    resources:
+      requests:
+        cpu: 100m
+        memory: 256Mi
+      limits:
+        cpu: '1'
+        memory: 512Mi
+  frontend:
+    image: ghcr.io/vimalyad/typeahead-capstone-frontend
+    port: 8080
+    uid: 101
+    backend: false
+    replicas: 2
+    resources:
+      requests:
+        cpu: 20m
+        memory: 24Mi
+      limits:
+        cpu: 200m
+        memory: 48Mi
+infrastructure:
+  postgres:
+    image: postgres:16-alpine@sha256:721873c34ceb9f8d8fc265984940dc982404c105f19ad51be9fdc5970a6080ea
+  redis:
+    image: redis:7-alpine@sha256:858f009f9709ce576febc734aa78b8f6d624b82571f9ddb6bda4377c833b3499
+  kafka:
+    image: apache/kafka:4.1.0@sha256:bff074a5d0051dbc0bbbcd25b045bb1fe84833ec0d3c7c965d1797dd289ec88f
+ingress:
+  enabled: true
+  className: nginx
+  host: typeahead.local
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 3
+  cpuTarget: 70

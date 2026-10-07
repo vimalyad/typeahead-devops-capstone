@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: assignment-s21
+  labels:
+    project: devops-assignment
+    session: "21"
