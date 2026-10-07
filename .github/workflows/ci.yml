@@ -1,0 +1,169 @@
+name: Typeahead capstone
+on:
+  push:
+    branches: [main, assignment/session21-typeahead-capstone]
+    paths:
+      - .github/workflows/session21.yml
+      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/**
+      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/docker/**
+      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm/**
+      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/kubernetes/**
+      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/scripts/**
+      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/security/**
+  pull_request:
+    branches: [main]
+    paths:
+      - .github/workflows/session21.yml
+      - session-21-final-devops-project/Vimal-24BCS10273/**
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: capstone-${{ github.ref }}
+  cancel-in-progress: false
+env:
+  PROJECT: session-21-final-devops-project/Vimal-24BCS10273/final-devops-project
+  IMAGE_PREFIX: ghcr.io/${{ github.repository_owner }}/typeahead-capstone
+  IMAGE_TAG: ${{ github.sha }}
+defaults:
+  run:
+    shell: bash
+    working-directory: session-21-final-devops-project/Vimal-24BCS10273/final-devops-project
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '24'
+      - name: Run isolated Java tests and build frontend
+        run: |
+          mkdir -p reports
+          (cd application && ./gradlew --no-daemon test) | tee reports/tests.txt
+          (cd application/frontend && npm ci --no-fund && npm run build) | tee reports/frontend.txt
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: capstone-tests
+          path: |
+            ${{ env.PROJECT }}/reports/
+            ${{ env.PROJECT }}/application/*/build/test-results/
+          retention-days: 14
+  security:
+    needs: test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install pinned scanners
+        run: |
+          python3 scripts/install-tools.py trivy gitleaks
+          python3 -m venv .venv
+          .venv/bin/pip install -r security/requirements.txt
+          echo "$PWD/.tools/bin" >> "$GITHUB_PATH"
+      - name: SAST
+        run: |
+          mkdir -p reports
+          .venv/bin/semgrep scan --config p/java --config p/typescript --metrics=off --error --json --output reports/semgrep.json application
+      - name: Dependency gate
+        run: trivy fs --include-dev-deps --scanners vuln --severity HIGH,CRITICAL --exit-code 1 --format json --output reports/dependencies.json application
+      - name: Scan assignment Git history for secrets
+        run: gitleaks git --redact --log-opts="--all -- .github/workflows/session21.yml $PROJECT" --report-format json --report-path reports/gitleaks.json "$GITHUB_WORKSPACE"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: capstone-source-security
+          path: ${{ env.PROJECT }}/reports/
+          retention-days: 14
+  images:
+    needs: [test, security]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Build all three non-root runtime images
+        run: |
+          mkdir -p reports
+          for component in ingestion suggestion; do
+            docker build -f docker/backend.Dockerfile --build-arg "SERVICE=$component-service" --build-arg "VERSION=$IMAGE_TAG" -t "$IMAGE_PREFIX-$component:$IMAGE_TAG" .
+          done
+          docker build -f docker/frontend.Dockerfile -t "$IMAGE_PREFIX-frontend:$IMAGE_TAG" .
+          python3 scripts/install-tools.py trivy
+      - name: Reject HIGH and CRITICAL vulnerabilities in every image
+        run: |
+          for component in ingestion suggestion frontend; do
+            .tools/bin/trivy image --scanners vuln --severity HIGH,CRITICAL --exit-code 1 --format json --output "reports/$component-trivy.json" "$IMAGE_PREFIX-$component:$IMAGE_TAG"
+          done
+      - name: Publish and retrieve immutable SHA images
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        env:
+          REGISTRY_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          printf '%s' "$REGISTRY_TOKEN" | docker login ghcr.io -u "$GITHUB_ACTOR" --password-stdin
+          for component in ingestion suggestion frontend; do
+            docker push "$IMAGE_PREFIX-$component:$IMAGE_TAG" | tee "reports/$component-push.txt"
+            docker pull "$IMAGE_PREFIX-$component:$IMAGE_TAG" | tee "reports/$component-pull.txt"
+            docker inspect --format='{{json .RepoDigests}}' "$IMAGE_PREFIX-$component:$IMAGE_TAG" > "reports/$component-digest.json"
+          done
+      - name: Log out
+        if: always()
+        run: docker logout ghcr.io
+      - name: Export tested images for the deployment job
+        run: docker save "$IMAGE_PREFIX-ingestion:$IMAGE_TAG" "$IMAGE_PREFIX-suggestion:$IMAGE_TAG" "$IMAGE_PREFIX-frontend:$IMAGE_TAG" -o images.tar
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        with:
+          name: capstone-images
+          path: ${{ env.PROJECT }}/images.tar
+          retention-days: 3
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: capstone-image-security
+          path: ${{ env.PROJECT }}/reports/
+          retention-days: 14
+  deploy:
+    needs: images
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
+        with:
+          name: capstone-images
+          path: ${{ env.PROJECT }}
+      - name: Install cluster tools and load build artifacts
+        run: |
+          python3 scripts/install-tools.py kind kubectl helm
+          docker load -i images.tar
+      - name: Verify the complete stack with Helm in temporary Kubernetes
+        run: bash scripts/ci-deploy.sh
+      - name: Ensure cluster cleanup
+        if: always()
+        run: |
+          if [[ -x .tools/bin/kind ]]; then
+            .tools/bin/kind delete cluster --name "capstone-$GITHUB_RUN_ID-$GITHUB_RUN_ATTEMPT"
+          fi
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
+        if: always()
+        with:
+          name: capstone-deployment
+          path: ${{ env.PROJECT }}/reports/
+          retention-days: 14
