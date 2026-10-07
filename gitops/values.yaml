@@ -1,3 +1,3 @@
-# Replace with the full SHA of a successful pipeline before installing Argo CD.
-imageTag: local
-version: local
+# Verified by https://github.com/vimalyad/devops-heros/actions/runs/37586435056
+imageTag: 0349d1dba78fa5278b2058e162c3157b11c82657
+version: 0349d1dba78fa5278b2058e162c3157b11c82657
