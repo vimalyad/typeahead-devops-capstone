@@ -44,9 +44,9 @@ export function CacheInspector({ prefix }: CacheInspectorProps) {
 
   return (
     <div className="rounded-xl2 border border-black/[0.06] bg-surface-raised px-5 py-4 text-sm shadow-sm animate-fade-in">
-      <div className="mb-3 flex items-center gap-2 text-ink-faint">
+      <div className="mb-3 flex flex-wrap items-center gap-2 text-ink-faint">
         <span className="text-xs font-semibold uppercase tracking-[0.14em]">Cache routing</span>
-        <span className="text-ink-faint/70">— consistent-hash ring over 3 Redis nodes</span>
+        <span className="text-ink-faint/70">— live owner lookup</span>
       </div>
 
       {debounced.length === 0 ? (
@@ -79,7 +79,7 @@ export function CacheInspector({ prefix }: CacheInspectorProps) {
             <span className="font-medium text-ink">v{data.generation}</span>
           </Field>
           <Field label="key">
-            <code className="text-ink-soft">{data.key}</code>
+            <code className="min-w-0 break-all text-ink-soft">{data.key}</code>
           </Field>
         </div>
       ) : (
@@ -91,7 +91,7 @@ export function CacheInspector({ prefix }: CacheInspectorProps) {
 
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2">
+    <span className="inline-flex max-w-full flex-wrap items-center gap-2">
       <span className="text-ink-faint">{label}</span>
       {children}
     </span>

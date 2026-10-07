@@ -113,7 +113,8 @@ export function SearchTypeahead({ query, onQueryChange, onSubmit }: SearchTypeah
           onFocus={() => setOpen(true)}
           onBlur={() => setOpen(false)}
           onKeyDown={onKeyDown}
-          placeholder="Search products…"
+          placeholder="Search the query catalog…"
+          aria-label="Search the query catalog"
           autoComplete="off"
           spellCheck={false}
           role="combobox"
