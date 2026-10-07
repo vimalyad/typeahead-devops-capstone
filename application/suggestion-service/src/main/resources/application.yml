@@ -1,0 +1,51 @@
+spring:
+  application:
+    name: suggestion-service
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://postgres:5432/typeahead}
+    username: ${SPRING_DATASOURCE_USERNAME:app}
+    password: ${SPRING_DATASOURCE_PASSWORD:app}
+  flyway:
+    enabled: false
+
+app:
+  index:
+    # In-memory trie size. Default keeps the HashMap-per-node trie within a ~2g heap; raise
+    # toward the full dataset if the host has the RAM (see STACK notes).
+    max-queries: 300000
+    max-suggestions: 10
+    weights:
+      all-time: 1.0
+      recent: 1.0
+  builder:
+    # Timed trie rebuild cadence (30-60s bounds staleness predictably).
+    rebuild-interval-ms: 45000
+  redis:
+    nodes: ${APP_REDIS_NODES:redis-1:6379,redis-2:6379,redis-3:6379}
+    command-timeout-ms: 2000
+    liveness-interval-ms: 5000
+  ring:
+    vnodes: 150
+  cache:
+    base-ttl-seconds: 60
+    # Spread expiries so a burst of co-written keys don't all go cold on the same tick (§3.5).
+    jitter-seconds: 15
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
+  metrics:
+    distribution:
+      # Server-side suggest latency, split by cache outcome (ARCHITECTURE §10).
+      percentiles-histogram:
+        suggest.request: true
+      percentiles:
+        suggest.request: 0.5, 0.95, 0.99
