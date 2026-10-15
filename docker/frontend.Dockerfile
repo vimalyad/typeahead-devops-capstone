@@ -6,7 +6,7 @@ RUN --mount=type=cache,target=/root/.npm npm ci --no-fund
 COPY application/frontend/ ./
 RUN npm run build
 
-FROM nginxinc/nginx-unprivileged:stable-alpine@sha256:15c994d10d6d78658721c3bcafff14cb281fba2a4bdf9d5ba92c416a472516e3
+FROM nginxinc/nginx-unprivileged:stable-alpine@sha256:782bb89768cc87b7f95c18b95baa1af250e5d451f26794f59363540161147c01
 LABEL org.opencontainers.image.source="https://github.com/vimalyad/typeahead-devops-capstone"
 COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /workspace/dist /usr/share/nginx/html
