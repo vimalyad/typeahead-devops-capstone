@@ -5,7 +5,7 @@ COPY application/ ./
 RUN --mount=type=cache,target=/root/.gradle ./gradlew --no-daemon :ingestion-service:bootJar :suggestion-service:bootJar
 
 FROM eclipse-temurin:21-jre-alpine@sha256:51ab5e3302e7141ce665ca3ea85e8b5cd648eafbc3c0c90dd79d6537684e4555
-LABEL org.opencontainers.image.source="https://github.com/vimalyad/devops-heros"
+LABEL org.opencontainers.image.source="https://github.com/vimalyad/typeahead-devops-capstone"
 ARG SERVICE=ingestion-service
 ARG VERSION=local
 ENV APP_VERSION=$VERSION

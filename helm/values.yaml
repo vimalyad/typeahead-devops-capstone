@@ -6,7 +6,7 @@ databaseSecret: typeahead-database
 storageClass: standard
 services:
   ingestion-service:
-    image: ghcr.io/vimalyad/typeahead-capstone-ingestion
+    image: ghcr.io/vimalyad/typeahead-devops-capstone-ingestion
     port: 8082
     uid: 65532
     backend: true
@@ -19,7 +19,7 @@ services:
         cpu: '1'
         memory: 512Mi
   suggestion-service:
-    image: ghcr.io/vimalyad/typeahead-capstone-suggestion
+    image: ghcr.io/vimalyad/typeahead-devops-capstone-suggestion
     port: 8081
     uid: 65532
     backend: true
@@ -32,7 +32,7 @@ services:
         cpu: '1'
         memory: 512Mi
   frontend:
-    image: ghcr.io/vimalyad/typeahead-capstone-frontend
+    image: ghcr.io/vimalyad/typeahead-devops-capstone-frontend
     port: 8080
     uid: 101
     backend: false

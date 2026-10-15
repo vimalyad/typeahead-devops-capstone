@@ -17,7 +17,7 @@ concurrency:
   group: capstone-${{ github.ref }}
   cancel-in-progress: false
 env:
-  IMAGE_PREFIX: ghcr.io/${{ github.repository_owner }}/typeahead-capstone
+  IMAGE_PREFIX: ghcr.io/${{ github.repository_owner }}/typeahead-devops-capstone
   IMAGE_TAG: ${{ github.sha }}
 defaults:
   run:

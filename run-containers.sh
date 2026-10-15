@@ -5,7 +5,7 @@ project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 lab=assignment-s21-direct
 label="devops.assignment=$lab"
 release="${IMAGE_TAG:-0f8f27c95cae983b8274d649db2435200450c48a}"
-registry=ghcr.io/vimalyad/typeahead-capstone
+registry=ghcr.io/vimalyad/typeahead-devops-capstone
 
 cleanup() {
   mapfile -t containers < <(docker ps -aq --filter "label=$label")
