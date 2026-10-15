@@ -18,6 +18,12 @@ dependencies {
     runtimeOnly("org.postgresql:postgresql")
 
     testImplementation("org.springframework.boot:spring-boot-starter-webmvc-test")
+
+    constraints {
+        implementation("at.yawk.lz4:lz4-java:1.11.4") {
+            because("CVE-2026-106451: the Kafka client's lz4-java 1.10.1 is flagged HIGH by the dependency gate")
+        }
+    }
 }
 
 // The queries schema is owned here but kept at the repo root so the M1 loader and the
