@@ -23,4 +23,4 @@ Use the recording and saved records to cover these points:
 7. Show the promotion commit, Argo's matching revision, and the application's reported version.
 8. Finish with the actual AWS plan and state the outstanding cloud permission/apply/destroy work. Add real AWS evidence before presenting that module as complete.
 
-Browser, AWS Console, Prometheus Targets and Grafana screenshots are explicitly requested by the rubric. They are omitted under the terminal-only instruction; the supplied browser assertions and API responses are not described as browser screenshots.
+For the user-facing part, play the [browser walkthrough](demo/browser-walkthrough.mp4). It is about 90 seconds long and covers the application through the Ingress, CRUD, the phone layout, Prometheus targets, Grafana and Argo CD. AWS Console screenshots are absent because no EKS cluster was created.

@@ -39,6 +39,8 @@ The complete [recorded pipeline run](https://github.com/vimalyad/devops-heros/ac
 
 The corresponding `NN-*-terminal.txt` files preserve captured terminal streams, including control sequences. [The asciicast recording](commit-to-deployment.cast) preserves elapsed time; [its transcript](commit-to-deployment.txt) is also available as text.
 
+The [browser walkthrough](../demo/browser-walkthrough.mp4) and the images in [`screenshots/browser/`](../screenshots/browser/) come from one Playwright session on 15 October 2026. That session drove headless Chromium against the live Minikube deployment through the Ingress, Prometheus, Grafana and the Argo CD UI. Playwright's own page recorder captured only the rendered pages, with no desktop or terminal windows. The captions and the title and closing cards were added by the recording script. Everything else on screen is live application output.
+
 ## Cleanup
 
 [Local cleanup assertions](local/cleanup.json) passed after the application, monitoring, Argo CD and ingress resources were removed. Only the four default Kubernetes namespaces remained, no assignment PersistentVolumes remained, and the Compose project had no containers, networks or volumes. The dedicated Minikube cluster was then stopped. The nine unrelated running containers kept their original IDs.

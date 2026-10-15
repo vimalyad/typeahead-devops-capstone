@@ -139,6 +139,25 @@ kubectl get pv
 
 Verify that no PersistentVolume still refers to `assignment-s21`. On a dedicated lab cluster, also remove the installed Argo CD Core resources and ingress controller before stopping the cluster. Do not remove shared controllers from a cluster used by other applications.
 
+## Browser walkthrough
+
+[**Watch the 90-second walkthrough (MP4)**](demo/browser-walkthrough.mp4)
+
+Recorded on 15 October 2026 against the promoted release (`0f8f27c`) running on the local Minikube cluster. The application was reached through the NGINX Ingress as `typeahead.local`. The recording shows the browser page only. It covers live suggestions, the cache inspector, creating, editing, finding and deleting a catalog entry, the phone layout, Prometheus targets, the Grafana dashboard and the Argo CD application. A small background loop of suggestion requests kept the Grafana panels populated.
+
+| | |
+|---|---|
+| ![Application through the Ingress](screenshots/browser/01-app-via-ingress.png) | ![Live suggestions](screenshots/browser/02-live-suggestions.png) |
+| Application served through the Ingress | Ranked suggestions while typing |
+| ![Query created](screenshots/browser/03-crud-created.png) | ![New query suggested](screenshots/browser/04-new-query-suggested.png) |
+| Query created through the catalog form | The new query appearing in suggestions |
+| ![Phone layout](screenshots/browser/05-mobile.png) | ![Prometheus targets](screenshots/browser/06-prometheus-targets.png) |
+| 390 × 844 phone layout | Every backend replica scraped and UP |
+| ![Grafana dashboard](screenshots/browser/07-grafana-dashboard.png) | ![Argo CD application](screenshots/browser/08-argocd-synced.png) |
+| Grafana request rate, latency, heap and scrape health | Argo CD application Synced and Healthy |
+
+Grafana's CPU limit was raised from 500m to 2 cores for this run. With the old limit, its dashboard API requests timed out on startup.
+
 ## AWS lab
 
 The Terraform plan defines a VPC, two public subnets, one EKS 1.36 cluster, one managed worker, and EBS storage through Pod Identity. There is no NAT gateway or external load balancer. The Kubernetes API accepts the operator's IPv4 `/32`; application access uses authenticated port forwarding. Node storage is encrypted and uses gp3. AWS permissions and account-plan compatibility must be verified before apply.
@@ -165,7 +184,7 @@ Apply `kubernetes/storageclass-eks.yaml` and use `-f helm/values-eks.yaml` for E
 See the [requirement map](REQUIREMENTS.md), [failure exercises](FAULTS.md), [evidence provenance](evidence/README.md), and [presentation walkthrough](DEMO.md). The first complete green release is [run 37586435056](https://github.com/vimalyad/devops-heros/actions/runs/37586435056); the recorded interface release is [run 37588149332](https://github.com/vimalyad/devops-heros/actions/runs/37588149332), also fully green. [Release evidence](evidence/release-summary.json) ties the source SHA, promotion SHA and live application version together.
 
 
-Evidence is recorded from actual commands. Published screenshots contain only real terminals captured from spawned PTYs through Playwright/CDP. Any display of a saved log is identified by the visible `cat`/`jq` command. Browser, AWS Console and Grafana screenshots requested by the rubric are not included under the terminal-only instruction; actual browser assertions and dashboard API records are supplied as terminal evidence.
+Evidence is recorded from actual commands. The numbered screenshots contain only real terminals captured from spawned PTYs through Playwright/CDP. Any display of a saved log is identified by the visible `cat`/`jq` command. The [browser walkthrough](#browser-walkthrough) adds the application, Prometheus, Grafana and Argo CD views requested by the rubric. There is no AWS Console evidence because no EKS cluster was created.
 
 The local lab has been cleaned up: assignment containers, volumes and Kubernetes resources are gone, the dedicated Minikube cluster is stopped, and unrelated applications are unchanged. [Cleanup assertions](evidence/local/cleanup.json) and the CI cluster-deletion log are retained with the evidence.
 
