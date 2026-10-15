@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   sourceRepos:
-    - https://github.com/vimalyad/devops-heros.git
+    - https://github.com/vimalyad/typeahead-devops-capstone.git
   destinations:
     - namespace: assignment-s21
       server: https://kubernetes.default.svc
@@ -21,9 +21,9 @@ metadata:
 spec:
   project: typeahead-capstone
   source:
-    repoURL: https://github.com/vimalyad/devops-heros.git
-    targetRevision: assignment/session21-typeahead-capstone
-    path: session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm
+    repoURL: https://github.com/vimalyad/typeahead-devops-capstone.git
+    targetRevision: main
+    path: helm
     helm:
       releaseName: typeahead
       valueFiles:
