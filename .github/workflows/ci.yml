@@ -1,20 +1,15 @@
 name: Typeahead capstone
 on:
   push:
-    branches: [main, assignment/session21-typeahead-capstone]
-    paths:
-      - .github/workflows/session21.yml
-      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/application/**
-      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/docker/**
-      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/helm/**
-      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/kubernetes/**
-      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/scripts/**
-      - session-21-final-devops-project/Vimal-24BCS10273/final-devops-project/security/**
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - demo/**
+      - evidence/**
+      - screenshots/**
+      - gitops/**
   pull_request:
     branches: [main]
-    paths:
-      - .github/workflows/session21.yml
-      - session-21-final-devops-project/Vimal-24BCS10273/**
   workflow_dispatch:
 permissions:
   contents: read
@@ -22,13 +17,11 @@ concurrency:
   group: capstone-${{ github.ref }}
   cancel-in-progress: false
 env:
-  PROJECT: session-21-final-devops-project/Vimal-24BCS10273/final-devops-project
   IMAGE_PREFIX: ghcr.io/${{ github.repository_owner }}/typeahead-capstone
   IMAGE_TAG: ${{ github.sha }}
 defaults:
   run:
     shell: bash
-    working-directory: session-21-final-devops-project/Vimal-24BCS10273/final-devops-project
 jobs:
   test:
     runs-on: ubuntu-24.04
@@ -54,8 +47,8 @@ jobs:
         with:
           name: capstone-tests
           path: |
-            ${{ env.PROJECT }}/reports/
-            ${{ env.PROJECT }}/application/*/build/test-results/
+            reports/
+            application/*/build/test-results/
           retention-days: 14
   security:
     needs: test
@@ -79,12 +72,12 @@ jobs:
       - name: Dependency gate
         run: trivy fs --include-dev-deps --scanners vuln --severity HIGH,CRITICAL --exit-code 1 --format json --output reports/dependencies.json application
       - name: Scan assignment Git history for secrets
-        run: gitleaks git --redact --log-opts="--all -- .github/workflows/session21.yml $PROJECT" --report-format json --report-path reports/gitleaks.json "$GITHUB_WORKSPACE"
+        run: gitleaks git --redact --log-opts="--all" --report-format json --report-path reports/gitleaks.json "$GITHUB_WORKSPACE"
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
         with:
           name: capstone-source-security
-          path: ${{ env.PROJECT }}/reports/
+          path: reports/
           retention-days: 14
   images:
     needs: [test, security]
@@ -131,13 +124,13 @@ jobs:
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: capstone-images
-          path: ${{ env.PROJECT }}/images.tar
+          path: images.tar
           retention-days: 3
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
         with:
           name: capstone-image-security
-          path: ${{ env.PROJECT }}/reports/
+          path: reports/
           retention-days: 14
   deploy:
     needs: images
@@ -150,7 +143,7 @@ jobs:
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           name: capstone-images
-          path: ${{ env.PROJECT }}
+          path: .
       - name: Install cluster tools and load build artifacts
         run: |
           python3 scripts/install-tools.py kind kubectl helm
@@ -167,5 +160,5 @@ jobs:
         if: always()
         with:
           name: capstone-deployment
-          path: ${{ env.PROJECT }}/reports/
+          path: reports/
           retention-days: 14
