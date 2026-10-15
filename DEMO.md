@@ -1,6 +1,6 @@
 # Presentation walkthrough
 
-Start with the [architecture and run instructions](README.md), then explain the query catalog in one minute: CRUD stores catalog entries; search events flow through Kafka into PostgreSQL; the suggestion service rebuilds a trie and caches results in Redis.
+Present from the [slide deck](demo/Typeahead-DevOps-Capstone.pptx) ([PDF](demo/Typeahead-DevOps-Capstone.pdf)); its speaker notes follow the points below. Start with the [architecture and run instructions](README.md), then explain the query catalog in one minute: CRUD stores catalog entries; search events flow through Kafka into PostgreSQL; the suggestion service rebuilds a trie and caches results in Redis.
 
 The [terminal recording](evidence/commit-to-deployment.cast) uses the asciicast v2 format. It records actual output and timing from a spawned Bash PTY, viewed through Playwright/CDP. Replay it with an asciicast-compatible player, for example:
 
