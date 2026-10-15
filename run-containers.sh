@@ -4,7 +4,7 @@ set -euo pipefail
 project_dir="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 lab=assignment-s21-direct
 label="devops.assignment=$lab"
-release="${IMAGE_TAG:-0f8f27c95cae983b8274d649db2435200450c48a}"
+release="${IMAGE_TAG:-bea59b98495c4d4d7dc573be9900f7ec3afe4684}"
 registry=ghcr.io/vimalyad/typeahead-devops-capstone
 
 cleanup() {
